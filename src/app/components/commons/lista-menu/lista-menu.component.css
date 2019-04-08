@@ -1,0 +1,149 @@
+.listas_cabeza{  
+	position: relative;
+	margin: 10px 0px;
+	padding: 4px 0px;
+	/*
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	background-color: #e8e8e8;
+	*/
+	background-color: #fff;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.listas_cabeza span{
+	float: none !important;
+}
+/*
+.listas_cabeza .botoneraPrincipal{	 height: 20px !important;  }
+.listas_cabeza .botoneraPrincipal > div > *:not(.boton){	position: relative; margin-top: 3px;}
+*/
+
+/*	Botonera principal	*/
+
+.listas_cabeza .botoneraPrincipal span{	font-size: 16px; padding: 4px; }
+.listas_cabeza .botoneraPrincipal > div{	display: flex; flex-direction: row; }
+
+ 
+.listas_cabeza .botoneraPrincipal >  .opciones div,
+.listas_cabeza .botoneraPrincipal >  .paginacion div:not(.n_pagina){	
+	color: #595959;
+    background-color: rgba(153, 153, 153, 0);
+    padding: 4px;
+}
+.listas_cabeza .botoneraPrincipal > .opciones div:hover,
+.listas_cabeza .botoneraPrincipal >  .paginacion div:hover:not(.n_pagina){		
+    color: #3366ff;
+    background-color: rgba(153, 153, 153, .1);
+    padding: 3px 3px;
+    border: solid 1px rgba(153, 153, 153, 1);
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(153, 153, 153, .85) !important;
+    cursor: pointer;
+}
+
+
+
+
+.listas_cabeza .paginacion .form-control{	margin: 0; width: 40px;	height: 28px; margin-top: -1px; }
+
+.listas_cabeza .botoneraPrincipal .numeracion{
+	display: flex;
+	align-items: center;
+}
+.listas_cabeza .botoneraPrincipal .numeracion .sisa_buscador_select{
+	border-radius: 4px;
+	margin-left: 4px;
+	height: 28px; 
+}
+
+
+
+/*
+.listas_cabeza > *{ 				display: inline;}
+.listas_cabeza .controles {			display: flex;	align-items: center; margin-top: -6px;}
+.listas_cabeza .controles *{		display: inline; margin: 4px 1px;}
+
+.controles .form-control{	margin: 0; width: 40px;	height: 28px; margin-top: -1px; }
+
+.numeracion .sisa_buscador_select{
+	width: 55px !important; 
+	height: 28px; 
+	padding: 4px 2px;
+	margin-top: -2px;
+	font-size: 14px;
+	line-height: 1.42857;
+	border: 1px solid rgb(204, 204, 204);
+	border-radius: 4px;
+}
+
+.listas_cabeza .util_divisor{			display: inline-block; position: relative; width: 100%; height: 1px; bottom: 0px; background-color: #aaa; padding: 0 !important; margin: 5px 0 5px 0 !important;}
+
+.listas_cabeza .configuracion, 
+.listas_cabeza .referenciacolumnas, 
+.listas_cabeza .exportarlista, 
+.listas_cabeza .geolocalizacion,
+.listas_cabeza .tamanodefuente_red, 
+.listas_cabeza .tamanodefuente_agr,
+.listas_cabeza .ocultaBarra{			position: relative; top: 5px; padding-right: 5px;}
+.listas_cabeza .numeracion,
+.listas_cabeza .paginacion{			position: absolute; padding: 5px;}
+
+.listas_cabeza .configuracion, 
+.listas_cabeza .referenciacolumnas, 
+.listas_cabeza .geolocalizacion, 
+.listas_cabeza .tamanodefuente_red, 
+.listas_cabeza .tamanodefuente_agr, 
+.listas_cabeza .exportarlista, 
+.listas_cabeza .ocultaBarra{		margin-top: -5px;}
+.listas_cabeza .paginacion{			margin-top: -5px;}
+.listas_cabeza .numeracion{			margin-top: -7px;}
+
+.listas_cabeza .exportarlista, 
+.listas_cabeza .referenciacolumnas, 
+.listas_cabeza .geolocalizacion, 
+.listas_cabeza .configuracion, 
+.listas_cabeza .tamanodefuente_red, 
+.listas_cabeza .tamanodefuente_agr,
+.listas_cabeza .ocultaBarra{		float: left !important; }
+
+.listas_cabeza .numeracion{				right: 186px; }
+.listas_cabeza .paginacion{				right: 10px; }
+
+.listas_cabeza .numeracion *{			display: inline-block; margin-right: 2px; }
+
+.lista_exportarreportes .formatos > *{						display: inline; position: relative;}
+.lista_exportarreportes .formatos .iconos{		position: absolute; left: 140px; margin-top: 4px;}
+*/
+/* El ID al principio esta mas que todo como identificador de donde se usa*/
+/*
+#lista_referenciacolumnas .referencia, 
+#lista_referenciacolumnas1 .referencia{	
+	display: flex;
+	align-items: center;
+	margin-bottom: 4px;}
+#lista_referenciacolumnas .referencia .referenciacolor, 
+#lista_referenciacolumnas1 .referencia .referenciacolor{	 height: 16px; width: 16px;}
+#lista_referenciacolumnas .referencia p, 
+#lista_referenciacolumnas1 .referencia p{	 margin: 0px 0px 0px 6px;}
+#lista_referenciacolumnas h4, 
+#lista_referenciacolumnas1 h4{	 margin: 10px 0px 0px 0px;}
+
+*/
+
+/*	Submenu ...........................................................
+
+.listas_cabeza .submenu{  
+	position: relative;
+	margin-bottom: 10px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.listas_cabeza .submenu h3{						display: inline;	margin: 0px;	padding: 0px;}
+.listas_cabeza .submenu .botones{			display: inline;	position: absolute; margin-top: -4px; right: -4px;}
+.listas_cabeza .submenu .botones div{		float: right; margin-left: 10px;} 
+.listas_cabeza .submenu .botones .botoncerrar {  width: 22px; height: 22px;}
+.listas_cabeza .submenu .botones .botoncerrar span{	font-size: 16px !important;}
+*/

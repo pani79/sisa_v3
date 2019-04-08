@@ -1,0 +1,33 @@
+.header .container{  padding: 10px 0px; }
+
+.header {  background-color: white !important;  }
+.header p{  margin: 0px !important;  padding: 0px !important; }
+
+/*
+header, main, nav, footer > div{	display: flex; justify-content: center;	}
+header > .contenedor,
+main > .contenedor,
+nav > .contenedor,
+footer .contenedor{	
+	width: 1170px; 
+	display: flex;
+	align-self: flex-start;
+}
+
+header{		    		display: flex; align-items: center; height: 74px; background-color:#FFF;	}
+header > .contenedor{	
+	position: absolute; 
+	align-self: center;
+	justify-content: space-between;
+	align-items: center;	
+}
+*/
+.header .logos{			display: flex; flex-direction: row; align-self: center; }
+.header .logos > *{	/*display: inline-flex;*/ margin-right: 20px;	}
+
+.header .sisa_logo{	width: 244px; height: 42px; background-image: url(../../../../assets/img/svg/SISA_logo_ctda.svg); background-repeat: no-repeat;	}
+.header .cus_logo{	width: 80px; height: 42px; background-image: url(../../../../assets/img/svg/cus_logo.svg); background-repeat: no-repeat;	}
+.header .msal_logo{	width: 187px; height: 41px; background-image: url(../../../../assets/img/svg/msal_logo.svg); background-repeat: no-repeat;	}
+
+/*header .panel_sesion{ position: relative; background-color: hotpink;}*/
+.header .panel_sesion{ max-width: 300px; display: content; /*margin: -21px 0px;  background-color: orange;*/ }

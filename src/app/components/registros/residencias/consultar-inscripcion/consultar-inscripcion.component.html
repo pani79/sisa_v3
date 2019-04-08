@@ -1,0 +1,26 @@
+<p>
+  consultar-inscripcion works!!!!
+</p>
+<div class="row Formulario">
+  <form #formConsulta="ngForm" class="col-6">
+      
+      <div class="item">
+          <div class="w70_">
+              <input type="text" placeholder="Ingrese código" name="dato">
+          </div>
+          <div class="w30_">
+              <div (click)="consultarInscripcionConsulta(dato)" class="boton boton_general" id="bot_prof">
+                  <span class="icon-bot_ico_buscar"></span>Buscar
+              </div>
+          </div>
+      </div>
+      
+  </form>
+</div>
+<div *ngIf="consultarInscripcionResultado === true" class="respuesta">
+  {{t_resultado | json }}
+
+    <s-commons-lista [idLista]='t_resultado' class="row"></s-commons-lista>
+
+
+</div>  

@@ -1,0 +1,35 @@
+.footer{
+	border-top: rgba(0,0,0,.2) solid 2px;
+	color: #fff;
+	background-color:#999;
+  /*
+  min-height: 200px;
+  flex-direction: column;
+  */
+}
+.footer > div:first-child{
+	text-align:center;
+	background-color: #aaa; 
+}
+.footer .proyectos{ padding: 10px 0px !important;	}
+.footer .argentina{ padding: 30px 0px !important;	}
+
+/*
+footer > div:first-child{
+	height: 60px;
+	width: 100%;
+	text-align:center;
+	background-color: #aaa; 
+}
+footer > div:last-child{	height: 200px;	}
+footer > div > .contenedor{	align-self: center;	justify-content: space-between; align-items: flex-start;	}
+*/
+.footer a{		color: #ebebff; /* A6 */ font-weight: normal; text-decoration:none;	}	
+.footer a:hover{	text-decoration: underline;	}	
+	
+
+
+.footer .sisa_logo_verneg{	width: 244px; height: 42px; background-image: url(../../../../assets/img/svg/SISA_logo_ctda_verneg.svg); background-repeat: no-repeat;	}
+.footer .msal_logo_verneg{	width: 225px; height: 41px; background-image: url(../../../../assets/img/svg/msal_logo_verneg.svg); background-repeat: no-repeat; }
+.footer .presidencia_logo{	margin: 20px 0 0 0; width: 224px; height: 42px; background-image: url(../../../../assets/img/svg/presidencia_logo.svg); background-repeat: no-repeat;	}
+.footer .publicidad_logo{	width: 224px; height: 100px; background-image: url(../../../../assets/img/svg/bicentenario_logo.svg); background-repeat: no-repeat;	}

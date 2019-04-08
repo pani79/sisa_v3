@@ -1,0 +1,28 @@
+.menuPrincipal{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0px 40px 0px;
+}
+.menuPrincipal > div{
+    width: 100%;
+    margin: 0px 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5) !important;
+    background-color: white;
+}
+.menuPrincipal > div * {    text-align: center; }
+.menuPrincipal > div > .icono {
+    position: relative;
+    margin-top: 20px !important;
+}
+.menuPrincipal > div span{          font-size: 72px;  }
+.menuPrincipal > div h3 {           padding: 10px 0px 4px 0px; }
+.menuPrincipal > div h4 {           padding-bottom: 10px; }
+.menuPrincipal > div:hover {        background-color: #3366ff; cursor: pointer; }
+.menuPrincipal > div:hover span,
+.menuPrincipal > div:hover h3,
+.menuPrincipal > div:hover h4 {     color: white; }
+
+.secciones h1,
+.secciones p{margin-bottom: 20px;}

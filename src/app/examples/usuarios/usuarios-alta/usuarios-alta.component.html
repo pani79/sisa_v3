@@ -1,0 +1,161 @@
+<s-commons-basicPage  [info]="info"></s-commons-basicPage>
+
+
+
+<div class="container-fluid">
+  <h2>registro de usuario</h2>
+
+  <br><br>
+
+  <form (ngSubmit)="usuarioEnvia()"  #formularioDeUsuario="ngForm" class="row">
+
+    <div class="col-6">
+      <!-- base? 
+      {{formularioDeUsuario.value | json}}
+      <hr>
+      {{UsuarioForm.value | json}}-->
+      <hr>
+      {{usuario.usuario}}
+      <br>
+      {{usuario.password}}
+      <br>
+      {{usuario.n_documento}}
+      <hr>
+
+
+      <div class="form-group">
+        <label>Usuario</label>
+        <input type="text" 
+        class="form-control"
+        id="usuario"  
+        [(ngModel)]="usuario.usuario" name="usuario"          
+        #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" 
+          class="form-control"
+          id="password"  
+          [(ngModel)]="usuario.password" name="password"        
+          #name="ngModel">
+      </div>
+      
+      <div class="form-group">
+        <label>Número de documento</label>
+        <input type="text" 
+        class="form-control"
+        id="n_documento"  
+        [(ngModel)]="usuario.n_documento" name="n_documento"          
+        #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label>Correo Electrónico</label>
+        <input type="text" 
+        class="form-control"
+        id="email"  
+        [(ngModel)]="usuario.email" name="email"          
+        #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label>Cargo o función</label>
+        <input type="text" 
+        class="form-control"
+        id="funcion"  
+        [(ngModel)]="usuario.funcion" name="funcion"          
+        #name="ngModel"
+        placeholder="moster tester">
+      </div>
+
+          <!--  
+* Tipo de documento 
+
+* Número de documento 
+34534522
+
+Usuario SISA 
+*sin dato*
+* Perfil 
+
+* Provincia 
+
+Establecimiento 
+
+* Correo Electrónico 
+ Importante: El correo electrónico del usuario es imprescindible para la gestión de la cuenta de usuario ya que el sistema lo utiliza para notificar diferentes operaciones. Verifique que sea correcto y que el usuario lo utilice actualmente.
+* Cargo o función
+
+          -->
+          <!-- 
+            <div class="form-group">
+              <label>Confirma Password</label>
+              <input formControlName="usuarioPaswordRepeat" type="password" class="form-control">
+            </div>
+
+            <div formGroupName="usuarioDireccion">
+                <div class="form-group">
+                  <label>Provincia</label>
+                  <input formControlName="usuarioProvincia" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Ciudad</label>
+                  <input formControlName="usuarioCiudad" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Codigo Postal</label>
+                  <input formControlName="usuarioCP" type="text" class="form-control">
+                </div>
+            </div>
+           -->
+        <div class="contenedorDeBotones inverso">
+                  
+          <s-commons-BotonCTextoEIcono [infoBoton]="bot_enviar" (click)="usuarioEnvia(usuario)"></s-commons-BotonCTextoEIcono> 
+        
+        </div>
+        <!-- 
+
+          <button class="btn btn-primary" type="submit">
+              <i class="fas fa-plus-circle"></i>
+              Add a Product
+            </button>
+        --><!-- 
+
+          <div>
+              <div (click)="usuarioSubmit(UsuarioForm.value)" class="boton boton_pos">
+                  <span class="icon-bot_ico_aceptar"></span>Enviar datos
+              </div>
+              <div (click)="usuarioCargaInfoApi()" class="boton boton_general">
+                  <span class="icon-bot_ico_exportar"></span>Cargar datos (API)
+              </div>
+          </div>
+         -->
+      
+
+    </div>
+
+    <div class="col-6">
+      <!-- <div class="card" *ngFor="let usuarioTraido of "></div> -->
+    </div>
+
+  </form>
+<!-- 
+    <div class="row">
+      <br>
+        <div>
+            <div (click)="usuariosCarga()" class="boton boton_pos">
+                <span class="icon-bot_ico_aceptar"></span>traer
+            </div>
+        </div>
+    </div>
+ -->
+  <div  *ngIf="respuesta">
+    <s-commons-lista [idLista]='respuesta' class="row"></s-commons-lista>
+  </div>
+
+  <!-- <p> => {{t_buchon | json}}</p> -->
+  
+
+</div>
+

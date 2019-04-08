@@ -1,0 +1,96 @@
+<s-commons-basicPage [info]="info"></s-commons-basicPage>
+
+<div class="menuPrincipal">
+
+  <div id="bot_op1" (click)="operaBotoneraPrincipal(1)">
+    <div class="icono">
+      <span class="icon-bot_ico_editar"></span>
+    </div>
+    <h3>Pre-inscripción</h3>
+    <h4>Concurso de Residencias</h4>
+  </div>
+  <div id="bot_op2" (click)="operaBotoneraPrincipal(2)">
+    <div class="icono">
+      <span class="icon-bot_ico_auditoriaconsultar"></span>
+    </div>
+    <h3>Consultar</h3>
+    <h4>el estado de su Pre-inscripción / Readjudicación</h4>
+  </div>
+  <div id="bot_op8" (click)="operaBotoneraPrincipal(3)">
+    <div class="icono">
+      <span class="icon-bot_ico_editar"></span>
+    </div>
+    <h3>Readjudicación</h3>
+    <h4>Concurso de Residencias</h4>
+  </div>
+  <div id="bot_op4" (click)="operaBotoneraPrincipal(2)">
+    <div class="icono">
+      <span class="icon-mod_verificador"></span>
+    </div>
+    <h3>Consultar</h3>
+    <h4>codigo alfanumérico de examen</h4>
+  </div>
+
+</div>
+
+<div class="secciones">
+
+  
+    <div *ngIf="preinscripcion === true">
+        <h1>Pre-inscripción a Concurso de Residencias</h1>
+        <p>
+            Para facilitar su proceso de inscripción antes de comenzar por favor lea la siguiente información: instructivo de inscripción.
+        </p>    
+
+        <s-registros-residencias-preinscripcion></s-registros-residencias-preinscripcion>
+        
+    </div>
+
+
+    <div *ngIf="consultarInscripcion === true">
+
+        <h1>Consultar el estado de su Pre-inscripción / Readjudicación</h1>
+        <p>
+            Ingrese el código alfanumérico ( Ej. wIR3DVKilD ) que le fue asignado al momento de la preinscripción. El mismo le fue enviado
+            en el Mail de Notificación y también figura en la sección Datos Generales de la Constancia de Inscripción. En caso de
+            haberlo extraviado solicitarlo por mail indicando Nombre, Apellido y DNI a ​
+            <a href="#">inscripcionweb.residencia.msal@gmail.com</a>
+        </p>
+
+        <s-registros-residencias-inscripcionConsultar></s-registros-residencias-inscripcionConsultar>
+
+    </div>
+
+
+
+    <div *ngIf="readjudicacion === true">
+        <h1>Readjudicación a Concurso de Residencias</h1>
+        <p>
+            Ingrese el código alfanumérico ( Ej. wIR3DVKilD ) que le fue asignado al momento de la preinscripción. El mismo le fue enviado
+            en el Mail de Notificación y también figura en la sección Datos Generales de la Constancia de Inscripción. En caso de
+            haberlo extraviado solicitarlo por mail indicando Nombre, Apellido y DNI a ​
+            <a href="#">inscripcionweb.residencia.msal@gmail.com</a>
+        </p>
+        <div class="row Formulario">
+            <div class="col-6">
+
+                <div class="item">
+                    <div class="w70_">
+                        <input type="text" placeholder="Ingrese código">
+                    </div>
+                    <div class="w30_">
+                        <div (click)="readjudicacionConsulta(1)" class="boton boton_general" id="bot_prof">
+                            <span class="icon-bot_ico_buscar"></span>Buscar
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="readjudicacionResultado === true" class="respuesta">
+            Hola
+        </div> 
+    </div>
+
+  
+
+</div>

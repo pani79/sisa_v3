@@ -1,0 +1,45 @@
+[{
+  "22": {
+    "id": "22",
+    "usuario": "pani",
+    "nombre": "emilio",
+    "apellido": "panizza",
+    "email": "yo@soy.yo",
+    "rol": "amo y señor",
+    "foto": "",
+    "permisos": [true, false, true, false, true, false, true, false, true, false]
+  },
+  "0": {
+    "id": "0",
+    "usuario": "zoraks",
+    "nombre": "zorak",
+    "apellido": "s",
+    "email": "yo@soy.yo",
+    "rol": "rival del fantasma del espacio",
+    "foto": "",
+    "permisos": [false, false, false, false, false, false, false, false, false, false]
+  },
+  "": {
+    "id": "",
+    "usuario": "",
+    "nombre": "",
+    "apellido": "",
+    "email": "",
+    "rol": "",
+    "foto": "",
+    "permisos": [false, false, false, false, false, false, false, false, false, false]
+  }
+}]
+
+[{
+  "22": {
+    "id": "22",
+    "usuario": "skeletor",
+    "nombre": "Master",
+    "apellido": "of the universe",
+    "email": "yo@soy.yo",
+    "rol": "amo y señor",
+    "foto": "",
+    "permisos": [true, false, true, false, true, false, true, false, true, false]
+  }
+}]

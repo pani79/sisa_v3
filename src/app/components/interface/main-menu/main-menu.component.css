@@ -1,0 +1,338 @@
+.barraMenu{	background-color: #3366ff; border-top: #000099 solid 2px;}
+.barraMenu > .container > .row > .col-12 { 
+	position: relative;
+	width: 100% !important;
+	display: flex;
+	flex-direction: row;
+	align-content: space-between; 
+	/* background-color: yellowgreen; */ 
+}
+.barraMenu > .container > .row > .col-12  > *:first-child{  margin-left: -30px; }
+.barraMenu > .container > .row > .col-12  > *:last-child{	position: absolute;	right: -30px; }
+
+a, a:hover{	text-decoration-line: none;	}
+
+.menu{	display: flex;}
+/*
+.navbar{	background-color: #3366ff; border-top: #000099 solid 2px;}
+*/
+.navbar a{	    
+	padding: 10px 6px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #ffffff;
+	border-radius: 0px 0px 0px 0px;
+}
+.navbar a:hover{	background-color:white; color: #3366ff;	text-decoration-line: none;	}
+
+
+.navbar .dropdown-menu  a{	 color: #999;	}
+/*
+.barraMenu .navbar .dropdown > .dropdown-menu{	position: relative; top: 20px; background-color: red !important;	}
+*/
+.dropdown > .dropdown-menu{	top: 24px; background-color: #666 !important;	}
+.dropdown > .dropdown-menu > li{	display: flex; flex-direction: row;	}
+.dropdown > .dropdown-menu > li span{	font-size: 24px; margin-right: 8px;	}
+.dropdown > .dropdown-menu a{
+	display: flex;
+	width: 100%;
+	padding: 10px 6px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #ffffff;
+	border-radius: 0px 0px 0px 0px;
+}
+.dropdown > .dropdown-menu a:hover{	color: #3366ff;	}
+
+
+.miMenu > .dropdown-menu{
+	width: 300px;
+    margin-right: -90px;
+    position: relative;
+}
+
+.miMenu_grupo{	    
+	display: flex;
+	flex-direction: row;
+	padding: 10px 6px;
+    color: #ffffff;
+}
+.miMenu_grupo > *:first-child{	    font-size: 48px !important; margin-right: 20px !important;}
+.miMenu_grupo *{	color: #ffffff; }
+
+
+.dropdown-menu.registros{	width: 500px; }
+
+.dropdown-submenu {
+	position: relative;
+}
+
+.dropdown-submenu >.dropdown-menu {
+	top: 0;
+	right: 100%;
+	margin-top: 0px;
+	margin-left: -250px;
+	width: 250px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #7f7f7f; 
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu .divider {
+	background-color: #7f7f7f; 
+}
+
+#opciones_mimenu ul .dropdown-menu a {
+	width: 250px;
+	clear: both;
+}
+
+#opciones_mimenu ul .dropdown-menu li a {
+text-overflow: initial;
+white-space: normal;
+}
+
+/*
+	.miMenu{	float: right !important;	}
+	.miMenu_grupo{	display: flex; flex-direction: row; width: 100%; padding: 10px 6px;	}
+	.miMenu_grupo *{	color: white;	}
+	.miMenu_grupo span{	font-size: 48px; margin-right: 8px;	}
+	*/
+
+
+	/*
+	.dropdown-menu{	background-color: green !important;	}
+
+	/*
+	.menuPrincipal{background-color: #3366ff; border-top: #000099 solid 2px;}
+
+
+	.menuPrincipal > .container ul{	display: block; height: 36px; margin-top: -2px; margin-bottom: 0px;	}
+
+	.menuPrincipal li{				display: inline; margin-left: 20px; padding: 10px 0px;	}
+	.menuPrincipal li:first-child{	margin-left: 0px;	}
+	.menuPrincipal li > a{			display: inline-flex; color: white; padding: 10px; text-decoration-line: none;	}
+	.menuPrincipal li:hover{			background-color: white; cursor: pointer;	}
+	.menuPrincipal li:hover > a{		color: #000099;	}
+
+
+
+	#menu_principal_boton_mimenu, #menu_principal_boton_salir{
+		float: right !important;
+		right: -22px;
+		}
+
+	#menu_principal_boton_mimenu #dLabel{		color: #fff; background-color: #000099;}
+	#menu_principal_boton_mimenu #dLabel:hover{	color: #3366ff; background-color: #fff;}
+
+	.opciones_mimenu_registro span{	float: left; margin: 0 20px 0 0; font-size: 48px;}
+	*/
+		
+
+	/* Menu principal --------------------------------------
+
+
+
+	#opciones_mimenu_misherramientas { color: #000; background-color: rgba(1,1,1,.4); }
+
+	*/
+
+
+
+	/* Barra ........................................................  */
+	/*
+
+	#menu_principal{
+		background-color: #3366ff;
+		border-top: #000099 solid 2px; 
+	}
+
+	#menu_principal li{
+		float: left;
+		display:inline;
+		margin: 0px 20px 0px 0px;
+		}
+		
+	#menu_principal li:first-child{
+		margin: 0px 20px 0px 0px;
+		}
+
+	#menu_principal a{
+		padding: 10px 6px;
+		font-size: 13px;
+		font-weight: normal;
+		color: #ffffff; 
+		border-radius: 0px 0px 0px 0px;
+		}
+
+	#menu_principal a:hover, #menu_principal a:focus{
+		color: #3366ff;
+		background-color:#fff;
+		text-decoration:none;
+		}	
+
+	#menu_principal_mimenu a:hover, #menu_principal_mimenu a:focus{
+		color: #ff0;
+		background-color:#3366ff; 
+		text-decoration:none;
+		border-radius: 0px 0px 0px 0px;
+		}	
+
+
+	.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+		background-color: #fff;
+	}
+
+	*/
+
+
+
+
+
+
+
+	/* Mi menu -----------------------------------*/
+	/*
+	#opciones_mimenu{
+		left: -135px;
+		background-color: #3366ff; 
+		color: #fff;
+		width: auto;
+	}
+	*/
+
+	/* Mi menu - paneles -----------------------------------*/
+	/*
+
+	#opciones_registros, #opciones_mimenu, #opciones_documentacion{
+		background-color: #666; 	 
+	}
+
+	#opciones_registros li, #opciones_mimenu li, #opciones_documentacion li{
+		clear: both;
+		width: 100%;
+	}
+
+	#opciones_registros a, #opciones_mimenu a, #opciones_documentacion a{
+		color: #fff; 
+		clear: both;
+	}
+
+	#opciones_registros span{
+		font-size: 25px;
+		margin: 0 16px 0 0;
+	}
+	*/
+
+	/* En todos los menues al hacer RO pinta texto y fondo
+	#opciones_registros a:hover, #opciones_mimenu a:hover, #opciones_documentacion a:hover{
+		color: #3366ff; 
+	}
+	*/
+	/* En los registros de MIMENU, al hacer RO pinta titulos y parrafos
+	#opciones_mimenu a:hover p, #opciones_mimenu a:hover h4{
+		color: #3366ff; 
+	}
+
+
+	.opciones_mimenu_registro{
+		margin: 8px;
+		width: 100%;
+		min-height: 48px;
+	}
+
+	.opciones_mimenu_registro h4, .opciones_mimenu_registro p{
+		color: #fff;
+		padding: 0;
+		margin: 0;
+		width: 80%;
+	}
+	*/
+
+	/* Fondo y menues de registro (y otros submenues)
+	li.dropdown-submenu:hover {
+		color: #3366ff; 
+		background-color: #fff;
+		cursor: pointer; 
+	}
+	li.dropdown-submenu:hover .opciones_mimenu_registro h4, li.dropdown-submenu:hover .opciones_mimenu_registro p {
+		color: #3366ff; 
+	}
+
+	*/
+
+	/*
+	.opciones_mimenu_registro p{
+		width: 100%;
+	}
+	*/
+	/*  */
+
+
+
+	/* Submenus ................................ 
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	.dropdown-submenu >.dropdown-menu {
+		top: 0;
+		right: 100%;
+		margin-top: 0px;
+		margin-left: -250px;
+		width: 250px;
+		
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		background-color: #7f7f7f; 
+	}
+
+	.dropdown-submenu:hover>.dropdown-menu {
+		display: block;
+	}
+
+	.dropdown-menu .divider {
+		background-color: #7f7f7f; 
+	}
+
+	#opciones_mimenu ul .dropdown-menu a {
+		width: 250px;
+		clear: both;
+	}
+
+	#opciones_mimenu ul .dropdown-menu li a {
+	text-overflow: initial;
+	white-space: normal;
+	}
+	*/
+		
+	/* Menu principal --------------------------------------
+
+
+	#menu_principal_boton_mimenu, #menu_principal_boton_salir{
+		float: right !important;
+		right: -22px;
+		}
+
+	#menu_principal_boton_mimenu #dLabel{		color: #fff; background-color: #000099;}
+	#menu_principal_boton_mimenu #dLabel:hover{	color: #3366ff; background-color: #fff;}
+
+	.opciones_mimenu_registro span{	float: left; margin: 0 20px 0 0; font-size: 48px;}
+	*/
+		
+
+	/* Menu principal --------------------------------------
+
+
+
+	#opciones_mimenu_misherramientas { color: #000; background-color: rgba(1,1,1,.4); }
+
+
+ */

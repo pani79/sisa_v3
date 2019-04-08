@@ -1,0 +1,2 @@
+.contenedor{    display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 40px;/*  background-color: red; */   }
+.contenedor > *{    display: flex; flex-grow: 0 !important; width: 100% !important;/*  background-color: orange;  */ }

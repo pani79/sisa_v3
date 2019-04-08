@@ -1,0 +1,27 @@
+<div *ngIf="UsuarioLogueado() == true" class="userOn">
+  <div class="foto"></div>
+  <div class="info">
+    <p>Bienvenido</p>
+    <a href="#">Emilio Panizzadevrnsisa</a> 
+    <p>Miércoles 20 de julio de 2016</p>
+  </div>
+</div>
+<div *ngIf="UsuarioLogueado() == false" class="userOff">
+    <s-commons-BotonCTextoEIcono [infoBoton]="botones.ingresar"></s-commons-BotonCTextoEIcono>
+    
+<!-- 
+  <div class="contenedorDeBotones">
+    <s-commons-BotonCTextoEIcono [infoBoton]="botones.ingresar"></s-commons-BotonCTextoEIcono>
+  </div>
+   -->
+  <!-- 
+  <div class="boton boton_general" data-toggle="modal" data-target="#exampleModal" >
+      <span class="icon-bot_ico_acceder"></span>
+      Ingresar
+    </div>
+ -->
+    <div id="cabecera_fecha">
+      <p>Miércoles 20 de julio de 2016</p>
+    </div>
+
+</div>

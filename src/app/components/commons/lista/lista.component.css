@@ -1,0 +1,35 @@
+/*
+.contenedorLista{    display: block; width: 100%; }
+table{    border-collapse: collapse; }
+table, tbody, tr{    display: block; width: 100%; }
+
+table tr:nth-child(even){ background-color: #d4d3ff; }
+table tr:nth-child(odd){ background-color:  #ebebff; }
+table tr td:last-child,
+table tr th:last-child{ background-color:  #f5f5f5; }
+table tr th{ background-color: white !important; font-weight: bold !important; }
+
+
+
+
+table tr > *:last-child{ min-width: 150px !important; }
+table tr > *:first-child{ min-width: 50px !important; }
+*/
+
+table, tbody, tr{    width: 100%; }
+table tr:nth-child(even){ background-color: #d4d3ff; }
+table tr:nth-child(odd){ background-color:  #ebebff; }
+td{
+    vertical-align: top;  
+    overflow: hidden;
+    border-right: solid 1px rgba(0, 0, 0, .05);  
+}
+th{background-color:  white; }
+th *{font-weight: bold;}
+th > p,
+td > p{ padding: 8px;}
+
+table tr td:last-child,
+table tr th:last-child{ background-color:  #f5f5f5; border: none; }
+table tr td:last-child > div{ display: flex; }
+/*.columna{ padding: 2px !important;}*/

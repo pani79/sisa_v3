@@ -1,0 +1,86 @@
+{{lista_propiedades | json}}
+<!-- {{lista_datos.cantidad}} --> 
+<s-commons-listaMenu [infoDeLista] = 'lista_datos' [propiedadesDeLista] = 'lista_propiedades'></s-commons-listaMenu>
+
+<div class="contenedorLista">
+  <!-- <p>    -=>   {{datosDeLista}}</p> -->
+
+  <!-- 
+    <s-commons-listaCabecera class="fila" [datos]='lista_datos.cabecera' [configuracion]='lista_datos.configuracion'  (evento)="actualizaPadre($event)"></s-commons-listaCabecera>
+    
+    <div *ngFor="let fila of usuariosLista" class="fila">
+
+      <s-commons-listaDato [datos]='fila' [configuracion]='lista_datos.configuracion' (evento)="actualizaPadre($event)"></s-commons-listaDato>
+    
+    </div>
+  -->
+  <p>
+    x => {{usuariosLista}}
+  </p>
+  <p>
+    x => {{lista_propiedades}}
+  </p>
+  <p>
+    x => {{lista_propiedades | json}}
+  </p>
+  
+  <table>
+    
+    <tr>
+        <th *ngFor="let fila of lista_datos.cabecera; let c=index" class="columna" ><p>{{fila}}</p></th>
+        <th class="columna"></th>
+    </tr>
+    
+    <tr *ngFor="let fila of usuariosLista; let i=index"  
+      [ngClass]="('fila fila'+i)" 
+      [style.display]="((i > lista_propiedades.registros_muestra_inicio) && (i < lista_propiedades.registros_muestra_fin)) ? 'table-row' : 'none'"
+      >
+
+        <!--
+          <td class="columna" >{{usuariosLista[i]}}</td>
+          {{usuariosLista[i]}}
+          {{i}} - {{lista_propiedades.registros_muestra_inicio}} - {{lista_propiedades.registros_muestra_fin}} - {{usuariosLista[i][1]}}
+      
+        -->
+        
+      <td *ngFor="let celda of usuariosLista[i]; let i=index" [ngClass]="('columna columna'+i)"><p>{{celda}}</p></td>
+      <td class="columna">
+          <div>
+            <div *ngIf="usuariosLista[i][6] == 'HABILITADO'" class="boton_al b_pos">
+              <span class="icon-bot_ico_acceder" 
+              (click)="accion('ir', usuariosLista[i][1])"></span>
+            </div>
+            <div class="boton_al b_neg" 
+            (click)="eliminar(datos[0])">
+              <span class="icon-bot_ico_cancelar"></span>
+            </div>
+            <div class="boton_al" 
+            (click)="muestraInfo(datos)">
+              <span class="icon-bot_ico_info"></span>
+            </div>
+            <div class="boton_al b_neg" 
+            (click)="eliminar(datos[0])">
+              <span class="icon-bot_ico_cancelar"></span>
+            </div>
+            <div class="boton_al" 
+            (click)="eventoLanzado = usuariosLista[i][1]">
+              <span class="icon-bot_ico_info"></span>
+            </div>
+          </div>
+
+      </td>
+    </tr>
+      
+      <!-- <s-commons-listaDato [datos]='fila' [configuracion]='lista_datos.configuracion' (evento)="actualizaPadre($event)"></s-commons-listaDato> -->
+  </table>
+</div>
+
+<s-commons-listaMenu [infoDeLista] = 'lista_datos' [propiedadesDeLista] = 'lista_propiedades'></s-commons-listaMenu>
+
+
+<!-- 
+  <div class="boton b_pos" (click)="emite()">
+    <span class="icon-ico_unicorn"></span>
+    Bowie
+  </div> 
+-->

@@ -1,0 +1,16 @@
+<!-- 
+<div class="contenedor">
+
+  <div *ngFor="let panel of infoPaneles">
+    <s-commons-panelImagen [infoPanel]="panel"></s-commons-panelImagen> 
+  </div>
+
+</div>
+ -->
+
+<div class="contenedor">
+  <s-commons-panelImagen [infoPanel]="panel" *ngFor="let panel of infoPaneles"></s-commons-panelImagen> 
+</div>
+
+
+<p>infoPaneles ==> {{infoPaneles | json}}</p>

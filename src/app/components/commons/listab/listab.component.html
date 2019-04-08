@@ -1,0 +1,102 @@
+
+
+<div>
+  <p>    -=>   {{datosDeLista}}</p>
+  <s-commons-listaMenu [infoDeLista] = 'lista_datos' [propiedadesDeLista] = 'lista_propiedades'></s-commons-listaMenu>
+  
+    <!--  -->
+  
+    
+      <!--   
+      <div *ngFor="let fila of usuariosLista" class="fila">
+  
+        <s-commons-listaDato [datos]='fila' [configuracion]='lista_datos.configuracion' (evento)="actualizaPadre($event)"></s-commons-listaDato>
+      
+      </div>
+   
+    <p>
+      x => {{usuariosLista}}
+    </p>
+    <p>
+      x => {{lista_propiedades}}
+    </p>
+    <p>
+      x => {{lista_propiedades | json}}
+    </p>
+     -->
+     <table class="table table-sm table-hover">
+        <tbody>
+          
+      <tr>
+        <td *ngFor="let dato of modelo; let i=index">{{modelo[i]}}</td>
+        <!-- <th *ngFor="let fila of lista_datos.cabecera; let c=index" class="columna" ><p>{{fila}}</p></th> -->
+        <th class="columna"></th>
+      </tr>
+      
+      <tr *ngFor="let fila of usuariosLista; let i=index">
+  
+          <!--
+            <td class="columna" >{{usuariosLista[i]}}</td>
+            {{usuariosLista[i]}}
+            {{i}} - {{lista_propiedades.registros_muestra_inicio}} - {{lista_propiedades.registros_muestra_fin}} - {{usuariosLista[i][1]}}
+        
+          -->
+
+        <!--   
+        <td>{{fila | pObjectPropeties}}</td>
+        <td>First Name: {{u.key}} <br> Last Name: {{u.value}}</td>
+        
+        <td>{{fila.usuario}}</td>
+        <td>{{fila.pasword}}</td>
+         -->
+
+        <!-- <td *ngFor="let item of fila | pObjectPropeties">{{item.key}}:{{item.value}}</td> -->
+        
+        <!-- <td>{{tempG(i)}}</td>
+        <td  *ngFor="let celda of fila">{{celda}}</td> -->
+        <!-- 
+        <td>{{fila[temp]}}</td>
+        <td *ngFor="let item of fila | pObjectPropeties">{{item.value}}</td>
+         -->
+
+        <!--   -->
+        <td *ngFor="let dato of modelo; let i=index">{{fila[modelo[i]]}}</td>
+        
+        <td class="columna">
+            <div>
+              <div *ngIf="(fila[modelo[1]] == 'pani')" class="boton_al b_pos">
+                <span class="icon-bot_ico_acceder" 
+                (click)="accion('ir', fila[keyCodigo])"></span>
+              </div>
+              <div class="boton_al b_neg" 
+              (click)="eliminar(datos[0])">
+                <span class="icon-bot_ico_cancelar"></span>
+              </div>
+              <div class="boton_al" 
+              (click)="muestraInfo(datos)">
+                <span class="icon-bot_ico_info"></span>
+              </div>
+              <div class="boton_al b_neg" 
+              (click)="buchon(fila[modelo[1]], 'pani')">
+                <span class="icon-mod_sisabi"></span>
+              </div>
+              <div class="boton_al" 
+              (click)="eventoLanzado = fila[keyCodigo]">
+                <span class="icon-bot_ico_info"></span>
+              </div>
+            </div>
+  
+        </td>
+         <!--    
+        <td *ngFor="let celda of usuariosLista[i]; let i=index" [ngClass]="('columna columna'+i)"><p>{{celda}}</p></td>
+        
+         -->
+      </tr>
+
+    </tbody>
+  </table>
+
+  </div>
+  
+  <s-commons-listaMenu [infoDeLista] = 'lista_datos' [propiedadesDeLista] = 'lista_propiedades'></s-commons-listaMenu>
+  

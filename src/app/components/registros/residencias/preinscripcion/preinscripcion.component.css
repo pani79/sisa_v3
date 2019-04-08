@@ -1,0 +1,152 @@
+
+/* SISA_panelPasos  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*
+.SISA_panelPasos{ 
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-content: stretch;
+	margin: 20px 0 20px 0;
+}
+.SISA_panelPasos > .menu{ 	max-width: 100%; }
+.SISA_panelPasos > .menu > .pasos{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.SISA_panelPasos > .menu > .pasos > div{
+	width: 100%;
+	margin: 0px;
+}
+.SISA_panelPasos > .menu > .pasos > div:first-child{	margin-left: 0px; }
+.SISA_panelPasos > .menu > .pasos > div:last-child{	margin-right: 0px; }
+
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero{ position: relative; }
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .nexo_i,
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .nexo_d{
+	position: absolute; 
+	z-index: 1;
+	top: 35px;
+	height: 6px;
+	width: 50%;
+	border-left-style: none;
+	border-right-style: none;
+}
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .nexo_i{	margin-right: 50%;	background-color: grey;}
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .nexo_d{	margin-left: 50%;	background-color: grey;}
+
+.SISA_panelPasos > .menu > .pasos > div:first-child .pasoNumero .nexo_i{	display: none;	}
+.SISA_panelPasos > .menu > .pasos > div:last-child .pasoNumero .nexo_d{	display: none;	}
+
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .color,
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .colorFondo{
+	position: absolute; 
+}
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .color{
+	z-index: 10;
+	height: 72px;
+	width: 72px;
+	left: 50%;
+	margin: 0px  0px 0px -36px !important;
+	border-radius: 36px;
+	border: white 2px solid;
+	background-color: grey;
+}
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .colorFondo{
+	z-index: 8;
+	height: 80px;
+	width: 80px;
+	left: 50%;
+	margin: -4px 0px 0px -40px !important;
+	border-radius: 40px;
+	background-color: grey;
+}
+.SISA_panelPasos > .menu > .pasos > div > .pasoNumero > .color > h2{	
+	margin-top: 7px; 
+	font-size: 48px !important; 
+	text-align: center;	
+	color: white; 
+}
+
+.SISA_panelPasos > .menu > .pasos > div > .pasoTitulo {			margin-top: 90px; }
+.SISA_panelPasos > .menu > .pasos > div > .pasoTitulo > *{	text-align: center;}
+.SISA_panelPasos > .menu > .pasos > div > .pasoTitulo > h3{	margin-top: 34px; }
+.SISA_panelPasos > .menu > .pasos > div > .pasoTitulo > p{	margin: -6px 0px 0px 0px !important; line-height: 1.2; }
+
+.SISA_panelPasos .seccionesPaso > div > h2:first-child{ margin: 20px 0px 40px 0px; }
+
+
+*/
+/* panelPasos_horizontal  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.SISA_panelPasos{ 
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-content: stretch;
+	margin: 20px 0 20px 0;
+}
+.panelPasos_horizontal > .menu{ 	max-width: 100%; }
+.panelPasos_horizontal > .menu > .pasos{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.panelPasos_horizontal > .menu > .pasos > div{
+	width: 100%;
+	margin: 0px;
+}
+.panelPasos_horizontal > .menu > .pasos > div:first-child{	margin-left: 0px; }
+.panelPasos_horizontal > .menu > .pasos > div:last-child{	margin-right: 0px; }
+
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero{ position: relative; }
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .nexo_i,
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .nexo_d{
+	position: absolute; 
+	z-index: 1;
+	top: 35px;
+	height: 6px;
+	width: 50%;
+	border-left-style: none;
+	border-right-style: none;
+}
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .nexo_i{	margin-right: 50%;	background-color: grey;}
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .nexo_d{	margin-left: 50%;	background-color: grey;}
+
+.panelPasos_horizontal > .menu > .pasos > div:first-child .pasoNumero .nexo_i{	display: none;	}
+.panelPasos_horizontal > .menu > .pasos > div:last-child .pasoNumero .nexo_d{	display: none;	}
+
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .color,
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .colorFondo{
+	position: absolute; 
+}
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .color{
+	z-index: 10;
+	height: 72px;
+	width: 72px;
+	left: 50%;
+	margin: 0px  0px 0px -36px !important;
+	border-radius: 36px;
+	border: white 2px solid;
+	background-color: grey;
+	cursor: pointer;
+}
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .colorFondo{
+	z-index: 8;
+	height: 80px;
+	width: 80px;
+	left: 50%;
+	margin: -4px 0px 0px -40px !important;
+	border-radius: 40px;
+	background-color: grey;
+}
+.panelPasos_horizontal > .menu > .pasos > div > .pasoNumero > .color > h2{	margin-top: 7px; font-size: 48px !important; ; text-align: center;	color: white; }
+
+.panelPasos_horizontal > .menu > .pasos > div > .pasoTitulo {			margin-top: 90px; }
+.panelPasos_horizontal > .menu > .pasos > div > .pasoTitulo > *{	text-align: center;}
+.panelPasos_horizontal > .menu > .pasos > div > .pasoTitulo > h3{	margin-top: 34px; margin-bottom: 4px; }
+.panelPasos_horizontal > .menu > .pasos > div > .pasoTitulo > p{	margin: -6px 0px 0px 0px !important; line-height: 1.2; }
+
+.panelPasos_horizontal .seccionesPaso > div > h2:first-child{ margin: 20px 0px 40px 0px; }

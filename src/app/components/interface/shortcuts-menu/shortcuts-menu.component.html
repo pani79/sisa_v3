@@ -1,0 +1,43 @@
+<div class="contenedor">
+
+  <div>
+
+    <div class="solapa">
+      <div class="encabezado" (click)="ActivaDesactivaSolapa(0)" [class.d_abierto]="solapasLaterales[0]">
+        <span class="icon-ico_accesosfrecuentes"></span>
+        <h2 [class.d_block]="solapasLaterales[0]">Accesos frecuentes</h2>
+      </div>
+      <div [class.d_block]="solapasLaterales[0]" class="contenido">
+        <p>Hola mundo!!</p>
+      </div>
+    </div>
+</div>
+
+
+    <div>
+    <div class="solapa">
+      <div class="encabezado" (click)="ActivaDesactivaSolapa(1)" [class.d_abierto]="solapasLaterales[1]">
+        <span class="icon-bot_ico_configurar"></span>
+        <h2 [class.d_block]="solapasLaterales[1]">Unicornios</h2>
+      </div>
+      <div [class.d_block]="solapasLaterales[1]" class="contenido">
+        <s-commons-BotonCTextoEIcono [infoBoton]="botones.interface" (click)="ActivaDesactivaInterface()"></s-commons-BotonCTextoEIcono>
+      </div>
+    </div>
+</div>
+
+
+    <div>
+    <div class="solapa">
+      <div class="encabezado" (click)="ActivaDesactivaSolapa(2)" [class.d_abierto]="solapasLaterales[2]">
+        <span class="icon-ico_unicorn text-dark"></span>
+        <h2 [class.d_block]="solapasLaterales[2]">Developer</h2>
+      </div>
+      <div [class.d_block]="solapasLaterales[2]" class="contenido">
+        <p>Hola mundo!!</p>
+        <s-commons-BotonCTextoEIcono [infoBoton]="botones.placeholder"></s-commons-BotonCTextoEIcono>     
+      </div>
+    </div>
+</div>
+
+</div>

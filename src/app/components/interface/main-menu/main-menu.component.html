@@ -1,0 +1,247 @@
+<div class="barraMenu">
+  <div class="container">
+
+    <div class="row">
+      <nav class="col-12">
+          
+
+        <ul class="navbar">
+          <li>
+            <a [routerLink]="['/']" data-toggle="tooltip" data-placement="top" title="el fin es el principio">INICIO</a>
+          </li>
+          <!-- 
+          <li>
+            <a [routerLink]="['/']" placeholder="placeholder" ngbTooltip="tipContent" #t="ngbTooltip">Pruebass</a>
+          </li>
+           -->
+
+
+
+
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">REGISTROS</a>
+            <ul class="dropdown-menu registros">
+              
+              <li>
+                <a routerLink="/homes/nomivac" routerLinkActive="active">
+                <span class="icon-reg_nomivac"></span>
+                  Registro Federal de Vacunación Nominalizado (NOMIVAC)
+                </a>
+              </li>
+              <li>
+                  <a routerLink="/homes/svih" routerLinkActive="on"> 
+                  <span class="icon-reg_svih"></span>
+                    Dirección de SIDA y ETS (SVIH)
+                </a>
+              </li>            
+              <li>
+                  <a routerLink="/homes/paierc" routerLinkActive="on">
+                  <span class="icon-reg_paierc"></span>
+                    Programa de Abordaje Integral de la Enfermedad Renal Crónica (PAIERC)
+                </a>
+              </li>       
+              <li>
+                <a routerLink="/homes/pfis">
+                <span class="icon-reg_pfis"></span>
+                  Programa Federal Incluir Salud (PFIS)
+                </a>
+              </li>
+                <!-- 
+                  Programa Nacional de Cardiopatías Congénitas (CCC)
+                  Programa Nacional de Detección Temprana y Atención de la Hipoacusia (PNH)
+                  Programa Nacional de Salud Escolar (PROSANE)
+                  Programa REDES (REDES)
+                  Programa Medicamentos (MEDICAMENTOS)
+                  - Red Federal de Registros de Profesionales de la Salud (REFEPS)
+                  Registro del Programa SUMAR (SUMAR)
+                  Registro Federal de Droguerías (REDRO)
+                  - Registro Federal de Establecimientos de Salud (REFES)
+                  - Registro Federal de Farmacias (REFAR)
+                  Registro Nacional de Donantes de Sangre (REDOS)
+                  Registro Nacional de Investigaciones en Salud (RENIS)
+                  Registro Nacional de Personas Internadas por motivos de Salud Mental (RESAM)
+                  Registro Nacional del Banco de Drogas Oncológicas (BNDO)
+                  Sistema de Monitoreo de Insumos Sanitarios (SMIS)
+                  Sistema de vigilancia de lesiones (SIVILE)
+                  Sistema Nacional de Residencias del Equipo de Salud (Residencias)
+                  - Sistema Nacional de Vigilancia de la Salud (SNVS)
+                -->
+
+              <li>
+                <a [routerLink]="['/homes/pronahep']" data-toggle="tooltip" data-placement="left" title="Inicio del registro PRONAHEP"> 
+                  <span class="icon-reg_pronahep"></span>
+                    Programa Nacional de Hepatitis (PRONAHEP)
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="/homes/refeps" routerLinkActive="active">
+                  <span class="icon-reg_refeps"></span>
+                    Red Federal de Registros de Profesionales de la Salud (REFEPS)
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="/homes/refes" routerLinkActive="active">
+                  <span class="icon-reg_refes"></span>
+                  Registro Federal de Establecimientos de Salud (REFES)
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="/homes/refar" routerLinkActive="active">
+                  <span class="icon-reg_refar"></span>
+                    Registro Federal de Farmacias (REFAR)
+                  </a>
+                </li>
+                <li>
+                    <a [routerLink]="['/homes/renis']" data-toggle="tooltip" data-placement="left" title="Inicio del registro RENIS">
+                  <!-- <a (click)="navigateTo('/homes/renis')" data-toggle="tooltip" data-placement="left" title="Inicio del registro PAIERC"> -->
+                    <span class="icon-reg_renis"></span>
+                    Registro Nacional de Investigaciones en Salud (RENIS)
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="/homes/snvs" routerLinkActive="active">
+                  <span class="icon-reg_snvs"></span>
+                    Sistema Nacional de Vigilancia de la Salud (SNVS)
+                  </a>
+                </li>
+
+            </ul>
+          </li>
+
+          <li>
+            <a [routerLink]="['/uops']" data-toggle="tooltip" data-placement="top" title="click para ver NINJA">No deberias ver esto</a>
+          </li>
+        </ul>
+
+
+
+
+
+        <ul class="navbar">
+
+          <li class="miMenu dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" data-placement="top" title="Pruebas que voy haciendo pa avanzar">
+              MI MENÚ
+            </a>
+
+            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu" id="opciones_mimenu">
+
+              <li class="dropdown-submenu">
+                <div>
+
+                  <div class="miMenu_grupo">
+                    <span class="icon-ico_unicorn"></span>
+                    <div class="texto">
+                      <h4>PRUEBAS</h4>
+                      <p>Pruebas de este pintorezco desarrollador</p>
+                    </div>
+                  </div>
+
+                </div>
+                <ul class="dropdown-menu" id="opciones_mimenu_miinformacion_panel" role="menu">
+                  
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1">Usuarios</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                          <a [routerLink]="['/usuarios/']" data-toggle="tooltip" data-placement="left" title="Vamos a USUARIOS">Usuarios (lista)</a>
+                        </li>
+                      <li>
+                        <a [routerLink]="['/usuariosCrea/']" data-toggle="tooltip" data-placement="left" title="Vamos a crear usuarios">Usuario (alta)</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a [routerLink]="['/residencias/']" data-toggle="tooltip" data-placement="left" title="Residencias">Residencias</a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <hr>
+              <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+              <li class="dropdown-submenu">
+                <div>
+
+                  <div class="miMenu_grupo">
+                    <span class="icon-reg_bndo"></span>
+                    <div class="texto">
+                      <h4>BNDO</h4>
+                      <p>Registro Nacional del Banco de Drogas Oncológicas</p>
+                    </div>
+                  </div>
+
+                </div>
+                <ul class="dropdown-menu" id="opciones_mimenu_miinformacion_panel" role="menu">
+                  <li>
+                    <a class="gwt-Anchor">Mis documentos</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Mis reportes</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Mis cursos</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor" aria-hidden="true" style="display: none;">Mis noticias</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor" aria-hidden="true" style="display: none;">Mi establecimiento</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Ver mis datos de usuario</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Modificar datos de mi cuenta</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor" aria-hidden="true" style="display: none;">Ver mi ficha de ciudadano</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor" aria-hidden="true" style="display: none;">Ver mi ficha de profesional</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Ver mis mensajes y alertas históricos</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Configurar mis alertas</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Cambiar mi contraseña</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Enviar correo electrónico</a>
+                  </li>
+                  <li>
+                    <a class="gwt-Anchor">Ver términos y condiciones</a>
+                  </li>
+                  <li id="terminarSesion">
+                    <a class="gwt-Anchor">Terminar sesión</a>
+                  </li>
+                </ul>
+
+              </li>
+
+              <hr>
+              <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+              <li>
+                <a href="#">Comunidad</a>
+              </li>
+
+
+            </ul>
+
+          </li>
+        </ul>
+
+
+
+      </nav>
+    </div>
+
+  </div>
+</div>

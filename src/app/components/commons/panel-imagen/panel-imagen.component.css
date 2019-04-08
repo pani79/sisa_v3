@@ -1,0 +1,41 @@
+.panel{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5) !important;
+    background-color: white;
+    cursor: pointer;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.panel .imagen{ 
+    position: relative;   
+    border-radius: 4px 4px 0px 0px;
+    height: 100px;
+
+}
+.panel .imagen > *{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    min-height: 100px;
+    max-height: 100px;
+    border-radius: 4px 4px 0px 0px;
+}
+.panel .imagen > img{       z-index: 10;    }
+.panel .imagen > .color{    z-index: 20; opacity: .5;    }
+.panel .imagen > span{
+    z-index: 30;
+    font-size: 48px;
+    color: white;
+    /* margin-top: 50% !important; */
+    top: 25px;    
+}
+
+
+.panel .texto{      background-color: white; padding: 4px 10px; border-radius: 0px 0px 4px 4px;}
+.panel .texto > *{  color: #333;    }

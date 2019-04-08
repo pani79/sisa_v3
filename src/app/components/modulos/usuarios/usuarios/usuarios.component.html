@@ -1,0 +1,15 @@
+<s-commons-basicPage [info]="info"></s-commons-basicPage>
+<!--   
+  <div class="boton b_pos" (click)="accion()">
+    <span class="icon-ico_unicorn"></span>
+    Stargate
+  </div>
+ -->
+
+<div class="contenedorDeBotones">
+    <s-commons-BotonCTextoEIcono [infoBoton]="bot_agregar"></s-commons-BotonCTextoEIcono>
+</div>
+
+
+<s-commons-lista [idLista]="listaRequerida" (salida)="modifica($event)"></s-commons-lista>
+

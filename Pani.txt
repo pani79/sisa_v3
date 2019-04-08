@@ -1,0 +1,209 @@
+git remote add origin https://github.com/pani79/sisa_v3.git
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+ng serve --proxy-config proxyconfig.json
+
+ng generate module routing --module=app
+
+ng g c components/commons/botoneraLateral
+ng g c components/commons/lista
+ng g c components/commons/listaCabecera
+ng g c components/commons/panelImagen
+ng g c components/commons/panelImagenGrupo
+
+ng g c components/modulos/ayudaEnLinea
+ng g c components/modulos/homes
+ng g c components/modulos/noticias
+
+// ng g c components/views/botoneraLateral
+
+ng g pipe pipes/PObjectPropeties
+
+ng g c examples/usuarios/usuariosLista
+ng g c examples/usuarios/usuariosAlta
+
+ng g s services/listas
+ng g s services/sisaInfo
+
+
+
+
+--flat puts the file in src/app instead of its own folder.
+--module=app tells the CLI to register it in the imports array of the AppModule.
+
+
+// Eliminar
+- components\modulos\usuarios\usuario-crea
+
+
+// instalar mongodb sin compass
+https://www.mongodb.com
+// instalar compass por separado
+https://www.mongodb.com/download-center?filter=community#compass
+https://www.youtube.com/watch?v=2KMQdqDk9e8
+
+
+npm init --yes
+npm install express
+
+// instala nodemon (para no estar riniciando el servidor con cada
+// cambio guardado) como dependencia de desarrollo
+npm install nodemon -D
+
+// para ver por consola que pide el usuario
+npm install morgan
+
+npm install mongoose
+
+
+// prueba server
+node servidor/index.js
+// corre el script de inicio
+npm run dev
+
+
+
+// ====================================================================================
+// Arreglos
+
+corregir el problema SyntaxError: export declarations may only appear at top level of a module
+https://github.com/mcny/mcny.github.io/commit/ef48c902d99ea83e3289b7b44fb91b468302e50c
+
+(angular.json)
+(elimino) <script src="vendor/popper.js-1.12.9/dist/popper.min.js"></script>
+(cambio por) <script src="vendor/popper.js-1.12.9/dist/umd/popper-utils.min.js"></script>
+(error, dejan de andar los menues desplegables)
+
+// ====================================================================================
+// inicia mongoDB
+mongod
+
+
+// ====================================================================================
+// Instalar fireBase 
+npm install firebase angularfire2
+
+// ====================================================================================
+// Toastr (notificaciones)
+
+https://www.youtube.com/watch?v=WND9mw3HiBM&feature=youtu.be&t=3481
+https://www.npmjs.com/package/ngx-toastr
+
+
+
+
+https://github.com/FaztWeb/mean-employees/blob/master/server/controllers/employee.controller.js
+
+https://www.youtube.com/watch?v=khCIunNAEHI&index=14&list=PLL0TiOXBeDah7WVka93yhyjhq8PprRS5m
+40.03
+54.44
+103.00
+
+
+
+// ================================================================================
+// ================================================================================
+// 
+//       Bootstrap
+
+// centra las columnas que contenga
+<div class="row justify-content-md-center">
+
+
+
+// ================================================================================
+// ================================================================================
+// 
+//       Coponentes
+
+
+
+//    botones     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+<s-commons-BotonCTextoEIcono [infoBoton]="bot_agregar"></s-commons-BotonCTextoEIcono>
+
+  botones = {
+    placeholder: ['boton_neg', 'askeletor', 'No hago nada che'],
+    interface: ['boton_general', 'bot_ico_verbarra', 'mostrar/ocultar Interface']
+  };
+
+  tipo = 'boton_pos';
+  icono = 'bot_ico_aceptar';
+  texto = 'Enviar datos';
+
+//    inputs     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  <s-commons-BotonCTextoEIcono [infoBoton]="botones.buscar"></s-commons-BotonCTextoEIcono>
+
+
+  (despues del inicio de la clase y antes del constructor)
+  @Input() infoBoton: string[];
+
+  ngOnInit() {
+    this.tipo = this.infoBoton[0];
+    this.icono = this.infoBoton[1];
+    this.texto = this.infoBoton[2];
+  }
+
+
+
+
+// ================================================================================
+// ================================================================================
+// 
+//       Ver
+
+
+para el uso del pipe
+https://colintoh.com/blog/5-array-methods-that-you-should-use-today
+
+¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+
+
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
+
+
+  private _location: Location
+
+
+
+
+  getHero(): void {
+    const id = +this._route.snapshot.paramMap.get('id'); --- obtiene la id de la ruta
+    console.log('getHero => ' + id);
+    this._heroservice.getHero(id)
+      .subscribe(hero => this.hero = hero);
+  }
+
+  goBack(): void {
+    this._location.back();
+  }
+
+
+¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+
+
+import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HeroesComponent} from './heroes/heroes.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {HeroDetailComponent} from './hero-detail/hero-detail.component';
+
+const routes: Routes = [
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  {path: 'dashboard', component: DashboardComponent },
+  {path: 'detail/:id', component: HeroDetailComponent },
+  {path: 'heroes', component: HeroesComponent }
+]
+
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
+})
+
+export class AppRoutingModule {}
+  https://medium.com/@papaponmx/looping-over-object-properties-with-ngfor-in-angular-869cd7b2ddcc
+
+  https://stackoverflow.com/questions/31490713/iterate-over-object-in-angular

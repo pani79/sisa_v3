@@ -1,0 +1,91 @@
+
+.boton{
+    display: flex;
+    position: relative;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 0 4px;
+    font-size:14px;
+    font-weight: normal;
+    color: #FFF;
+    cursor: pointer; 
+  }
+  
+  .boton_al{
+      position: relative;
+    float: right;
+    width: 26px;
+    height: 26px;
+      margin: 0px 0px 0px 4px;
+      border-radius: 4px;
+      padding: 4px !important;
+      font-size: 12px;
+      font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  
+  
+  .b_gen{			  background-color: #000099; /* A2 */	}
+  .b_gen:hover{	background-color: #3366ff; /* A3 */}
+  .b_pos{			  background-color:  #006633; /* V1 */	}
+  .b_pos:hover{	background-color:#009933; /* V2 */}
+  .b_neg{			  background-color:	#990033; /* A3 */}
+  .b_neg:hover{	background-color:  #cc0033; /* R2 */}
+  .b_inh{		    background-color: #f5f5f5; /* G3 */	color: #7f7f7f;/* G1  */	}
+  .b_gen > span{			  color: #000099; /* A2 */	}
+  .b_gen:hover > span{	color: #3366ff; /* A3 */}
+  .b_pos > span{			  color:  #006633; /* V1 */	}
+  .b_pos:hover > span{	color:#009933; /* V2 */}
+  .b_neg > span{			  color:	#990033; /* A3 */}
+  .b_neg:hover > span{	color:  #cc0033; /* R2 */}
+  .b_inh > span{		    color: #f5f5f5; /* G3 */	color: #7f7f7f;/* G1  */	}
+  
+    
+  /* reveer si esta clase se sigue usando*/
+  .boton_mini{
+      position: relative;
+      float: right;
+      margin: 0px 0px 0px 10px;
+      border-radius: 4px 4px 4px 4px;
+      padding: 4px 7px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      }
+  
+  .boton:hover{	
+      cursor: pointer; 
+  }
+  
+  .boton span{
+      position: relative;
+      top: 2px;
+      margin: 2px 10px 0px 0px;
+      font-size: 16px;
+      }
+  
+  /* reveer si esta clase se sigue usando*/
+  .boton_mini span{
+      position: relative;
+      top: 1px;
+      color: #fff;
+  }
+      
+  
+  
+  .boton_general{			background-color: #000099; /* A2 */	}
+  .boton_general:hover{	background-color: #3366ff; /* A3 */}
+  
+  
+  .boton_pos{			background-color:  #006633; /* V1 */	}
+  .boton_pos:hover{	background-color:#009933; /* V2 */}
+  
+  
+  .boton_neg{			background-color:	#990033; /* A3 */}
+  .boton_neg:hover{	background-color:  #cc0033; /* R2 */}
+  
+  
+  .boton_inhab{		background-color: #f5f5f5; /* G3 */	color: #7f7f7f;/* G1  */	}
+  
+  

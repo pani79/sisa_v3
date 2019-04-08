@@ -1,0 +1,1161 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body{
+	position:absolute;
+	width: 100%;
+	min-width: 750px;
+	margin: 0px;
+	padding: 0px;	
+	font-family:'Roboto', sans-serif !important;
+	font-size:12px;
+	font-weight: normal;
+	color: #333;
+	background-color:#F5F5F5 !important; /* G3 */
+}
+
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li{	padding: 0px; margin: 0px;	}
+
+h1, h2, h3, h4, h5, h6{	font-weight: bold; margin: 0px 0px 0px 0px; padding: 0px;}
+h1, h2, h3, h4 {		color:#333;}
+
+/*Titulos*/
+h1{			font-size:22px !important;}
+h2{			font-size:18px !important;}
+h3{			font-size:16px !important;}
+h4{			font-size:12px !important;}
+h5, h6{		font-size:3px; color: #FF0;}
+
+p{			font-size:12px; font-weight:normal; color: #333;}
+
+/*Links*/
+a{			color:#3366ff; /* A3 */ font-weight:normal; text-decoration:none;}
+a:hover{	text-decoration: underline;color:#3366ff; /* A3 */ }
+a:focus{	text-decoration: underline;color:#3366ff; /* A3 */ }
+
+ul{	margin: 0px; padding: 0px; list-style-type:none;}
+
+main > .container{	padding: 10px 0px 40px 0px;	}
+aside{  position: absolute; top: 140px; right: 0px;}
+
+
+
+/* 
+====================================================================================================================================
+	Colores deegistros y modulos
+====================================================================================================================================
+*/	
+
+.mod_sisa{			  background-color: #3366ff; color: #3366ff;}
+.mod_ficha{			  background-color: #cc6600; color: #cc6600;}
+
+.reg_bndo{				background-color: #cc9900; color: #cc9900;}
+.reg_ccc{					background-color: #ff0000; color: #ff0000;}
+.reg_cus{					background-color: #3366ff; color: #3366ff;}
+.reg_deis{				background-color: #6ab074; color: #6ab074;}
+.reg_epf{					background-color: #92278F; color: #92278F;}
+.reg_esavi{				background-color: #383780; color: #383780;}
+.reg_ieh{					background-color: #990066; color: #990066;}
+.reg_iepna{				background-color: #009999; color: #009999;}
+.reg_nomivac{			background-color: #383780; color: #383780;}
+.reg_ongs{				background-color: #6db5ff; color: #6db5ff;}
+.reg_pfis{				background-color: #d4bb92; color: #d4bb92;}
+.reg_pnh{					background-color: #009f98; color: #009f98;}
+.reg_paierc{			background-color: #514f85; color: #514f85;}
+.reg_pnt{					background-color: #eab8ea; color: #eab8ea;}
+.reg_pronahep{		background-color: #CB134F; color: #CB134F;}
+.reg_prosane{			background-color: #0049ff; color: #0049ff;}
+.reg_recs{				background-color: #AE0EFF; color: #AE0EFF;}
+.reg_recann{			background-color: #105B19; color: #105B19;}
+.reg_redes{				background-color: #003a5e; color: #003a5e;}
+.reg_redos{				background-color: #c13464; color: #c13464;}
+.reg_refecv{			background-color: #e4312b; color: #e4312b;}
+.reg_refes{				background-color: #3e699c; color: #3e699c;}
+.reg_refeps{			background-color: #a13d3b; color: #a13d3b;}
+.reg_rehab{				background-color: #00bff2; color: #00bff2;}
+.reg_renac{				background-color: #4AAAD3; color: #4AAAD3;}
+.reg_renacel{			background-color: #f7c42d; color: #f7c42d;}
+.reg_rendecar{		background-color: #b3cd43; color: #b3cd43;}
+.reg_renis{				background-color: #819e44; color: #819e44;}
+.reg_remediar{		background-color: #0092CF; color: #0092CF;}
+.reg_resam{				background-color: #F00505; color: #F00505;}
+.reg_residencias{	background-color: #3fa0d9; color: #3fa0d9;}
+.reg_restringido{	background-color: #aaa;    color: #aaa;}
+.reg_rnh{				  background-color: #71040A; color: #71040A;}
+.reg_sa{				  background-color: #107569; color: #107569;}
+.reg_sip{				  background-color: #3a77a7; color: #3a77a7;}
+.reg_sivile{			background-color: #003333; color: #003333;}
+.reg_smis{				background-color: #00529E; color: #00529E;}
+.reg_snvs{				background-color: #0ca6b2; color: #0ca6b2;}
+.reg_svih{				background-color: #e0081b; color: #e0081b;}
+.reg_sumar{				background-color: #009fe3; color: #009fe3;}
+.reg_telesalud{		background-color: #00DDFD; color: #00DDFD;}
+.reg_ufis{				background-color: #00315A; color: #00315A;}
+
+/* 
+====================================================================================================================================
+====================================================================================================================================
+
+	SISAfont
+	(la fuente pulenta del SISA)
+	contiene todos los logos e iconos en version plana (monocromatica)
+
+====================================================================================================================================
+====================================================================================================================================
+*/	
+
+
+
+
+@font-face {
+	font-family: 'sisafont';
+	src:  url('./assets/fonts/sisafont.eot?2vfz4p#iefix') format('embedded-opentype'),
+	  url('./assets/fonts/sisafont.ttf?2vfz4p') format('truetype'),
+	  url('./assets/fonts/sisafont.woff?2vfz4p') format('woff'),
+	  url('./assets/fonts/sisafont.svg?2vfz4p#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  
+  [class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'sisafont' !important;
+	/*speak: none;*/
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-bot_ico__endesarrollo:before {
+	content: "\e900";
+  }
+  .icon-bot_ico_acceder:before {
+	content: "\e901";
+  }
+  .icon-bot_ico_acceder_ver:before {
+	content: "\e902";
+  }
+  .icon-bot_ico_aceptar:before {
+	content: "\e903";
+  }
+  .icon-bot_ico_actualizar:before {
+	content: "\e904";
+  }
+  .icon-bot_ico_agregar:before {
+	content: "\e905";
+  }
+  .icon-bot_ico_archivo:before {
+	content: "\e906";
+  }
+  .icon-bot_ico_archivo_adjunto:before {
+	content: "\e907";
+  }
+  .icon-bot_ico_archivo_agregar:before {
+	content: "\e908";
+  }
+  .icon-bot_ico_archivo_bmp:before {
+	content: "\e909";
+  }
+  .icon-bot_ico_archivo_csv:before {
+	content: "\e90a";
+  }
+  .icon-bot_ico_archivo_descarga:before {
+	content: "\e90b";
+  }
+  .icon-bot_ico_archivo_doc:before {
+	content: "\e90c";
+  }
+  .icon-bot_ico_archivo_jpeg:before {
+	content: "\e90d";
+  }
+  .icon-bot_ico_archivo_json:before {
+	content: "\e90e";
+  }
+  .icon-bot_ico_archivo_pdf:before {
+	content: "\e90f";
+  }
+  .icon-bot_ico_archivo_pps:before {
+	content: "\e910";
+  }
+  .icon-bot_ico_archivo_ppt:before {
+	content: "\e911";
+  }
+  .icon-bot_ico_archivo_rar:before {
+	content: "\e912";
+  }
+  .icon-bot_ico_archivo_txt:before {
+	content: "\e913";
+  }
+  .icon-bot_ico_archivo_url:before {
+	content: "\e914";
+  }
+  .icon-bot_ico_archivo_xls:before {
+	content: "\e915";
+  }
+  .icon-bot_ico_archivo_xlsx:before {
+	content: "\e916";
+  }
+  .icon-bot_ico_archivo_zip:before {
+	content: "\e917";
+  }
+  .icon-bot_ico_archivos_descargar:before {
+	content: "\e918";
+  }
+  .icon-bot_ico_archivos_exportar:before {
+	content: "\e919";
+  }
+  .icon-bot_ico_atencion:before {
+	content: "\e91a";
+  }
+  .icon-bot_ico_auditoriaconsultar:before {
+	content: "\e91b";
+  }
+  .icon-bot_ico_ayudaenlinea:before {
+	content: "\e91c";
+  }
+  .icon-bot_ico_basededatos:before {
+	content: "\e91d";
+  }
+  .icon-bot_ico_basededatos_configurar:before {
+	content: "\e91e";
+  }
+  .icon-bot_ico_basededatos_error:before {
+	content: "\e91f";
+  }
+  .icon-bot_ico_borrar:before {
+	content: "\e920";
+  }
+  .icon-bot_ico_buscar:before {
+	content: "\e921";
+  }
+  .icon-bot_ico_cancelar:before {
+	content: "\e922";
+  }
+  .icon-bot_ico_capacitacion_agendaeinscripcion:before {
+	content: "\e923";
+  }
+  .icon-bot_ico_capacitacion_cursosdictados:before {
+	content: "\e924";
+  }
+  .icon-bot_ico_capacitacion_cursosdisponibles:before {
+	content: "\e925";
+  }
+  .icon-bot_ico_cd_info:before {
+	content: "\e926";
+  }
+  .icon-bot_ico_cmdb_ciudadano:before {
+	content: "\e927";
+  }
+  .icon-bot_ico_cmdb_ciudadano_coberturasocial:before {
+	content: "\e928";
+  }
+  .icon-bot_ico_cmdb_ciudadano_datospersonales:before {
+	content: "\e929";
+  }
+  .icon-bot_ico_cmdb_ciudadano_domicilio:before {
+	content: "\e92a";
+  }
+  .icon-bot_ico_cmdb_ciudadano_infocontacto:before {
+	content: "\e92b";
+  }
+  .icon-bot_ico_cmdb_ciudadano_informacionvital:before {
+	content: "\e92c";
+  }
+  .icon-bot_ico_cmdb_ciudadano_niveldeformacion:before {
+	content: "\e92d";
+  }
+  .icon-bot_ico_cmdb_ciudadano_situacionlaboral:before {
+	content: "\e92e";
+  }
+  .icon-bot_ico_cmdb_ciudadanoaceptar .path1:before {
+	content: "\e92f";
+	color: rgb(0, 0, 153);
+  }
+  .icon-bot_ico_cmdb_ciudadanoaceptar .path2:before {
+	content: "\e930";
+	margin-left: -1em;
+	color: rgb(0, 0, 153);
+  }
+  .icon-bot_ico_cmdb_ciudadanoaceptar .path3:before {
+	content: "\e931";
+	margin-left: -1em;
+	color: rgb(0, 0, 153);
+  }
+  .icon-bot_ico_cmdb_ciudadanoaceptar .path4:before {
+	content: "\e932";
+	margin-left: -1em;
+	color: rgb(0, 102, 51);
+  }
+  .icon-bot_ico_cmdb_ciudadanoaceptar .path5:before {
+	content: "\e933";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+  }
+  .icon-bot_ico_cmdb_datosasociados:before {
+	content: "\e934";
+  }
+  .icon-bot_ico_cmdb_documentos:before {
+	content: "\e935";
+  }
+  .icon-bot_ico_cmdb_estados_anses:before {
+	content: "\e936";
+  }
+  .icon-bot_ico_cmdb_estados_ape:before {
+	content: "\e937";
+  }
+  .icon-bot_ico_cmdb_estados_auh:before {
+	content: "\e938";
+  }
+  .icon-bot_ico_cmdb_estados_auh_b:before {
+	content: "\e939";
+  }
+  .icon-bot_ico_cmdb_estados_auh_t:before {
+	content: "\e93a";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_0neg:before {
+	content: "\e93b";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_0pos:before {
+	content: "\e93c";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_abneg:before {
+	content: "\e93d";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_abpos:before {
+	content: "\e93e";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_aneg:before {
+	content: "\e93f";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_apos:before {
+	content: "\e940";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_bneg:before {
+	content: "\e941";
+  }
+  .icon-bot_ico_cmdb_estados_sangre_bpos:before {
+	content: "\e942";
+  }
+  .icon-bot_ico_cmdb_estados_sintys .path1:before {
+	content: "\e943";
+	color: rgb(0, 117, 171);
+	opacity: 0.5;
+  }
+  .icon-bot_ico_cmdb_estados_sintys .path2:before {
+	content: "\e944";
+	margin-left: -1em;
+	color: rgb(129, 174, 222);
+	opacity: 0.5;
+  }
+  .icon-bot_ico_cmdb_estados_sss .path1:before {
+	content: "\e945";
+	color: rgb(123, 123, 123);
+  }
+  .icon-bot_ico_cmdb_estados_sss .path2:before {
+	content: "\e946";
+	margin-left: -1em;
+	color: rgb(147, 144, 147);
+  }
+  .icon-bot_ico_cmdb_estados_sss .path3:before {
+	content: "\e947";
+	margin-left: -1em;
+	color: rgb(69, 112, 164);
+  }
+  .icon-bot_ico_cmdb_ficha_convinarficha:before {
+	content: "\e948";
+  }
+  .icon-bot_ico_cmdb_ficha_incucai:before {
+	content: "\e949";
+  }
+  .icon-bot_ico_cmdb_indocumentado:before {
+	content: "\e94a";
+  }
+  .icon-bot_ico_cmdb_nucleofamiliar:before {
+	content: "\e94b";
+  }
+  .icon-bot_ico_cmdb_prestaciones:before {
+	content: "\e94c";
+  }
+  .icon-bot_ico_cmdb_sexofemenino:before {
+	content: "\e94d";
+  }
+  .icon-bot_ico_cmdb_sexomasculino:before {
+	content: "\e94e";
+  }
+  .icon-bot_ico_comunidadsisa_chatagregar:before {
+	content: "\e94f";
+  }
+  .icon-bot_ico_comunidadsisa_chatdeshabilitado:before {
+	content: "\e950";
+  }
+  .icon-bot_ico_comunidadsisa_chathabilitado:before {
+	content: "\e951";
+  }
+  .icon-bot_ico_configurar:before {
+	content: "\e952";
+  }
+  .icon-bot_ico_copiar:before {
+	content: "\e953";
+  }
+  .icon-bot_ico_deshabilitar:before {
+	content: "\e954";
+  }
+  .icon-bot_ico_documentos:before {
+	content: "\e955";
+  }
+  .icon-bot_ico_editar:before {
+	content: "\e956";
+  }
+  .icon-bot_ico_eliminar:before {
+	content: "\e957";
+  }
+  .icon-bot_ico_explorar:before {
+	content: "\e958";
+  }
+  .icon-bot_ico_exportarreportes:before {
+	content: "\e959";
+  }
+  .icon-bot_ico_fuenteagrandar:before {
+	content: "\e95a";
+  }
+  .icon-bot_ico_fuentereducir:before {
+	content: "\e95b";
+  }
+  .icon-bot_ico_geolocalizacion:before {
+	content: "\e95c";
+  }
+  .icon-bot_ico_geolocalizacion_mapa:before {
+	content: "\e95d";
+  }
+  .icon-bot_ico_globo_info:before {
+	content: "\e95e";
+  }
+  .icon-bot_ico_grabar:before {
+	content: "\e95f";
+  }
+  .icon-bot_ico_habilitar:before {
+	content: "\e960";
+  }
+  .icon-bot_ico_imprimir:before {
+	content: "\e961";
+  }
+  .icon-bot_ico_info:before {
+	content: "\e962";
+  }
+  .icon-bot_ico_inhabilitado:before {
+	content: "\e963";
+  }
+  .icon-bot_ico_institucionformadora:before {
+	content: "\e964";
+  }
+  .icon-bot_ico_int_menu:before {
+	content: "\e965";
+  }
+  .icon-bot_ico_int_menu_contraer:before {
+	content: "\e966";
+  }
+  .icon-bot_ico_int_menu_expandir:before {
+	content: "\e967";
+  }
+  .icon-bot_ico_int_menu_flecha:before {
+	content: "\e968";
+  }
+  .icon-bot_ico_lectoroptico:before {
+	content: "\e969";
+  }
+  .icon-bot_ico_listas_anterior:before {
+	content: "\e96a";
+  }
+  .icon-bot_ico_listas_ordenar_ascendente:before {
+	content: "\e96b";
+  }
+  .icon-bot_ico_listas_ordenar_descendente:before {
+	content: "\e96c";
+  }
+  .icon-bot_ico_listas_primer:before {
+	content: "\e96d";
+  }
+  .icon-bot_ico_listas_siguiente:before {
+	content: "\e96e";
+  }
+  .icon-bot_ico_listas_ultimo:before {
+	content: "\e96f";
+  }
+  .icon-bot_ico_map_00:before {
+	content: "\e970";
+  }
+  .icon-bot_ico_map_01:before {
+	content: "\e971";
+  }
+  .icon-bot_ico_map_02:before {
+	content: "\e972";
+  }
+  .icon-bot_ico_map_03:before {
+	content: "\e973";
+  }
+  .icon-bot_ico_map_04:before {
+	content: "\e974";
+  }
+  .icon-bot_ico_map_05:before {
+	content: "\e975";
+  }
+  .icon-bot_ico_map_06:before {
+	content: "\e976";
+  }
+  .icon-bot_ico_map_07:before {
+	content: "\e977";
+  }
+  .icon-bot_ico_map_08:before {
+	content: "\e978";
+  }
+  .icon-bot_ico_map_09:before {
+	content: "\e979";
+  }
+  .icon-bot_ico_map_10:before {
+	content: "\e97a";
+  }
+  .icon-bot_ico_map_11:before {
+	content: "\e97b";
+  }
+  .icon-bot_ico_map_12:before {
+	content: "\e97c";
+  }
+  .icon-bot_ico_map_13:before {
+	content: "\e97d";
+  }
+  .icon-bot_ico_map_14:before {
+	content: "\e97e";
+  }
+  .icon-bot_ico_map_15:before {
+	content: "\e97f";
+  }
+  .icon-bot_ico_map_16:before {
+	content: "\e980";
+  }
+  .icon-bot_ico_map_17:before {
+	content: "\e981";
+  }
+  .icon-bot_ico_map_18:before {
+	content: "\e982";
+  }
+  .icon-bot_ico_map_19:before {
+	content: "\e983";
+  }
+  .icon-bot_ico_map_20:before {
+	content: "\e984";
+  }
+  .icon-bot_ico_map_21:before {
+	content: "\e985";
+  }
+  .icon-bot_ico_map_22:before {
+	content: "\e986";
+  }
+  .icon-bot_ico_map_23:before {
+	content: "\e987";
+  }
+  .icon-bot_ico_map_24:before {
+	content: "\e988";
+  }
+  .icon-bot_ico_medicos:before {
+	content: "\e989";
+  }
+  .icon-bot_ico_observacionesmostrar .path1:before {
+	content: "\e98a";
+	color: rgb(0, 0, 0);
+  }
+  .icon-bot_ico_observacionesmostrar .path2:before {
+	content: "\e98b";
+	margin-left: -1em;
+	color: rgb(0, 153, 51);
+  }
+  .icon-bot_ico_observacionesmostrar .path3:before {
+	content: "\e98c";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+  }
+  .icon-bot_ico_observacionesocultar .path1:before {
+	content: "\e98d";
+	color: rgb(204, 0, 51);
+  }
+  .icon-bot_ico_observacionesocultar .path2:before {
+	content: "\e98e";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+  }
+  .icon-bot_ico_observacionesocultar .path3:before {
+	content: "\e98f";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+  }
+  .icon-bot_ico_refeps_profesional_certificadodoespecialidad:before {
+	content: "\e990";
+  }
+  .icon-bot_ico_refeps_profesional_formaciondegrado:before {
+	content: "\e991";
+  }
+  .icon-bot_ico_refeps_profesional_formaciondeposgrado:before {
+	content: "\e992";
+  }
+  .icon-bot_ico_refeps_profesional_inhabilitaciones:before {
+	content: "\e993";
+  }
+  .icon-bot_ico_refeps_profesional_matriculacion:before {
+	content: "\e994";
+  }
+  .icon-bot_ico_refeps_profesional_seguridadsocial:before {
+	content: "\e995";
+  }
+  .icon-bot_ico_refes_colegio:before {
+	content: "\e996";
+  }
+  .icon-bot_ico_refes_habilitaciones:before {
+	content: "\e997";
+  }
+  .icon-bot_ico_renaper:before {
+	content: "\e998";
+  }
+  .icon-bot_ico_reporte_chequear:before {
+	content: "\e999";
+  }
+  .icon-bot_ico_reportes_geolocalizacion:before {
+	content: "\e99a";
+  }
+  .icon-bot_ico_reportes_informes:before {
+	content: "\e99b";
+  }
+  .icon-bot_ico_reportes_integrados:before {
+	content: "\e99c";
+  }
+  .icon-bot_ico_reportes_listados:before {
+	content: "\e99d";
+  }
+  .icon-bot_ico_reportes_numericos:before {
+	content: "\e99e";
+  }
+  .icon-bot_ico_salir:before {
+	content: "\e99f";
+  }
+  .icon-bot_ico_smis_generarmovimiento:before {
+	content: "\e9a0";
+  }
+  .icon-bot_ico_snvs_clinica:before {
+	content: "\e9a1";
+  }
+  .icon-bot_ico_snvs_embarazo:before {
+	content: "\e9a2";
+  }
+  .icon-bot_ico_snvs_epidemiologia:before {
+	content: "\e9a3";
+  }
+  .icon-bot_ico_snvs_laboratorio:before {
+	content: "\e9a4";
+  }
+  .icon-bot_ico_snvs_monitoreo:before {
+	content: "\e9a5";
+  }
+  .icon-bot_ico_snvs_notificacion:before {
+	content: "\e9a6";
+  }
+  .icon-bot_ico_soporte_niveles:before {
+	content: "\e9a7";
+  }
+  .icon-bot_ico_soporte_preguntasfrecuentes:before {
+	content: "\e9a8";
+  }
+  .icon-bot_ico_usuario_agregar:before {
+	content: "\e9a9";
+  }
+  .icon-bot_ico_usuario_deshabilitar:before {
+	content: "\e9aa";
+  }
+  .icon-bot_ico_usuario_eliminar:before {
+	content: "\e9ab";
+  }
+  .icon-bot_ico_usuario_enviarmail:before {
+	content: "\e9ac";
+  }
+  .icon-bot_ico_usuario_resetear:before {
+	content: "\e9ad";
+  }
+  .icon-bot_ico_usuario_ultimosaccesos:before {
+	content: "\e9ae";
+  }
+  .icon-bot_ico_usuarios:before {
+	content: "\e9af";
+  }
+  .icon-bot_ico_usuarios_aceptar:before {
+	content: "\e9b0";
+  }
+  .icon-bot_ico_verbarra:before {
+	content: "\e9b1";
+  }
+  .icon-bot_ico_volver:before {
+	content: "\e9b2";
+  }
+  .icon-bot_ico_zoomagrandar:before {
+	content: "\e9b3";
+  }
+  .icon-bot_ico_zoomreducir:before {
+	content: "\e9b4";
+  }
+  .icon-ico_accesosfrecuentes:before {
+	content: "\e9b5";
+  }
+  .icon-ico_homes_acerca:before {
+	content: "\e9b6";
+  }
+  .icon-ico_homes_autoridades:before {
+	content: "\e9b7";
+  }
+  .icon-ico_homes_documentacionaccesopublico:before {
+	content: "\e9b8";
+  }
+  .icon-ico_homes_establecimientos:before {
+	content: "\e9b9";
+  }
+  .icon-ico_homes_faq:before {
+	content: "\e9ba";
+  }
+  .icon-ico_homes_infografia:before {
+	content: "\e9bb";
+  }
+  .icon-ico_homes_investigacion:before {
+	content: "\e9bc";
+  }
+  .icon-ico_homes_marconormativo:before {
+	content: "\e9bd";
+  }
+  .icon-ico_homes_reniscomiteetica:before {
+	content: "\e9be";
+  }
+  .icon-ico_homes_renisconsultar:before {
+	content: "\e9bf";
+  }
+  .icon-ico_homes_renisinformaciondelregistro:before {
+	content: "\e9c0";
+  }
+  .icon-ico_homes_renisinvestigador:before {
+	content: "\e9c1";
+  }
+  .icon-ico_homes_renispatrocinador:before {
+	content: "\e9c2";
+  }
+  .icon-ico_homes_renisregistrar:before {
+	content: "\e9c3";
+  }
+  .icon-ico_interface_expandir:before {
+	content: "\e9c4";
+  }
+  .icon-ico_sisa_icono:before {
+	content: "\e9c5";
+  }
+  .icon-ico_sisa_logo:before {
+	content: "\e9c6";
+  }
+  .icon-ico_unicorn:before {
+	content: "\e9c7";
+  }
+  .icon-mod_agenda:before {
+	content: "\e9c8";
+  }
+  .icon-mod_alertas:before {
+	content: "\e9c9";
+  }
+  .icon-mod_auditoria:before {
+	content: "\e9ca";
+  }
+  .icon-mod_autoridadesyreferentes:before {
+	content: "\e9cb";
+  }
+  .icon-mod_biblioteca:before {
+	content: "\e9cc";
+  }
+  .icon-mod_capacitacion:before {
+	content: "\e9cd";
+  }
+  .icon-mod_centraldereportes:before {
+	content: "\e9ce";
+  }
+  .icon-mod_codificaciones:before {
+	content: "\e9cf";
+  }
+  .icon-mod_codificacionesauxiliares:before {
+	content: "\e9d0";
+  }
+  .icon-mod_comunidadsisa:before {
+	content: "\e9d1";
+  }
+  .icon-mod_cus:before {
+	content: "\e9d2";
+  }
+  .icon-mod_fichadeciudadano:before {
+	content: "\e9d3";
+  }
+  .icon-mod_geosisa:before {
+	content: "\e9d4";
+  }
+  .icon-mod_ministerios:before {
+	content: "\e9d5";
+  }
+  .icon-mod_movile:before {
+	content: "\e9d6";
+  }
+  .icon-mod_noticias:before {
+	content: "\e9d7";
+  }
+  .icon-mod_padron:before {
+	content: "\e9d8";
+  }
+  .icon-mod_puco:before {
+	content: "\e9d9";
+  }
+  .icon-mod_serviciosweb:before {
+	content: "\e9da";
+  }
+  .icon-mod_sisabi:before {
+	content: "\e9db";
+  }
+  .icon-mod_sisageneral:before {
+	content: "\e9dc";
+  }
+  .icon-mod_soporte:before {
+	content: "\e9dd";
+  }
+  .icon-mod_usuarios:before {
+	content: "\e9de";
+  }
+  .icon-mod_verificador:before {
+	content: "\e9df";
+  }
+  .icon-reg__registrorestringido:before {
+	content: "\e9e0";
+  }
+  .icon-reg_bndo:before {
+	content: "\e9e1";
+  }
+  .icon-reg_ccc:before {
+	content: "\e9e2";
+  }
+  .icon-reg_deis:before {
+	content: "\e9e3";
+  }
+  .icon-reg_epf:before {
+	content: "\e9e4";
+  }
+  .icon-reg_esavi:before {
+	content: "\e9e5";
+  }
+  .icon-reg_ieh:before {
+	content: "\e9e6";
+  }
+  .icon-reg_iepna:before {
+	content: "\e9e7";
+  }
+  .icon-reg_nomivac:before {
+	content: "\e9e8";
+  }
+  .icon-reg_ongs:before {
+	content: "\e9e9";
+  }
+  .icon-reg_paierc:before {
+	content: "\e9ea";
+  }
+  .icon-reg_pfis:before {
+	content: "\e9eb";
+  }
+  .icon-reg_pnh:before {
+	content: "\e9ec";
+  }
+  .icon-reg_pnt:before {
+	content: "\e9ed";
+  }
+  .icon-reg_pronahep:before {
+	content: "\e9ee";
+  }
+  .icon-reg_prosane:before {
+	content: "\e9ef";
+  }
+  .icon-reg_recann:before {
+	content: "\e9f0";
+  }
+  .icon-reg_recom:before {
+	content: "\e9f1";
+  }
+  .icon-reg_recs:before {
+	content: "\e9f2";
+  }
+  .icon-reg_redes:before {
+	content: "\e9f3";
+  }
+  .icon-reg_redh:before {
+	content: "\e9f4";
+  }
+  .icon-reg_redos:before {
+	content: "\e9f5";
+  }
+  .icon-reg_redro:before {
+	content: "\e9f6";
+  }
+  .icon-reg_refar:before {
+	content: "\e9f7";
+  }
+  .icon-reg_refecv:before {
+	content: "\e9f8";
+  }
+  .icon-reg_refeps:before {
+	content: "\e9f9";
+  }
+  .icon-reg_refes:before {
+	content: "\e9fa";
+  }
+  .icon-reg_rehab:before {
+	content: "\e9fb";
+  }
+  .icon-reg_remediar:before {
+	content: "\e9fc";
+  }
+  .icon-reg_renac:before {
+	content: "\e9fd";
+  }
+  .icon-reg_renacel:before {
+	content: "\e9fe";
+  }
+  .icon-reg_rendecar:before {
+	content: "\e9ff";
+  }
+  .icon-reg_renis:before {
+	content: "\ea00";
+  }
+  .icon-reg_resam:before {
+	content: "\ea01";
+  }
+  .icon-reg_residencias:before {
+	content: "\ea02";
+  }
+  .icon-reg_rnh:before {
+	content: "\ea03";
+  }
+  .icon-reg_sa:before {
+	content: "\ea04";
+  }
+  .icon-reg_sipg:before {
+	content: "\ea05";
+  }
+  .icon-reg_sivile:before {
+	content: "\ea06";
+  }
+  .icon-reg_smis:before {
+	content: "\ea07";
+  }
+  .icon-reg_snvs:before {
+	content: "\ea08";
+  }
+  .icon-reg_sumar:before {
+	content: "\ea09";
+  }
+  .icon-reg_svih:before {
+	content: "\ea0a";
+  }
+  .icon-reg_telesalud:before {
+	content: "\ea0b";
+  }
+  .icon-reg_ufis:before {
+	content: "\ea0c";
+  }
+
+  
+
+
+/* 
+====================================================================================================================================
+====================================================================================================================================
+
+	Utilitarios
+
+====================================================================================================================================
+====================================================================================================================================
+*/	
+
+
+/* Formularios   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.Formulario .item{  display: flex; flex-direction: row !important; margin-bottom: 8px; }
+.Formulario .item > *{  display: inline-flex; margin-left: 8px; }
+.Formulario .item > *:first-child{  margin-left: 0px; }
+.Formulario .item > * > *{          margin: auto 0px !important; }
+
+.Formulario .item .w5_{     width: 5% !important; }
+.Formulario .item .w10_{		width: 10% !important; }
+.Formulario .item .w15_{		width: 15% !important; }
+.Formulario .item .w20_{		width: 20% !important; }
+.Formulario .item .w25_{		width: 25% !important; }
+.Formulario .item .w30_{		width: 30% !important; }
+.Formulario .item .w35_{		width: 35% !important; }
+.Formulario .item .w40_{		width: 40% !important; }
+.Formulario .item .w50_{		width: 50% !important; }
+.Formulario .item .w60_{		width: 60% !important; }
+.Formulario .item .w65_{		width: 65% !important; }
+.Formulario .item .w70_{		width: 70% !important; }
+.Formulario .item .w75_{		width: 75% !important; }
+.Formulario .item .w80_{		width: 80% !important; }
+.Formulario .item .w85_{		width: 85% !important; }
+.Formulario .item .w90_{		width: 90% !important; }
+.Formulario .item .w95_{		width: 95% !important; }
+.Formulario .item .w100_{		width: 100% !important; }
+
+.Formulario .item p,
+.Formulario .item label{      width: 100%; text-align: right; }
+.Formulario .item input{      
+  width: 100%; 
+  padding: 9px 10px; 
+  background-color: white; 
+}
+.Formulario .item input,
+.Formulario .item select{           
+  width: 100%; 
+  padding: 9px 10px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 4px;  
+}
+.Formulario .item input > *{  color: black; }
+
+.Formulario .item .rb{      display: flex; flex-direction: column; }
+.Formulario .item .rb > *{  display: flex; flex-direction: row; }
+.Formulario .item .rb > * input{  width: 20px; margin-right: 4px; }
+.Formulario .item .rb > * label{  text-align: left; }
+
+/* Debug
+.Formulario .item,
+.Formulario .item > *,
+.Formulario .item > * > *{  border: dotted 1px gray; }
+ */
+
+.Formulario .menuFormulario{  margin: 20px 0 40px 0; }
+
+
+
+/* Botoneras y Botones   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.contenedorDeBotones{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+}
+.contenedorDeBotones.inverso{  flex-direction: row-reverse; }
+
+.contenedorDeBotones > *{  margin: 0px 4px; }
+.contenedorDeBotones > *:first-child{  margin-left: 0px; }
+.contenedorDeBotones > *:last-child{  margin-right: 0px; }
+
+
+
+
+/* Tooltip   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+.tooltip{	
+	position:absolute;
+	z-index:1070;
+	display:block;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:12px;
+	font-style:normal;
+	font-weight:400;
+	line-height:1.42857143;
+	text-align:left;
+	text-align:start;
+	text-decoration:none;
+	text-shadow:none;
+	text-transform:none;
+	letter-spacing:normal;
+	word-break:normal;
+	word-spacing:normal;
+	word-wrap:normal;
+	white-space:normal;
+	filter:alpha(opacity=0);
+	opacity:0;
+	/* line-break:auto */
+}
+.tooltip.in{filter:alpha(opacity=90);opacity:.9}
+.tooltip.top{padding:5px 0;margin-top:-3px}
+.tooltip.right{padding:0 5px;margin-left:3px}
+.tooltip.bottom{padding:5px 0;margin-top:3px}
+.tooltip.left{padding:0 5px;margin-left:-3px}
+.tooltip-inner{max-width:200px;padding:10px !important;color:#fff;text-align:center;background-color:#4040ff;border-radius:4px;}
+
+.tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;border-style:solid;background-color:#090}
+
+.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#4040ff}
+.tooltip.top-left .tooltip-arrow{right:5px;bottom:0;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#4040ff}
+.tooltip.top-right .tooltip-arrow{bottom:0;left:5px;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#4040ff}
+.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#4040ff}
+.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#4040ff}
+.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#4040ff}
+.tooltip.bottom-left .tooltip-arrow{top:0;right:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#4040ff}
+.tooltip.bottom-right .tooltip-arrow{top:0;left:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#4040ff}
+
+
+
+
+
+
+/* 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Sisa font apocrifa
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ */
+
+
+
+/* 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Sisa font apocrifa
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ */
+
+ @font-face {
+  font-family: 'sisaFontApocrifa';
+  src:  url('./assets/fonts/sisaFontApocrifa.eot?h4xeds');
+  src:  url('./assets/fonts/sisaFontApocrifa.eot?h4xeds#iefix') format('embedded-opentype'),
+    url('./assets/fonts/sisaFontApocrifa.ttf?h4xeds') format('truetype'),
+    url('./assets/fonts/sisaFontApocrifa.woff?h4xeds') format('woff'),
+    url('./assets/fonts/sisaFontApocrifa.svg?h4xeds#sisaFontApocrifa') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-a"], [class*=" icon-a"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sisaFontApocrifa' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-askeletor:before {
+  content: "\e900";
+}
+
+/* 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Utilidades de developer malevolo
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ */
+
+ .dm_bor_n{ border: black solid thin !important;}

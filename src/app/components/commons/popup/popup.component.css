@@ -1,0 +1,70 @@
+.modal .modal-body > .container-fluid > .row > .contenido_icono{		width: 68px; }
+.modal .modal-body > .container-fluid > .row > .contenido_icono > div{		
+	font-size: 48px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+.modal .modal-body .recuadro{		
+    padding: 8px;
+    border-radius: 4px;
+	background-color: #ebebff;
+	width: 100%;
+}
+
+.modal .modal-body > .container-fluid > .row > .contenido_descripcion{	/*float: left; width: 400px;*/ }
+.modal .modal-body > .container-fluid > .row > .contenido_descripcion .row{	margin: 0px !important; }
+
+.modal-header {
+	display: flex;	align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    background-color: #000099; /* A2 */
+    color: #fff;
+}
+
+.modal-header h3, .modal-header span{	
+    color: #fff;
+}
+
+.modal-header h3{
+	font-weight: normal;
+	/*font-size: 18px;*/
+    margin: 0px;
+		width: 85%;
+}
+
+
+.modal-header .botones{	position: absolute; top: 16px; right: 10px;  }
+.modal-header .botones span{	font-size: 16px; padding: 4px; border-radius: 4px; background-color: rgba(153, 153, 153, 0); }
+.modal-header .botones span:hover{	background-color: #fff; padding: 3px 3px; border: solid 1px rgba(153, 153, 153, 1); box-shadow: 0 0 2px rgba(153, 153, 153, .85) !important; cursor: pointer;   }
+
+.modal-header .botones span.bot_popup{         color: white; /* color: #595959; */ }
+.modal-header .botones span.bot_popup:hover{    color: #3366ff; }
+
+.modal-header .botones span.bot_popup_neg{     color: white; /* color: #990033; */ }
+.modal-header .botones span.bot_popup_neg:hover{color: #cc0033; }
+
+.modal .contenido_icono{		float: left; width: 68px; }
+.modal .contenido_icono > div{		
+	font-size: 48px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+.modal .contenido_descripcion{	float: left; width: 400px; }
+.modal .contenido_descripcion .row{	margin: 0px !important; } 
+
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    /*border-top: rgba(0,0,0,.2) solid 2px; */
+	background-color: #cecece; 
+}
+
+form input{	margin-bottom: 4px; }
+form input:last-child{	margin-bottom: 0px; }
+

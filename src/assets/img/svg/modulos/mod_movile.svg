@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<g id="SISA_movil_2_">
+	<rect x="17" y="18" fill="#000055" width="13" height="21"/>
+	<path fill="#FFFFFF" d="M30,14H17c-2.2,0-4,1.8-4,4v26c0,2.2,1.8,4,4,4h13c2.2,0,4-1.8,4-4V18C34,15.8,32.2,14,30,14z M24.5,46h-1
+		c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h1c0.8,0,1.5,0.7,1.5,1.5S25.3,46,24.5,46z M32,41H15V16h17V41z"/>
+	<g>
+		<g>
+			<defs>
+				<polygon id="SVGID_1_" points="48,0 35,0 35,13 35,13 35,13 48,13 				"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+			<path clip-path="url(#SVGID_2_)" fill="#FF9900" d="M34,0c-7.7,0-14,6.3-14,14s6.3,14,14,14s14-6.3,14-14S41.7,0,34,0z M34,27
+				c-7.2,0-13-5.8-13-13S26.8,1,34,1s13,5.8,13,13S41.2,27,34,27z M34,3c-6.1,0-11,4.9-11,11s4.9,11,11,11s11-4.9,11-11S40.1,3,34,3
+				z M34,23c-5,0-9-4-9-9s4-9,9-9s9,4,9,9S39,23,34,23z M34,8c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S37.3,8,34,8z M34,17
+				c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S35.7,17,34,17z"/>
+		</g>
+	</g>
+</g>
+</svg>

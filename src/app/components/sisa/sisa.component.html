@@ -1,0 +1,34 @@
+<header *ngIf="SisaInterfaceConsulta()">
+<s-interface-header>header</s-interface-header>
+</header>
+  
+  
+<nav *ngIf="SisaInterfaceConsulta()">
+  <s-interface-mainMenu></s-interface-mainMenu>  
+</nav>
+  
+<aside>
+  <s-interface-shortcutsMenu></s-interface-shortcutsMenu>
+</aside>
+  
+  
+  
+  
+  <main>
+    <div class="container">
+
+      <router-outlet></router-outlet>
+      <!--
+        <app-pagina-base></app-pagina-base>
+        
+        <router-outlet></router-outlet>
+      -->
+    
+    </div>
+  </main>
+  
+  
+<footer *ngIf="SisaInterfaceConsulta()">
+  <s-interface-footer></s-interface-footer>
+</footer>
+<s-commons-popUp></s-commons-popUp>

@@ -1,0 +1,165 @@
+
+
+/* Noticias   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+#noticias_base{
+	position:relative;
+	margin: 20px 0px 40px 0px;
+	width: 100%;
+	height: 300px;
+	background-color:#fff;
+
+	border-radius: 4px;
+	/* som */
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+	}
+	
+.noticias_foto{
+	position:relative;
+	width: 470px;
+	height: 300px;
+	border-radius: 4px 0px 0px 4px;
+	background-image:url(../../../../assets/img/png/noticias/noticia115.jpg);
+	}
+	
+.noticias_texto{
+	position:relative;
+	float:left;
+	margin: 20px 20px 20px 490px;
+	overflow: hidden;
+	}
+
+#noticia_fecha{			font-size:12px;}
+.noticias_texto h1{		font-size:26px; padding: 0px;margin: 10px 0px 20px 0px;}
+.noticias_texto p{		font-size:14px;}
+	
+
+
+
+/* Noticias / capacitaciones   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+
+/* #notcapa_seccion .col-3{ border: lightgray thin solid;} */
+
+#notcapa_seccion{ margin: 0px 0px 40px 0px;}
+
+#notcapa_seccion .panel{
+	/* display:block;
+    margin: auto 5px; */
+	border-radius:4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+	color:#111;
+	display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    height: 100%;
+}
+
+#notcapa_seccion .panel > div:first-child{
+	height:120px;
+	overflow: hidden;
+	background-size: cover;
+	background-position: top center;
+	border-radius: 4px 4px 0px 0px;
+}	
+
+#notcapa_seccion .panel > div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch !important;
+    height: 76px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 0px 0px 4px 4px;
+}	
+#notcapa_seccion .panel > div:last-child h3{	margin-bottom: 2px;	}	
+/* 
+#notcapa_seccion > .container > .row > * > .notcapa_panel{ width: 230px; }
+#notcapa_seccion > .container > .row > * > .notcapa_panel{ width: 230px; }
+
+#notcapa_seccion > .container > .row > *:first-child > .notcapa_panel{ margin-left: 0px; }
+#notcapa_seccion > .container > .row > *:last-child > .notcapa_panel{ margin-right: 0px; }
+
+.notcapa_panel{
+	display:block;
+    margin: auto 5px;
+	border-radius:4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+	color:#111;
+	}
+	
+.notcapa_panel a{
+	background-color: #0072BC;
+	color: rgba(0,0,0,1);
+	}
+
+.notcapa_panel a:hover{
+	text-decoration:none;
+}
+
+.notcapa_imagen{		height: 100%; width: 100%;}
+.notcapa_panel_texto{	margin: 10px 20px; height: 65px; text-decoration: none !important;}
+.notcapa_panel_texto h3{margin:  0px 0px 4px 0px; }
+
+
+#notacapa_01:hover, #notacapa_02:hover, #notacapa_03:hover, #notacapa_04:hover {
+	background-color: #3366ff;
+	cursor: pointer;
+	}
+
+#notacapa_01:hover p, #notacapa_02:hover p, #notacapa_03:hover p, #notacapa_04:hover p {
+	color: #fff;
+	}
+
+#notacapa_01:hover h3, #notacapa_02:hover h3, #notacapa_03:hover h3, #notacapa_04:hover h3 {
+	color: #fff;
+	}
+	
+ */
+
+/* Servicios   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+
+
+#servicios_seccion{    margin-bottom: 20px;	}
+#servicios_seccion .panel{
+	width: 150px;
+	height: 120px;
+	display: block;
+    margin: auto 5px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+    color: #111;
+}
+
+#servicios_seccion .panel > .servicios_recuadro{	
+    border-radius: 4px 4px 0px 0px; background-color: #3366ff;}
+#servicios_seccion .panel > .servicios_recuadro > *{	
+	height: 48px;
+	width: 48px;
+}
+#servicios_seccion .panel > .panel-body{	padding: 15px 0; text-align: center;}
+#servicios_seccion .panel > .panel-body > h4{	text-align: center;}
+
+
+#servicios_seccion{    margin-bottom: 20px;	}
+
+#servicios_seccion .servicios_recuadro > *{	padding: 10px; position: relative; left: 50%; margin-left: -24px; text-align: center;	}
+
+ico_mod_cus{		background-image: url(../../../../assets/img/svg/modulos/mod_cus.svg);}		
+
+.ico_mod_agenda{		background-image: url(../../../../assets/img/svg/modulos/mod_agenda.svg);}		
+.ico_mod_autoridades{	background-image: url(../../../../assets/img/svg/modulos/mod_autoridadesyreferentes.svg);}		
+.ico_mod_buscador{		background-image: url(../../../../assets/img/svg/modulos/mod_buscador.svg);}	
+.ico_mod_comunidad{		background-image: url(../../../../assets/img/svg/modulos/mod_comunidad.svg);}	
+.ico_mod_biblioteca{	background-image: url(../../../../assets/img/svg/modulos/mod_biblioteca.svg);}	
+.ico_mod_capacitacion{	background-image: url(../../../../assets/img/svg/modulos/mod_capacitacion.svg);}
+.ico_mod_central{		background-image: url(../../../../assets/img/svg/modulos/mod_central.svg);}
+.ico_mod_codificaciones{background-image: url(../../../../assets/img/svg/modulos/mod_codificaciones.svg);}
+.ico_mod_geosisa{		background-image: url(../../../../assets/img/svg/modulos/mod_geosisa.svg);}
+.ico_mod_movile{		background-image: url(../../../../assets/img/svg/modulos/mod_movile.svg);}	
+.ico_mod_puco{			background-image: url(../../../../assets/img/svg/modulos/mod_puco.svg);}	
+.ico_mod_serviciosweb{	background-image: url(../../../../assets/img/svg/modulos/mod_serviciosweb.svg);}	
+.ico_mod_seisabi{		background-image: url(../../../../assets/img/svg/modulos/mod_sisabi.svg);}	
+.ico_mod_verificador{	background-image: url(../../../../assets/img/svg/modulos/mod_verificar.svg);}	
+/* f:\SISA\Sisa V3\src\assets\img\svg\modulos */
