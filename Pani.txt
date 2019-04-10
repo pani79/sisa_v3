@@ -1,4 +1,9 @@
+download git for windows
 git remote add origin https://github.com/pani79/sisa_v3.git
+
+PS F:\SISA - aplicaciones\Sisa V3> git config --global user.email "emilio.panizza@gmail.com"
+PS F:\SISA - aplicaciones\Sisa V3> git config --global user.name "pani79"
+PS F:\SISA - aplicaciones\Sisa V3>
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 

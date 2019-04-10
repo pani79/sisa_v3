@@ -1,10 +1,14 @@
 
+        {{    _infoHome | json}}
 <s-commons-basicPage [info]="_infoPaginacabecera"></s-commons-basicPage>
+<!-- 
+        {{_infoPaginacabecera | json}}
+        <hr>
+        {{    _infoHome | json}}
+ -->
 
-{{_infoPaginacabecera | json}}
-<hr>
-{{    _infoHome | json}}
 
+ 
 <div *ngIf="_infoHome[1]['componentesMuestra'][0] === true" class="container homes">
     <div class="row justify-content-md-center">
         <form class="col-12 col-md-6 buscador">
@@ -15,23 +19,24 @@
             <s-commons-BotonCTextoEIcono [infoBoton]="botones.buscar"></s-commons-BotonCTextoEIcono>
         </form>
     </div>
+        <!-- 
+            <div class="row buscador">
+            <div class="FormularioEdicion">
+                <div class="item panelBuscador">
+                <div class="w50_">
+                    
+                    <p><a href="#">Buscador avanzado</a></p>
+                </div>
+                </div>
+            </div>
+            </div>
+        -->
 </div>
 
-<div>
-    <s-commons-panelImagenGrupo [infoPaneles]="panelesInfo"></s-commons-panelImagenGrupo>
+<div  *ngIf="_infoHome[1]['componentesMuestra'][4] === true" >
+    + {{_infoHome[2] | json}}
+    <s-commons-panelImagenGrupo [infoPaneles]="_panelesInfo"></s-commons-panelImagenGrupo>
 </div>
-<!-- 
-<div class="row buscador">
-  <div class="FormularioEdicion">
-    <div class="item panelBuscador">
-      <div class="w50_">
-        
-        <p><a href="#">Buscador avanzado</a></p>
-      </div>
-    </div>
-  </div>
-</div>
- -->
 
 <div *ngIf="_infoHome[1]['componentesMuestra'][1] === true" class="row numeros">
 

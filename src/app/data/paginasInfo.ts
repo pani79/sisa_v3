@@ -116,21 +116,28 @@ export class PaginasInfo {
     public static homes = {
         /*
             modelo - - - - - - - - - - - - - - 
-            s: titulo
-            s: subtitulo
-            s[]: texto intro
-            b[]:configuracion visual de herramientas que muestra
+            s: titulo (titulo)
+            s: subtitulo (subtitulo)
+            s[]: texto intro (textoIntro)
+            b[]:configuracion visual de herramientas que muestra (componentesMuestra)
                 0   buscador
                 1   paneles numerales
                 2   BOTONERA LATERAL
                 3   NOTICIAS
+                4   paneles de imagenes
+            a[]:informacion herramientas que muestra (componentesInfo)
+                0   buscador
+                1   paneles numerales
+                2   BOTONERA LATERAL
+                3   NOTICIAS
+                4   paneles de imagenes
         */
         nomivac: {
             titulo: 'Registro Federal de Vacunación Nominalizado',
             subtitulo: null,
             textoIntro: null,
-            componentesMuestra: [true, false, true, true],
-            componentesInfo: [true, false, true, true]
+            componentesMuestra: [true, false, true, true, true],
+            componentesInfo: [null, null, null, null, [0, 2]]
         },
         paierc: {
             titulo: 'Programa de Abordaje Integral de la Enfermedad Renal Crónica',
@@ -162,15 +169,60 @@ export class PaginasInfo {
             textoIntro: 'Aquí usted puede consultar o actualizar información del Registro de Establecimientos de Salud en el ámbito de su jurisdicción. Utilice el buscador para seleccionar él o los establecimientos que desea consultar o modificar y presione el botón buscar. Si desea registrar un nuevo establecimiento seleccione el botón Agregar. Para mayor información consulte la Ayuda en línea o el Manual de Usuario.',
             componentesMuestra: [true, true, true, true]
         },
+        renis: {
+            titulo: 'El Renis',
+            subtitulo: null,
+            componentesMuestra: [false, true, false, false]
+        },
         snvs: {
             titulo: 'El SNVS',
             subtitulo: null,
-            componentesMuestra: [false, true, false, false]
+            componentesMuestra: [false, true, false, false, false]
         },
         svih: {
             titulo: 'El Sistema de Administración de Pacientes VIH',
             subtitulo: null,
-            componentesMuestra: [false, true, false, false]
+            componentesMuestra: [false, true, false, false, false]
+        }
+    };
+
+    
+
+    public static panelesDeImagenes = {
+        1: {
+            titulo: 'Acerca de',
+            subtitulo: null,
+            icono: 'icon-bot_ico_ayudaenlinea',
+            imagen: '_homes_acercade.png',
+            color: '#3314cc'
+        },
+        2: {
+            titulo: 'Documentación',
+            subtitulo: null,
+            icono: 'icon-bot_ico_cmdb_documentos',
+            imagen: '_homes_biblioteca.png',
+            color: '#cc4a14'
+        },
+        3: {
+            titulo: 'Autoridades y Referentes',
+            subtitulo: null,
+            icono: 'icon-mod_autoridadesyreferentes',
+            imagen: '_homes_referentes.png',
+            color: '#3366ff'
+        },
+        4: {
+            titulo: 'Red de establecimientos',
+            subtitulo: null,
+            icono: 'icon-reg_refes',
+            imagen: '_homes_establecimientos.png',
+            color: '#3e699c'
+        },
+        5: {
+            titulo: 'Preguntas frecuentes',
+            subtitulo: 'null',
+            icono: 'icon-bot_ico_soporte_preguntasfrecuentes',
+            imagen: '_homes_preguntasFrecuentes.png',
+            color: '#ff9900'
         }
     };
 

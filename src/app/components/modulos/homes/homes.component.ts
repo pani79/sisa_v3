@@ -6,7 +6,7 @@ import { Location/* , LocationStrategy, PathLocationStrategy */ } from '@angular
 import { SisaInfoService} from '../../../services/sisa-info.service';
 
 // Servicios
-import {} from '../../../services/';
+/* import {} from '../../../services/'; */
 
 @Component({
   selector: 's-modulos-homes',  
@@ -18,6 +18,7 @@ export class HomesComponent implements OnInit {
 
   _registro: string;
   _infoHome = [];
+  _panelesInfo: any[];
   /*
       modelo - - - - - - - - - - - - - - 
       s: titulo
@@ -29,6 +30,7 @@ export class HomesComponent implements OnInit {
           2   BOTONERA LATERAL
           3   NOTICIAS
   */
+ /* 
   panelesInfo: any[] = [
     ['icon-bot_ico_ayudaenlinea', '_homes_acercade.png', '#3314cc', 'Acerca de', ''],
     ['icon-bot_ico_cmdb_documentos', '_homes_biblioteca.png', '#cc4a14', 'Documentación', 'Info loca de Lorem ipsum'],
@@ -36,7 +38,7 @@ export class HomesComponent implements OnInit {
     ['icon-reg_refes', '_homes_establecimientos.png', '#3e699c', 'Red de establecimientos', 'dasd asd asd asd  asda sdasdasd asd a'],
     ['icon-bot_ico_soporte_preguntasfrecuentes', '_homes_preguntasFrecuentes.png', '#ff9900', 'Preguntas frecuentes', '']
   ];
-
+ */
 
   _infoPaginacabecera: string[] = [
     'es una produccion del',
@@ -115,14 +117,15 @@ export class HomesComponent implements OnInit {
 
     this._infoHome['registro'] = this._registro;
     const infoObtenida = this._infoService.obtieneInfo('homes', this._registro);
-   /*  console.log('infoObtenida es: ' + infoObtenida); */
+    /*  console.log('infoObtenida es: ' + infoObtenida); */
     this._infoHome = this._infoService.obtieneInfo('homes', this._registro);
     this._infoPaginacabecera[0] = this._infoHome[1]['subtitulo'];
     this._infoPaginacabecera[1] = this._infoHome[1]['titulo'];
     this._infoPaginacabecera[2] = this._infoHome[0]['claseColor'];
     this._infoPaginacabecera[3] = this._infoHome[0]['claseIcono'];
     this._infoPaginacabecera[4] = this._infoHome[1]['textoIntro'];
-   }
+    console.log('holis 2 - : ' + this._infoHome[2]);
+  }
 
   obtieneRuta(): any {
     // const id = +this._ruta.snapshot.paramMap.get('id');

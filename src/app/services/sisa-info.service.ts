@@ -22,7 +22,20 @@ export class SisaInfoService {
       case 'homes':
         respuesta[0] = this.obtieneRegistro(valor);
         respuesta[1] = this.obtieneRegistroHome(valor);
-        respuesta[2] = 'homeX';
+        respuesta[2] = this.obtienePanelesDeImagenes(['0', '2']);
+        /* this.obtienePanelesDeImagenes(['1', '2']); */
+        /* 
+          respuesta[2] =  (): any[] => {
+            let paneles: any[] = ['paneles' + respuesta[2]['componentesInfo']];
+            return paneles;
+          };
+         */
+        /* 
+          respuesta[2] = (respuesta[2]['componentesInfo']) => {
+            let paneles: any[] = ['paneles' + respuesta[2]['componentesInfo']];
+            return paneles;
+          }; 
+        */
         break;
       default:
         break;
@@ -33,25 +46,41 @@ export class SisaInfoService {
   }
 
   obtieneRegistro(registro: string): object {
-    /* 
-      console.log('0=> ' + registro);
-      console.log('1=> ' + PaginasInfo.registros[registro]);
-      console.log('2=> ' + PaginasInfo['registros'][registro]);
-      console.log('1=> ' + PaginasInfo.registros[registro]['id']);
-     */
     let registroDatos =  PaginasInfo.registros[registro];
-    /* console.log('registroDatos ts - - - - - - - - 0=> ' + (<Object>registroDatos).toString()); */
     return registroDatos;
+    /* 
+        console.log('0=> ' + registro);
+        console.log('1=> ' + PaginasInfo.registros[registro]);
+        console.log('2=> ' + PaginasInfo['registros'][registro]);
+        console.log('1=> ' + PaginasInfo.registros[registro]['id']);
+     */
+    /* console.log('registroDatos ts - - - - - - - - 0=> ' + (<Object>registroDatos).toString()); */
   }
   
   obtieneRegistroHome(registro: string): object {
-  
+      let homeDatos =  PaginasInfo.homes[registro];
+      return homeDatos;
       /* console.log('obtieneRegistroHome 0=> ' + registro);
       console.log('obtieneRegistroHome 1=> ' + PaginasInfo.homes[registro]); */
-      let homeDatos =  PaginasInfo.homes[registro];
-
       /* console.log('obtieneRegistroHome 3=> ' + homeDatos); */
-      return homeDatos;
     }
 
+  obtienePanelesDeImagenes(ids: string[]): any[] {
+    let panelesDeImagenes: any[] = [];
+    ids.forEach(element => {
+      panelesDeImagenes.push(PaginasInfo.panelesDeImagenes[element]);
+    });
+    return panelesDeImagenes;
+  }
+/*   
+    obtienePanelesDeImagenes(id: string): any {
+      return id;
+    }
+
+    obtienePanelesDeImagenes(id: string): any[] {
+      let panelesDeImagenes: any[];
+      panelesDeImagenes[0] =  PaginasInfo.panelesDeImagenes[id];
+      return panelesDeImagenes;
+    }
+ */  
 }
