@@ -124,7 +124,8 @@ export class HomesComponent implements OnInit {
     this._infoPaginacabecera[2] = this._infoHome[0]['claseColor'];
     this._infoPaginacabecera[3] = this._infoHome[0]['claseIcono'];
     this._infoPaginacabecera[4] = this._infoHome[1]['textoIntro'];
-    console.log('holis 2 - : ' + this._infoHome[2]);
+    this._panelesInfo = this._infoHome[1]['componentesInfo'][4];
+    console.log('holis 2 - : ' + this._infoHome[2]['componentesInfo']);
   }
 
   obtieneRuta(): any {

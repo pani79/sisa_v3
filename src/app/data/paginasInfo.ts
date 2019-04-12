@@ -137,13 +137,14 @@ export class PaginasInfo {
             subtitulo: null,
             textoIntro: null,
             componentesMuestra: [true, false, true, true, true],
-            componentesInfo: [null, null, null, null, [0, 2]]
+            componentesInfo: [null, null, null, null, [1, 3]]
         },
         paierc: {
             titulo: 'Programa de Abordaje Integral de la Enfermedad Renal Crónica',
             subtitulo: null,
             textoIntro: ['TI: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI1: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI2: Programa de Abordaje Integral de la Enfermedad Renal Crónica'],
-            componentesMuestra: [true, false, true, true]
+            componentesMuestra: [true, false, true, true, true],
+            componentesInfo: ['el null', null, 22, null, [1, 2, 3]]
         },
         pfis: {
             titulo: 'Programa Federal Incluir Salud (PFIS)',
@@ -182,7 +183,8 @@ export class PaginasInfo {
         svih: {
             titulo: 'El Sistema de Administración de Pacientes VIH',
             subtitulo: null,
-            componentesMuestra: [false, true, false, false, false]
+            componentesMuestra: [false, true, false, false, false],
+            componentesInfo: [null, null, null, null, null]
         }
     };
 

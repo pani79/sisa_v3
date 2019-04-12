@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+/* import { ProvinciaService } from 'src/app/services/tas/provincia.service'; */
 /* import {  } from '../../../../assets'; */
 
 @Component({
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeLogOutComponent implements OnInit {
 
-  constructor() { }
+  constructor(/* public service: ProvinciaService */) { }
 
   ngOnInit() {
+    console.log('Obteniendo las provincias');
+    /* this.service.getAll().subscribe(data =>  console.log(data)); */
+
   }
 
 }
+

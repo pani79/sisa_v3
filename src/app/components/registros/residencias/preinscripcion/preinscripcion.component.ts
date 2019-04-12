@@ -1,9 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription, Observable} from 'rxjs';
 import { Ipreinscripcion_busqueda } from './ipreinscripcion_busqueda';
 import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
 
+//  Modelos
+import { Provincia } from 'src/app/models/provincia';
+
+//  Servicios
+import { ProvinciaService } from 'src/app/services/tas/provincia.service';
+
 // Informacion falsa
-import { PROVINCIAS } from '../../../../../assets/fakeData/tablas_auxiliares';
+/* import { PROVINCIAS } from '../../../../../assets/fakeData/tablas_auxiliares'; */
 
 @Component({
   selector: 's-registros-residencias-preinscripcion',
@@ -11,7 +18,7 @@ import { PROVINCIAS } from '../../../../../assets/fakeData/tablas_auxiliares';
   styleUrls: ['./preinscripcion.component.css']
 })
 export class PreinscripcionComponent implements OnInit {
-
+  _provincias: Provincia[];
   _pasoActual = 1;
   _formularioCompleto = false;
 
@@ -24,11 +31,13 @@ export class PreinscripcionComponent implements OnInit {
   //  = {    _a__a_concursaId = 1; };
 
   // Informacion falsa
-  provincias = PROVINCIAS;
+  /* provincias = PROVINCIAS; */
 
-  constructor() { }
+  constructor(public _servicio_t_provincia: ProvinciaService) { }
 
   ngOnInit() {
+    this._provincias = this._servicio_t_provincia.getAll()
+      .subscribe(data => {this._provincias = data as Provincia[]; });
   }
 
   activaPaso(numeroDePaso: number) {

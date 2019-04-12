@@ -1,17 +1,17 @@
 <div class="panel">
   <div class="imagen">
     <!-- <div class="color"></div> -->
-    <div [ngStyle]="{'background-color': infoPanel[2]}" class="color"></div>
-    <img src="../../../../assets/img/png/{{infoPanel[1]}}" alt="">
-    <span class="{{infoPanel[0]}}"></span>
+    <div [ngStyle]="{'background-color': infoPanel['color']}" class="color"></div>
+    <img src="../../../../assets/img/png/{{infoPanel['imagen']}}">
+    <span class="{{infoPanel['icono']}}"></span>
   </div>
   <div class="texto">
-    <h3>{{infoPanel[3]}}</h3>
-    <p><!--  *ngIf="{{infoPanel[4]}}" -->
-      {{infoPanel[4]}}
+    <h3>{{infoPanel['titulo']}}</h3>
+    <p>
+      <!--  *ngIf="{{infoPanel['subtitulo']}}" -->
+      {{infoPanel['subtitulo']}}
     </p>
   </div>
+  
 </div>
-<!-- 
-<p>infoPanel ==> {{infoPanel | json}}</p>
- -->
+<!-- <p>infoPanel ==> {{infoPanel | json}}</p> -->

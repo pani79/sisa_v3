@@ -34,7 +34,6 @@
 </div>
 
 <div  *ngIf="_infoHome[1]['componentesMuestra'][4] === true" >
-    + {{_infoHome[2] | json}}
     <s-commons-panelImagenGrupo [infoPaneles]="_panelesInfo"></s-commons-panelImagenGrupo>
 </div>
 
@@ -72,7 +71,7 @@
 
 <div *ngIf="_infoHome[1]['componentesMuestra'][2] === true" class="container homes botonera">
     <div class="row">
-        <s-commons-botonera-lateral [idBotonera]="codigoInfoBotonera"></s-commons-botonera-lateral>
+        <s-commons-botonera-lateral [idBotonera]="_registro"></s-commons-botonera-lateral>
     </div>
 </div>
 
