@@ -44,6 +44,7 @@ import { NoticiasComponent } from './components/modulos/noticias/noticias.compon
 import { BotoneraLateralComponent } from './components/commons/botonera-lateral/botonera-lateral.component';
 import { PanelImagenComponent } from './components/commons/panel-imagen/panel-imagen.component';
 import { PanelImagenGrupoComponent } from './components/commons/panel-imagen-grupo/panel-imagen-grupo.component';
+import { HomesV2Component } from './examples/homes-v2/homes-v2.component';
 
 
 // const routes: Routes = [
@@ -79,7 +80,8 @@ import { PanelImagenGrupoComponent } from './components/commons/panel-imagen-gru
     NoticiasComponent,
     BotoneraLateralComponent,
     PanelImagenComponent,
-    PanelImagenGrupoComponent//,
+    PanelImagenGrupoComponent,
+    HomesV2Component//,
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],

@@ -65,9 +65,9 @@ export class HomesComponent implements OnInit {
     private _ruta: ActivatedRoute,
     private _localizacion: Location,
     private _infoService: SisaInfoService,
-    private ruter: Router
+    private _ruter: Router
   ) {
-    ruter.events.subscribe(val => {
+    _ruter.events.subscribe(val => {
         /* console.log('ruta escritorio = ' + _localizacion.path()); */
       if (_localizacion.path() !== '') {
         this.ruta = _localizacion.path();
@@ -89,8 +89,8 @@ export class HomesComponent implements OnInit {
 
   ngOnInit() {
     console.log('iniciando escritorio = ' + this._infoHome['registro']);
-    this.codigoInfoBotonera = 22;
-      /* 
+    this.codigoInfoBotonera = 22;/* Esto creo esta demas */
+        /* 
           this._ruta.paramMap.subscribe((params: ParamMap) => {
             this.competitionId = params.get('competitionId ');
             let condition = params.get('condition ');
@@ -114,7 +114,7 @@ export class HomesComponent implements OnInit {
 
   configura() {
     this._registro = this.obtieneRuta();
-
+    
     this._infoHome['registro'] = this._registro;
     const infoObtenida = this._infoService.obtieneInfo('homes', this._registro);
     /*  console.log('infoObtenida es: ' + infoObtenida); */
@@ -125,7 +125,7 @@ export class HomesComponent implements OnInit {
     this._infoPaginacabecera[3] = this._infoHome[0]['claseIcono'];
     this._infoPaginacabecera[4] = this._infoHome[1]['textoIntro'];
     this._panelesInfo = this._infoHome[1]['componentesInfo'][4];
-    console.log('holis 2 - : ' + this._infoHome[2]['componentesInfo']);
+    /* console.log('holis 2 - : ' + this._infoHome[2]['componentesInfo']); */
   }
 
   obtieneRuta(): any {

@@ -2,14 +2,25 @@ export class BotoneraLateralInfo {
 
     public static homes = {
         nomivac: {
-            registro: 'nomivac',
-            id: 4,
-            sigla: 'NOMIVAC',
-            claseColor: 'reg_nomivac',
-            claseIcono: 'reg_nomivac',
-            nombre: '',
-            nombreCompleto: 'Registro Federal de Vacunación Nominalizado',
-            color: '#383780'
+            queEs: {
+                solapa: {
+                    registro: 'paierc',
+                    id: 4,
+                    sigla: 'PAIERC',
+                    claseColor: 'reg_paierc',
+                    claseIcono: 'reg_paierc'},
+                    titulo: 'Programa de Abordaje Integral de la Enfermedad Renal Crónica',
+                    subtitulo: null,
+                info: {}
+            },
+            info: {
+                solapa: {},
+                info: {}
+            },
+            info: {
+                solapa: {},
+                info: {}
+            }
         },
         paierc: {
             registro: 'paierc',

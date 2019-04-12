@@ -1,6 +1,16 @@
 export class PaginasInfo {
 
     public static registros = {
+        ccc: {
+            registro: 'ccc',
+            id: 4,
+            sigla: 'CCC',
+            claseColor: 'reg_ccc',
+            claseIcono: 'reg_ccc',
+            nombre: '',
+            nombreCompleto: 'Programa Nacional de Cardiopatías Congénitas',
+            color: '#ff0000'
+        },
         nomivac: {
             registro: 'nomivac',
             id: 4,
@@ -132,6 +142,18 @@ export class PaginasInfo {
                 3   NOTICIAS
                 4   paneles de imagenes
         */
+        ccc: {
+            cabecera: {
+                titulo: 'Registro Nacional de Cardiopatías Congénitas',
+                subtitulo: null,
+                textoIntro: null
+            },
+            noticias: {
+                titulo: 'Registro Nacional de Cardiopatías Congénitas',
+                subtitulo: null,
+                textoIntro: null
+            }
+        },
         nomivac: {
             titulo: 'Registro Federal de Vacunación Nominalizado',
             subtitulo: null,
@@ -150,41 +172,47 @@ export class PaginasInfo {
             titulo: 'Programa Federal Incluir Salud (PFIS)',
             subtitulo: 'el sub',
             textoIntro: ['TI: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI1: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI2: Programa de Abordaje Integral de la Enfermedad Renal Crónica'],
-            componentesMuestra: [true, false, true, true]
+            componentesMuestra: [true, false, true, true, false],
+            componentesInfo: [ null, null, null, null, null]
         },
         refeps: {
             titulo: 'Red Federal de Registros de Profesionales de la Salud',
             subtitulo: 'REFEPS',
             textoIntro: null,
-            componentesMuestra: [true, true, true, true]
+            componentesMuestra: [true, true, true, true, false],
+            componentesInfo: [ null, null, null, null, null]
         },
         refar: {
             titulo: 'Registro Federal de Farmacias',
             subtitulo: 'REFAR',
             textoIntro: 'Las farmacias vio!.',
-            componentesMuestra: [true, true, true, true]
+            componentesMuestra: [true, true, true, true, false],
+            componentesInfo: [ null, null, null, null, null]
         },
         refes: {
             titulo: 'Registro Federal de Establecimientos de Salud',
             subtitulo: 'REFES',
             textoIntro: 'Aquí usted puede consultar o actualizar información del Registro de Establecimientos de Salud en el ámbito de su jurisdicción. Utilice el buscador para seleccionar él o los establecimientos que desea consultar o modificar y presione el botón buscar. Si desea registrar un nuevo establecimiento seleccione el botón Agregar. Para mayor información consulte la Ayuda en línea o el Manual de Usuario.',
-            componentesMuestra: [true, true, true, true]
+            componentesMuestra: [true, true, true, true, false],
+            componentesInfo: [ null, null, null, null, null]
         },
         renis: {
             titulo: 'El Renis',
             subtitulo: null,
-            componentesMuestra: [false, true, false, false]
+            componentesMuestra: [false, true, false, false, false],
+            componentesInfo: [ null, null, null, null, null]
         },
         snvs: {
             titulo: 'El SNVS',
             subtitulo: null,
-            componentesMuestra: [false, true, false, false, false]
+            componentesMuestra: [false, true, false, false, false],
+            componentesInfo: [ null, null, null, null, null]
         },
         svih: {
             titulo: 'El Sistema de Administración de Pacientes VIH',
             subtitulo: null,
-            componentesMuestra: [false, true, false, false, false],
-            componentesInfo: [null, null, null, null, null]
+            componentesMuestra: [false, true, false, false, true],
+            componentesInfo: [null, null, null, null, [1, 2, 3, 4, 5]]
         }
     };
 

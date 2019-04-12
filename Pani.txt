@@ -21,6 +21,7 @@ ng g c components/modulos/ayudaEnLinea
 ng g c components/modulos/homes
 ng g c components/modulos/noticias
 
+ng g c examples/homesV2
 // ng g c components/views/botoneraLateral
 
 ng g pipe pipes/PObjectPropeties
