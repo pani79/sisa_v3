@@ -5,6 +5,8 @@ PS F:\SISA - aplicaciones\Sisa V3> git config --global user.email "emilio.panizz
 PS F:\SISA - aplicaciones\Sisa V3> git config --global user.name "pani79"
 PS F:\SISA - aplicaciones\Sisa V3>
 
+x
+
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ng serve --proxy-config proxyconfig.json
