@@ -41,8 +41,10 @@ export class SisaInfoService {
       break;
 
       case 'homes2':
-        respuesta[0] = [this.obtieneRegistro(valor), this.obtieneRegistroHomex(valor)];
-        respuesta[1] = this.obtieneRegistroHomex(valor);
+          let info = this.obtieneRegistroHomex(valor);
+        respuesta[0] = this.obtieneRegistro(valor);
+        respuesta[1] = info['cabecera'];
+        respuesta[2] = info['componentes'];
         /* console.log('-----------x-x--------------' + respuesta[1]['componentesInfo'][4]);  */
         break;
       default:
@@ -57,13 +59,6 @@ export class SisaInfoService {
   obtieneRegistro(registro: string): object {
     let registroDatos =  PaginasInfo.registros[registro];
     return registroDatos;
-    /*
-        console.log('0=> ' + registro);
-        console.log('1=> ' + PaginasInfo.registros[registro]);
-        console.log('2=> ' + PaginasInfo['registros'][registro]);
-        console.log('1=> ' + PaginasInfo.registros[registro]['id']);
-     */
-    /* console.log('registroDatos ts - - - - - - - - 0=> ' + (<Object>registroDatos).toString()); */
   }
 
   obtieneRegistroHomex(registro: string): object {

@@ -1,3 +1,31 @@
+<hr>
 <p>
-  homes-contenedor works!
+  {{inputInfo['tipo']}} works! - {{inputInfo | json }}
 </p>
+
+
+<!-- 
+<div class="row" *ngIf="inputInfo['tipo'] === 'panelesNumericosGrupo'">
+  <s-commons-panel-numerico-grupo></s-commons-panel-numerico-grupo>
+</div>
+
+
+
+<div class="row" *ngIf="inputInfo['tipo'] === 'panelesImagenesGrupo'">
+  <s-commons-panelImagenGrupo [infoPaneles]="_panelesInfo"></s-commons-panelImagenGrupo>
+</div>
+ -->
+
+<div class="row" *ngIf="inputInfo['tipo'] === 'buscador'">
+  <s-commons-buscador [inputInfoBuscador]="inputInfo"></s-commons-buscador>
+</div>
+
+<div class="row" *ngIf="inputInfo['tipo'] === 'botoneraLateral'">
+  <s-commons-botonera-lateral [idBotonera]="inputInfo['idBotonera']"></s-commons-botonera-lateral>
+</div>
+
+<div class="row" *ngIf="inputInfo['tipo'] === 'noticias'">
+  <s-modulos-noticias [infoInput]="inputInfo"></s-modulos-noticias>
+</div>
+
+<hr>

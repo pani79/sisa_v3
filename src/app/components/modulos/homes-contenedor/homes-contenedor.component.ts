@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-homes-contenedor',
+  selector: 's-modulos-homes-contenedor',
   templateUrl: './homes-contenedor.component.html',
   styleUrls: ['./homes-contenedor.component.css']
 })
 export class HomesContenedorComponent implements OnInit {
+
+  @Input() inputInfo: {};
 
   constructor() { }
 
