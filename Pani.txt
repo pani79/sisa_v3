@@ -5,7 +5,6 @@ PS F:\SISA - aplicaciones\Sisa V3> git config --global user.email "emilio.panizz
 PS F:\SISA - aplicaciones\Sisa V3> git config --global user.name "pani79"
 PS F:\SISA - aplicaciones\Sisa V3>
 
-x
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
@@ -21,6 +20,7 @@ ng g c components/commons/panelImagenGrupo
 
 ng g c components/modulos/ayudaEnLinea
 ng g c components/modulos/homes
+ng g c components/modulos/homesContenedor
 ng g c components/modulos/noticias
 
 ng g c examples/homesV2
@@ -36,6 +36,16 @@ ng g s services/sisaInfo
 
 
 
+// Correcciones - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Error rxjs
+R +> package.json
+
+    "rxjs": "6.0.0",
+    "typescript": "2.8"
+
+
+// Notas - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 --flat puts the file in src/app instead of its own folder.
 --module=app tells the CLI to register it in the imports array of the AppModule.

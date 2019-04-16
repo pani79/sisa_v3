@@ -1,8 +1,10 @@
+import { getLocaleEraNames } from '@angular/common';
+
 export class BotoneraLateralInfo {
 
     public static homes = {
         nomivac: {
-            queEs: {
+            1: {
                 solapa: {
                     registro: 'paierc',
                     id: 4,
@@ -11,13 +13,16 @@ export class BotoneraLateralInfo {
                     claseIcono: 'reg_paierc'},
                     titulo: 'Programa de Abordaje Integral de la Enfermedad Renal Crónica',
                     subtitulo: null,
-                info: {}
+                info: {
+                    titulo: 'el paierc',
+                    texto: 'lorem100'
+                }
             },
-            info: {
+            2: {
                 solapa: {},
                 info: {}
             },
-            info: {
+            3: {
                 solapa: {},
                 info: {}
             }

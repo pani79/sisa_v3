@@ -12,8 +12,10 @@ export class HomeLogOutComponent implements OnInit {
   constructor(/* public service: ProvinciaService */) { }
 
   ngOnInit() {
-    console.log('Obteniendo las provincias');
-    /* this.service.getAll().subscribe(data =>  console.log(data)); */
+    /*
+      console.log('Obteniendo las provincias');
+      this.service.getAll().subscribe(data =>  console.log(data)); 
+    */
 
   }
 

@@ -38,13 +38,19 @@ export class SisaInfoService {
             return paneles;
           };
         */
+      break;
+
+      case 'homes2':
+        respuesta[0] = [this.obtieneRegistro(valor), this.obtieneRegistroHomex(valor)];
+        respuesta[1] = this.obtieneRegistroHomex(valor);
+        /* console.log('-----------x-x--------------' + respuesta[1]['componentesInfo'][4]);  */
         break;
       default:
         break;
     }
     /* console.log('(obtieneInfo) respuesta R => ' + respuesta[0]);
     console.log('(obtieneInfo) respuesta H => ' + respuesta[1]); */
-        console.log('-----------x-x--x------------' + respuesta[1][4]);
+        /* console.log('-----------x-x--x------------' + respuesta[1][4]); */
     return respuesta;
   }
 
@@ -60,13 +66,22 @@ export class SisaInfoService {
     /* console.log('registroDatos ts - - - - - - - - 0=> ' + (<Object>registroDatos).toString()); */
   }
 
+  obtieneRegistroHomex(registro: string): object {
+    console.log('obtieneRegistroHome2  = = = = = =0=> ' + registro);
+    let homeDatos =  PaginasInfo.homes[registro];
+    return homeDatos;
+    /* console.log('obtieneRegistroHome 0=> ' + registro);
+    console.log('obtieneRegistroHome 1=> ' + PaginasInfo.homes[registro]); */
+    /* console.log('obtieneRegistroHome 3=> ' + homeDatos); */
+  }
+
   obtieneRegistroHome(registro: string): object {
-      let homeDatos =  PaginasInfo.homes[registro];
-      return homeDatos;
-      /* console.log('obtieneRegistroHome 0=> ' + registro);
-      console.log('obtieneRegistroHome 1=> ' + PaginasInfo.homes[registro]); */
-      /* console.log('obtieneRegistroHome 3=> ' + homeDatos); */
-    }
+    let homeDatos =  PaginasInfo.homes[registro];
+    return homeDatos;
+    /* console.log('obtieneRegistroHome 0=> ' + registro);
+    console.log('obtieneRegistroHome 1=> ' + PaginasInfo.homes[registro]); */
+    /* console.log('obtieneRegistroHome 3=> ' + homeDatos); */
+  }
 
   obtienePanelesDeImagenes(ids: string[]): any[] {
     let panelesDeImagenes: any[] = [];

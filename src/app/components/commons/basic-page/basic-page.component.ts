@@ -93,16 +93,15 @@ export class BasicPageComponent implements OnChanges, OnInit {
         this.infoObtenida.prueba = 'RESIDES';
         console.log(this.registro);
      */
-
-    console.log(' ><');
-    if (this._info[3] !== 'askeletor') {
-      console.log(this._info[3] + ' ---------------<');
-    } else {
-      console.log(' -------askeletor--------<');
-      this.router.navigateByUrl('/uops');
-      /* <a [routerLink]="['/uops']" */
-
-    }
+/* 
+      console.log(' ><');
+      if (this._info[3] !== 'askeletor') {
+        console.log(this._info[3] + ' ---------------<');
+      } else {
+        console.log(' -------askeletor--------<');
+        this.router.navigateByUrl('/uops');
+      }
+ */
   }
 /*  */
   ayudaEnLinea() {

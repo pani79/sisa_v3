@@ -45,6 +45,7 @@ import { BotoneraLateralComponent } from './components/commons/botonera-lateral/
 import { PanelImagenComponent } from './components/commons/panel-imagen/panel-imagen.component';
 import { PanelImagenGrupoComponent } from './components/commons/panel-imagen-grupo/panel-imagen-grupo.component';
 import { HomesV2Component } from './examples/homes-v2/homes-v2.component';
+import { HomesContenedorComponent } from './components/modulos/homes-contenedor/homes-contenedor.component';
 
 
 // const routes: Routes = [
@@ -81,7 +82,8 @@ import { HomesV2Component } from './examples/homes-v2/homes-v2.component';
     BotoneraLateralComponent,
     PanelImagenComponent,
     PanelImagenGrupoComponent,
-    HomesV2Component//,
+    HomesV2Component,
+    HomesContenedorComponent//,
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],

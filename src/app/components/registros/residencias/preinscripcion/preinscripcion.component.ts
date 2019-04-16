@@ -36,8 +36,11 @@ export class PreinscripcionComponent implements OnInit {
   constructor(public _servicio_t_provincia: ProvinciaService) { }
 
   ngOnInit() {
-    this._provincias = this._servicio_t_provincia.getAll()
-      .subscribe(data => {this._provincias = data as Provincia[]; });
+    /* this.service.getAll().subscribe(data =>  console.log(data)); */ // accion original
+    /* 
+      this._provincias = this._servicio_t_provincia.getAll()
+        .subscribe(data => {this._provincias = data as Provincia[]; });
+    */
   }
 
   activaPaso(numeroDePaso: number) {

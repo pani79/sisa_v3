@@ -16,7 +16,7 @@ import { HomesV2Component } from '../examples/homes-v2/homes-v2.component';
 
 const routes: Routes = [
   { path: '', component: HomeLogOutComponent },
-  { path: 'homev', component: HomesV2Component },
+  { path: 'homesv2/:id', component: HomesV2Component },
   { path: 'homes/:id', component: HomesComponent },
   // { path: 'homes', component: HomesComponent },
   { path: 'residencias', component: ResidenciasExamenesComponent },

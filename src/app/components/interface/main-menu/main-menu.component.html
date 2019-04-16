@@ -21,8 +21,15 @@
 
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">REGISTROS</a>
-            <ul class="dropdown-menu registros">
-              
+            <ul class="dropdown-menu registros">              
+                
+              <li>
+                <a routerLink="/homesv2/ccc" routerLinkActive="active">
+                <span class="icon-reg_ccc"></span>
+                Programa Nacional de Cardiopatías Congénitas (CCC)
+                </a>
+              </li>
+
               <li>
                 <a routerLink="/homes/nomivac" routerLinkActive="active">
                 <span class="icon-reg_nomivac"></span>
@@ -30,11 +37,11 @@
                 </a>
               </li>
               <li>
-                  <a routerLink="/homes/svih" routerLinkActive="on"> 
+                <a routerLink="/homes/svih" routerLinkActive="on"> 
                   <span class="icon-reg_svih"></span>
-                    Dirección de SIDA y ETS (SVIH)
+                  Dirección de SIDA y ETS (SVIH)
                 </a>
-              </li>            
+              </li>   
               <li>
                   <a routerLink="/homes/paierc" routerLinkActive="on">
                   <span class="icon-reg_paierc"></span>
@@ -156,11 +163,12 @@
 
                   <li>
                     <a [routerLink]="['/residencias/']" data-toggle="tooltip" data-placement="left" title="Residencias">Residencias</a>
-                  </li>
-                  <li>
-                    <a [routerLink]="['/homev/']" data-toggle="tooltip" data-placement="left" title="Homes V2">Homes V2</a>
-                  </li>
-
+                  </li> 
+                  <!-- 
+                    <li>
+                      <a [routerLink]="['/homev/']" data-toggle="tooltip" data-placement="left" title="Homes V2">Homes V2</a>
+                    </li>
+                   -->
 
                 </ul>
               </li>
