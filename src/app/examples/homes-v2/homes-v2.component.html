@@ -1,8 +1,15 @@
-<p>
-  homes-v2 works!
-</p>
-{{    _infoHome | json}}
+
+{{    _infoHome['cabecera']['registro'] | json}}
+<hr>
+{{    _infoHome['cabecera']['info'] | json}}
+<hr>
+{{    _infoHome['componentesHome'] | json}}
+<hr>
+
 <s-commons-basicPage [info]="_infoPaginacabecera"></s-commons-basicPage>
 
 
 
+<div class="container">
+<s-modulos-homes-contenedor *ngFor="let componente of _infoHome['componentesHome']" [inputInfo]="componente"> x {{   componente| json  }}</s-modulos-homes-contenedor>
+</div>

@@ -16,15 +16,8 @@ export class HomesV2Component implements OnInit {
   _registro: string;
   _infoHome = {};
 
-  _infoPaginacabecera: string[] = [
-    'es una produccion del',
-    'Amo y se;or',
-    'bg-dark',
-    'askeletor',
-    'Default.',
-    'temp_usu',
-    'volverAtras'
-  ];
+  _infoPaginacabecera: string[] = [];
+  ruta: string;
 
   constructor(
     private _rutaActivada: ActivatedRoute,
@@ -32,6 +25,16 @@ export class HomesV2Component implements OnInit {
     private _infoService: SisaInfoService,
     private _ruter: Router
   ) {
+    
+    _ruter.events.subscribe(val => {
+      /* console.log('ruta escritorio = ' + _localizacion.path()); */
+      if (_localizacion.path() !== '') {
+        this.ruta = _localizacion.path();
+        console.log('ruta es = ' + _localizacion.path());
+        this.configura();
+      }/* else { this.ruta = 'home';  console.log('ruta es = home');  } */
+    });
+    
 /*     _ruter.events.subscribe(val => {
       let dondeEstoy = _localizacion.path();
       if (dondeEstoy !== '') {
@@ -47,10 +50,11 @@ export class HomesV2Component implements OnInit {
 
   configura() {
     this._locacion = this.obtieneRuta();
-    const infoObtenida = this._infoService.obtieneInfo('homes2', this._locacion);
+    let infoObtenida = this._infoService.obtieneInfo('homes2', this._locacion);
     this._infoHome['cabecera'] = {};
-    this._infoHome['cabecera']['registro'] = this._infoService.obtieneRegistro(this._locacion);
-    this._infoHome['cabecera']['info'] = this._infoService.obtieneRegistroHomex(this._locacion);
+    this._infoHome['cabecera']['registro'] = infoObtenida[0];
+    this._infoHome['cabecera']['info'] = infoObtenida[1];
+    this._infoHome['componentesHome'] = infoObtenida[2];
     /*
     this._infoHome['registro'] = this._registro;
     
@@ -63,6 +67,28 @@ export class HomesV2Component implements OnInit {
     this._infoPaginacabecera[4] = this._infoHome[1]['textoIntro'];
     this._panelesInfo = this._infoHome[1]['componentesInfo'][4];
           */
+    this._infoPaginacabecera[0] = this._infoHome['cabecera']['info']['subtitulo'];
+    this._infoPaginacabecera[1] = this._infoHome['cabecera']['info']['titulo'];
+    this._infoPaginacabecera[4] = this._infoHome['cabecera']['info']['textoIntro'];
+    
+    this._infoPaginacabecera[2] = this._infoHome['cabecera']['registro']['claseColor'];
+    this._infoPaginacabecera[3] = this._infoHome['cabecera']['registro']['claseIcono'];
+    /*
+    this._infoPaginacabecera[5] = this._infoHome['cabecera']['info'][''];
+    this._infoPaginacabecera[6] = this._infoHome['cabecera']['info'][''];
+    this._infoPaginacabecera[0] = this._infoHome['cabecera']['info'][''];
+    this._infoPaginacabecera[0] = this._infoHome['cabecera']['info'][''];
+    this._infoPaginacabecera[0] = this._infoHome['cabecera']['info'][''];
+     */
+    /* 
+          0 'es una produccion del',
+          1 'Amo y se;or',
+          2 'bg-dark',
+          3 'askeletor',
+          4 'Default.',
+          5 'temp_usu',
+          6 'volverAtras'
+     */    
   }
 
   obtieneRuta(): any {

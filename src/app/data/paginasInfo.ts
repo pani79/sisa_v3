@@ -148,11 +148,34 @@ export class PaginasInfo {
                 subtitulo: null,
                 textoIntro: null
             },
-            noticias: {
-                titulo: 'Registro Nacional de Cardiopatías Congénitas',
-                subtitulo: null,
-                textoIntro: null
-            }
+            componentes: [
+                {
+                    tipo: 'buscador',
+                    datos: {
+                        registro: 'ccc',
+                        filtros: {  ambito: 'provincia', objetivo: 'centrosccc' } // humo: filtros o acciones para la busqueda
+                    }
+                }, {
+                    tipo: 'noticias',
+                    registro: 'ccc',
+                    registrosAccesorios: {}
+                }, {
+                    tipo: 'panelImagenes',
+                    subtitulo: null,
+                    textoIntro: null
+                }, {
+                    tipo: 'botoneraLateral',
+                    idBotonera: 'idBlHomesCcc'
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    subtitulo: null,
+                    textoIntro: null
+                }, {
+                    tipo: 'panelesImagenesGrupo',
+                    subtitulo: null,
+                    textoIntro: null
+                }
+            ]
         },
         nomivac: {
             titulo: 'Registro Federal de Vacunación Nominalizado',
@@ -197,10 +220,26 @@ export class PaginasInfo {
             componentesInfo: [ null, null, null, null, null]
         },
         renis: {
-            titulo: 'El Renis',
-            subtitulo: null,
-            componentesMuestra: [false, true, false, false, false],
-            componentesInfo: [ null, null, null, null, null]
+            cabecera: {
+                titulo: 'Registro Nacional de Cardiopatías Congénitas',
+                subtitulo: 'El Renis',
+                textoIntro: 'El Registro Nacional de Investigaciones en Salud (ReNIS) fue creado por la Resolución 1480/2011 del Ministerio de Salud de la Nación en el ámbito de la Comisión Nacional Salud Investiga, con el objetivo de poner a disposición del público información actualizada acerca de las investigaciones en salud producidas, financiadas o reguladas por el Ministerio de Salud y/o sus organismos descentralizados dependientes.'
+            },
+            componentes: [
+                {
+                    tipo: 'botoneraLateral',
+                    subtitulo: null,
+                    textoIntro: null
+                }, {
+                    tipo: 'panelImagenes',
+                    subtitulo: null,
+                    textoIntro: null
+                }, {
+                    tipo: 'noticias',
+                    subtitulo: null,
+                    textoIntro: null
+                }
+            ]
         },
         snvs: {
             titulo: 'El SNVS',
