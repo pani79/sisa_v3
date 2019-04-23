@@ -245,7 +245,6 @@ export class PaginasInfo {
                     paneles: [
                         {   tipo: 1, nombre: 'Centros vacunatorios', dato: 'x'},
                         {   tipo: 3, nombre: 'Vacunas de campaña', dato: 'x'},
-                        {   tipo: 3, nombre: 'Gripe', dato: 'x'},
                         {   tipo: 3, nombre: 'Calendario nacional', dato: 'x'}
                     ]
                 }, {
@@ -259,31 +258,94 @@ export class PaginasInfo {
             ]
         },
         refeps: {
-            titulo: 'Red Federal de Registros de Profesionales de la Salud',
-            subtitulo: 'REFEPS',
-            textoIntro: null,
-            componentesMuestra: [true, true, true, true, false],
-            componentesInfo: [ null, null, null, null, null]
+            cabecera: {
+                titulo: 'Red Federal de Registros de Profesionales de la Salud',
+                subtitulo: 'REFEPS',
+                textoIntro: null
+            },
+            componentes: [
+                {
+                    tipo: 'buscador',
+                    datos: {
+                        registro: 'ccc',
+                        filtros: {  ambito: 'provincia', objetivo: 'centrosccc' } // humo: filtros o acciones para la busqueda
+                    }
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'Profesionales', dato: 'x'}
+                    ]
+                }, {
+                    tipo: 'botoneraLateral',
+                    subtitulo: null,
+                    textoIntro: null
+                }, {
+                    tipo: 'noticias',
+                    subtitulo: null,
+                    textoIntro: null
+                }
+            ]
         },
         refar: {
-            titulo: 'Registro Federal de Farmacias',
-            subtitulo: 'REFAR',
-            textoIntro: 'Las farmacias vio!.',
-            componentesMuestra: [true, true, true, true, false],
-            componentesInfo: [ null, null, null, null, null]
+            cabecera: {
+                titulo: 'Registro Federal de Farmacias',
+                subtitulo: 'REFAR',
+                textoIntro: `Las farmacias vio!.`
+            },
+            componentes: [
+                {
+                    tipo: 'buscador',
+                    datos: {
+                        registro: 'ccc',
+                        filtros: {  ambito: 'provincia', objetivo: 'centrosccc' } // humo: filtros o acciones para la busqueda
+                    }
+                }, {
+                    tipo: 'botoneraLateral',
+                    subtitulo: null,
+                    textoIntro: null
+                }, {
+                    tipo: 'noticias',
+                    subtitulo: null,
+                    textoIntro: null
+                }
+            ]
         },
         refes: {
-            titulo: 'Registro Federal de Establecimientos de Salud',
-            subtitulo: 'REFES',
-            textoIntro: 'Aquí usted puede consultar o actualizar información del Registro de Establecimientos de Salud en el ámbito de su jurisdicción. Utilice el buscador para seleccionar él o los establecimientos que desea consultar o modificar y presione el botón buscar. Si desea registrar un nuevo establecimiento seleccione el botón Agregar. Para mayor información consulte la Ayuda en línea o el Manual de Usuario.',
-            componentesMuestra: [true, true, true, true, false],
-            componentesInfo: [ null, null, null, null, null]
+            cabecera: {
+                titulo: 'Registro Federal de Establecimientos de Salud',
+                subtitulo: 'REFES',
+                textoIntro: `Aquí usted puede consultar o actualizar información del Registro de Establecimientos de Salud en el ámbito de su jurisdicción. Utilice el buscador para seleccionar él o los establecimientos que desea consultar o modificar y presione el botón buscar. Si desea registrar un nuevo establecimiento seleccione el botón Agregar. Para mayor información consulte la Ayuda en línea o el Manual de Usuario.`
+            },
+            componentes: [
+                {
+                    tipo: 'buscador',
+                    datos: {
+                        registro: 'ccc',
+                        filtros: {  ambito: 'provincia', objetivo: 'centrosccc' } // humo: filtros o acciones para la busqueda
+                    }
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'investigaciones', dato: 'x'},
+                        {   tipo: 1, nombre: 'comites de etica', dato: 'x'},
+                        {   tipo: 3, nombre: 'investigaciones', dato: 'x'}
+                    ]
+                }, {
+                    tipo: 'botoneraLateral',
+                    subtitulo: null,
+                    textoIntro: null
+                }, {
+                    tipo: 'noticias',
+                    subtitulo: null,
+                    textoIntro: null
+                }
+            ]
         },
         renis: {
             cabecera: {
                 titulo: 'Registro Nacional de Cardiopatías Congénitas',
                 subtitulo: 'El Renis',
-                textoIntro: 'El Registro Nacional de Investigaciones en Salud (ReNIS) fue creado por la Resolución 1480/2011 del Ministerio de Salud de la Nación en el ámbito de la Comisión Nacional Salud Investiga, con el objetivo de poner a disposición del público información actualizada acerca de las investigaciones en salud producidas, financiadas o reguladas por el Ministerio de Salud y/o sus organismos descentralizados dependientes.'
+                textoIntro: `El Registro Nacional de <a href="http://www.apple.com">Apple</a> Investigaciones en Salud (ReNIS) fue creado por la Resolución 1480/2011 del Ministerio de Salud de la Nación en el ámbito de la Comisión Nacional Salud Investiga, con el objetivo de poner a disposición del público información actualizada acerca de las investigaciones en salud producidas, financiadas o reguladas por el Ministerio de Salud y/o sus organismos descentralizados dependientes.`
             },
             componentes: [
                 {
@@ -296,10 +358,6 @@ export class PaginasInfo {
                     ]
                 }, {
                     tipo: 'botoneraLateral',
-                    subtitulo: null,
-                    textoIntro: null
-                }, {
-                    tipo: 'panelImagenes',
                     subtitulo: null,
                     textoIntro: null
                 }, {

@@ -53,6 +53,9 @@ R +> package.json
 --flat puts the file in src/app instead of its own folder.
 --module=app tells the CLI to register it in the imports array of the AppModule.
 
+<p [innerHTML]="_info[4]"></p>
+// permitir links dentro de textos
+
 
 // Eliminar
 - components\modulos\usuarios\usuario-crea
