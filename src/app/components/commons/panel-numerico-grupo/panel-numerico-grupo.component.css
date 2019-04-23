@@ -1,0 +1,12 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important; 
+    width: 100%;
+    align-items: stretch;
+}
+.contenedor > *{    
+    flex-grow: 1 !important;
+    /* border: thin solid green;   */
+    align-items: stretch;
+}

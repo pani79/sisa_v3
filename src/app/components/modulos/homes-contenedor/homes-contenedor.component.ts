@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomesContenedorComponent implements OnInit {
 
+  @Input() registro: {};
   @Input() inputInfo: {};
 
   constructor() { }

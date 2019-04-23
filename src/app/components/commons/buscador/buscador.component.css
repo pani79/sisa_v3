@@ -1,0 +1,15 @@
+.gridContenedora{	
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    width: 100%;
+}
+/* .gridContenedora > *{border: blue solid thin;} */
+.gridContenedora .gridBuscador{
+    display: grid;
+    grid-template-columns: auto 100px;
+    width: 100%;
+}
+.gridContenedora .gridBuscador > *{
+   /*  background-color: pink; */
+}
+.gridContenedora .gridBuscador > *:first-child p{   text-align: right;}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 's-commons-panel-numerico',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanelNumericoComponent implements OnInit {
 
+  @Input() registro: {};
+  @Input() info: {};
   constructor() { }
 
   ngOnInit() {

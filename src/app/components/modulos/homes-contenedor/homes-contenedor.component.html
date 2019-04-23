@@ -1,31 +1,32 @@
+<!-- 
 <hr>
+<p>
+  {{registro | json }}
+</p>
 <p>
   {{inputInfo['tipo']}} works! - {{inputInfo | json }}
 </p>
 
-
-<!-- 
-<div class="row" *ngIf="inputInfo['tipo'] === 'panelesNumericosGrupo'">
-  <s-commons-panel-numerico-grupo></s-commons-panel-numerico-grupo>
-</div>
-
-
-
-<div class="row" *ngIf="inputInfo['tipo'] === 'panelesImagenesGrupo'">
-  <s-commons-panelImagenGrupo [infoPaneles]="_panelesInfo"></s-commons-panelImagenGrupo>
-</div>
  -->
 
-<div class="row" *ngIf="inputInfo['tipo'] === 'buscador'">
-  <s-commons-buscador [inputInfoBuscador]="inputInfo"></s-commons-buscador>
+
+<div *ngIf="inputInfo['tipo'] === 'panelImagenes'" class="container">
+  <s-commons-panelImagenGrupo [infoPaneles]="inputInfo['imagenes']"></s-commons-panelImagenGrupo>
 </div>
 
-<div class="row" *ngIf="inputInfo['tipo'] === 'botoneraLateral'">
-  <s-commons-botonera-lateral [idBotonera]="inputInfo['idBotonera']"></s-commons-botonera-lateral>
+<div *ngIf="inputInfo['tipo'] === 'panelesNumericosGrupo'" class="container">
+  <s-commons-panel-numerico-grupo [registro]="registro" [inputInfoPaneles]="inputInfo" class="row"></s-commons-panel-numerico-grupo>
 </div>
 
-<div class="row" *ngIf="inputInfo['tipo'] === 'noticias'">
-  <s-modulos-noticias [infoInput]="inputInfo"></s-modulos-noticias>
+<div *ngIf="inputInfo['tipo'] === 'buscador'" class="container">
+  <s-commons-buscador [inputInfoBuscador]="inputInfo" class="row"></s-commons-buscador>
 </div>
 
-<hr>
+<div *ngIf="inputInfo['tipo'] === 'botoneraLateral'" class="container">
+  <s-commons-botonera-lateral [idBotonera]="inputInfo['idBotonera']" class="row"></s-commons-botonera-lateral>
+</div>
+
+<div *ngIf="inputInfo['tipo'] === 'noticias'" class="container">
+  <s-modulos-noticias [infoInput]="inputInfo" class="row"></s-modulos-noticias>
+</div>
+

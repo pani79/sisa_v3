@@ -1,4 +1,16 @@
+<!-- 
 <p>
-  panel-numerico-grupo works!
+  panel-numerico-grupo works! 
 </p>
-<s-commons-panel-numerico></s-commons-panel-numerico>
+<p> R = {{registro |json}}</p>
+<p>I = {{inputInfoPaneles |json}}</p>
+
+
+<div *ngFor="let panel of inputInfoPaneles['paneles']">{{panel}}</div>
+ -->
+
+<div class="contenedor">
+  <s-commons-panel-numerico *ngFor="let panel of inputInfoPaneles['paneles']" [registro]="registro" [info]="panel"></s-commons-panel-numerico>
+</div>
+<!-- <s-commons-panel-numerico *ngFor="let panel of inputInfoPaneles" [registro]="registro"></s-commons-panel-numerico> -->
+<!-- <s-commons-panel-numerico [registro]="registro"></s-commons-panel-numerico> -->

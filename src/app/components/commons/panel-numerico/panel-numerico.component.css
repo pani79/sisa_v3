@@ -1,0 +1,30 @@
+.recuadro{    
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 8px 12px;
+    flex-grow: 1;
+    margin: 0px 10px 0px 10px;
+    /* 
+    align-items: stretch;
+    align-self: stretch !important;
+    align-content: stretch !important;
+    border: thin solid red;   
+    */
+}
+.recuadro > div{    
+    display: flex;
+    flex-direction: column;
+    /* border: thin dotted black;  */ 
+}
+
+a{	color: #FFF !important;    } 
+.numero > h1{	font-size: 72px; text-align: center;	}
+.numero > h3:first-child{	margin-bottom: 10px;	}
+.numero > h3 a{	font-size: 36px; text-align: center;	}
+.texto{	/* margin-left: 10px; */ text-align: center;	}
+
+.texto *,
+.numero *{	margin: 0px; color: rgba(255,255,255,.5);	}
+.texto a{	font-size: 16px; font-weight: bold;	}
+

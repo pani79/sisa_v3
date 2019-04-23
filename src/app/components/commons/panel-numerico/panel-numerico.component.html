@@ -1,15 +1,36 @@
-<p>
-  panel-numerico works!
-</p>
-
-
-
-<div class="x">
+<div class="{{registro['claseColor']}} recuadro">
  <!--  <div class="{{_infoPaginacabecera[2]}}"> -->
-  <div class="numero">
-      <h1><a href="#">26.203</a></h1>
-  </div>
-  <div class="texto">
-      <h2>Establecimientos de salud total país</h2>    
-  </div>
+    <div *ngIf="info['tipo'] === 1">
+        <div class="numero">
+          <h1><a href="#">26.203</a></h1>
+        </div>
+        <div class="texto">
+            <h2>{{info['nombre']}}</h2>    
+        </div>
+    </div>
+    <div *ngIf="info['tipo'] === 2">
+        <div class="numero">
+         <h1><a href="#">6.523</a></h1>
+        </div>
+        <div class="texto">
+                <h3> 2 publicos </h3>  
+                <h3>x  {{info['nombre']}}</h3>    
+        </div>
+    </div>
+    <div *ngIf="info['tipo'] === 3">
+        <div class="numero">
+            <h1><a href="#">203</a>  {{info['nombre']}}</h1>
+        </div>
+        <div class="texto">
+            <h2>bla bla</h2>    
+        </div>
+    </div>
 </div>
+
+<!-- 
+<hr>
+<p>
+  panel-numerico works! = {{info | json}}
+</p>
+{{registro | json}}
+ -->

@@ -156,40 +156,79 @@ export class PaginasInfo {
                         filtros: {  ambito: 'provincia', objetivo: 'centrosccc' } // humo: filtros o acciones para la busqueda
                     }
                 }, {
+                    tipo: 'panelImagenes',
+                    imagenes: [1, 2, 3]
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'cccCentros', dato: 'x'},
+                        {   tipo: 3, nombre: 'cccCardiopatias', dato: 'x'}
+                    ]
+                }, {
                     tipo: 'noticias',
                     registro: 'ccc',
                     registrosAccesorios: {}
                 }, {
-                    tipo: 'panelImagenes',
-                    subtitulo: null,
-                    textoIntro: null
-                }, {
                     tipo: 'botoneraLateral',
                     idBotonera: 'idBlHomesCcc'
-                }, {
-                    tipo: 'panelesNumericosGrupo',
-                    subtitulo: null,
-                    textoIntro: null
-                }, {
-                    tipo: 'panelesImagenesGrupo',
-                    subtitulo: null,
-                    textoIntro: null
                 }
             ]
         },
         nomivac: {
-            titulo: 'Registro Federal de Vacunación Nominalizado',
-            subtitulo: null,
-            textoIntro: null,
-            componentesMuestra: [true, false, true, true, true],
-            componentesInfo: [null, null, null, null, [1, 3]]
+            cabecera: {
+                titulo: 'Registro Federal de Vacunación Nominalizado',
+                subtitulo: null,
+                textoIntro: null
+            },
+            componentes: [
+                {
+                    tipo: 'panelImagenes',
+                    imagenes: [1, 2, 3, 4, 5]
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'Centros vacunatorios', dato: 'x'},
+                        {   tipo: 3, nombre: 'Vacunas de campaña', dato: 'x'},
+                        {   tipo: 3, nombre: 'Gripe', dato: 'x'},
+                        {   tipo: 3, nombre: 'Calendario nacional', dato: 'x'}
+                    ]
+                }, {
+                    tipo: 'noticias',
+                    registro: 'ccc',
+                    registrosAccesorios: {}
+                }, {
+                    tipo: 'botoneraLateral',
+                    idBotonera: 'idBlHomesNomivac'
+                }
+            ]
         },
         paierc: {
-            titulo: 'Programa de Abordaje Integral de la Enfermedad Renal Crónica',
-            subtitulo: null,
-            textoIntro: ['TI: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI1: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI2: Programa de Abordaje Integral de la Enfermedad Renal Crónica'],
-            componentesMuestra: [true, false, true, true, true],
-            componentesInfo: ['el null', null, 22, null, [1, 2, 3]]
+            cabecera: {
+                titulo: 'Programa de Abordaje Integral de la Enfermedad Renal Crónica',
+                subtitulo: null,
+                textoIntro: ['TI: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI1: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI2: Programa de Abordaje Integral de la Enfermedad Renal Crónica']
+            },
+            componentes: [
+                {
+                    tipo: 'panelImagenes',
+                    imagenes: [1, 2, 3, 4, 5]
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'Centros vacunatorios', dato: 'x'},
+                        {   tipo: 3, nombre: 'Vacunas de campaña', dato: 'x'},
+                        {   tipo: 3, nombre: 'Gripe', dato: 'x'},
+                        {   tipo: 3, nombre: 'Calendario nacional', dato: 'x'}
+                    ]
+                }, {
+                    tipo: 'noticias',
+                    registro: 'ccc',
+                    registrosAccesorios: {}
+                }, {
+                    tipo: 'botoneraLateral',
+                    idBotonera: 'idBlHomesNomivac'
+                }
+            ]
         },
         pfis: {
             titulo: 'Programa Federal Incluir Salud (PFIS)',
@@ -227,6 +266,14 @@ export class PaginasInfo {
             },
             componentes: [
                 {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'investigaciones', dato: 'x'},
+                        {   tipo: 2, nombre: 'centros de investigacion', dato: 'x'},
+                        {   tipo: 1, nombre: 'comites de etica', dato: 'x'},
+                        {   tipo: 3, nombre: 'investigaciones', dato: 'x'}
+                    ]
+                }, {
                     tipo: 'botoneraLateral',
                     subtitulo: null,
                     textoIntro: null
