@@ -231,11 +231,32 @@ export class PaginasInfo {
             ]
         },
         pfis: {
-            titulo: 'Programa Federal Incluir Salud (PFIS)',
-            subtitulo: 'el sub',
-            textoIntro: ['TI: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI1: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI2: Programa de Abordaje Integral de la Enfermedad Renal Crónica'],
-            componentesMuestra: [true, false, true, true, false],
-            componentesInfo: [ null, null, null, null, null]
+            cabecera: {
+                titulo: 'Programa Federal Incluir Salud (PFIS)',
+                subtitulo: 'el subbtitulo',
+                textoIntro: ['TI: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI1: Programa de Abordaje Integral de la Enfermedad Renal Crónica', 'TI2: Programa de Abordaje Integral de la Enfermedad Renal Crónica']
+            },
+            componentes: [
+                {
+                    tipo: 'panelImagenes',
+                    imagenes: [1, 2, 3, 4, 5]
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'Centros vacunatorios', dato: 'x'},
+                        {   tipo: 3, nombre: 'Vacunas de campaña', dato: 'x'},
+                        {   tipo: 3, nombre: 'Gripe', dato: 'x'},
+                        {   tipo: 3, nombre: 'Calendario nacional', dato: 'x'}
+                    ]
+                }, {
+                    tipo: 'noticias',
+                    registro: 'ccc',
+                    registrosAccesorios: {}
+                }, {
+                    tipo: 'botoneraLateral',
+                    idBotonera: 'idBlHomesNomivac'
+                }
+            ]
         },
         refeps: {
             titulo: 'Red Federal de Registros de Profesionales de la Salud',
@@ -289,16 +310,60 @@ export class PaginasInfo {
             ]
         },
         snvs: {
-            titulo: 'El SNVS',
-            subtitulo: null,
-            componentesMuestra: [false, true, false, false, false],
-            componentesInfo: [ null, null, null, null, null]
+            cabecera: {
+                titulo: 'El SNVS 2.0',
+                subtitulo: null,
+                textoIntro: null
+            },
+            componentes: [
+                {
+                    tipo: 'panelImagenes',
+                    imagenes: [1, 2, 3, 4, 5]
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'Centros vacunatorios', dato: 'x'},
+                        {   tipo: 3, nombre: 'Vacunas de campaña', dato: 'x'},
+                        {   tipo: 3, nombre: 'Gripe', dato: 'x'},
+                        {   tipo: 3, nombre: 'Calendario nacional', dato: 'x'}
+                    ]
+                }, {
+                    tipo: 'noticias',
+                    registro: 'ccc',
+                    registrosAccesorios: {}
+                }, {
+                    tipo: 'botoneraLateral',
+                    idBotonera: 'idBlHomesNomivac'
+                }
+            ]
         },
         svih: {
-            titulo: 'El Sistema de Administración de Pacientes VIH',
-            subtitulo: null,
-            componentesMuestra: [false, true, false, false, true],
-            componentesInfo: [null, null, null, null, [1, 2, 3, 4, 5]]
+            cabecera: {
+                titulo: 'El Sistema de Administración de Pacientes VIH',
+                subtitulo: null,
+                textoIntro: null
+            },
+            componentes: [
+                {
+                    tipo: 'panelImagenes',
+                    imagenes: [1, 2, 3, 4, 5]
+                }, {
+                    tipo: 'panelesNumericosGrupo',
+                    paneles: [
+                        {   tipo: 1, nombre: 'Centros vacunatorios', dato: 'x'},
+                        {   tipo: 3, nombre: 'Vacunas de campaña', dato: 'x'},
+                        {   tipo: 3, nombre: 'Gripe', dato: 'x'},
+                        {   tipo: 3, nombre: 'Calendario nacional', dato: 'x'}
+                    ]
+                }, {
+                    tipo: 'noticias',
+                    registro: 'ccc',
+                    registrosAccesorios: {}
+                }, {
+                    tipo: 'botoneraLateral',
+                    idBotonera: 'idBlHomesNomivac'
+                }
+            ]
         }
     };
 

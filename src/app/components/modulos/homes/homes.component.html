@@ -1,85 +1,11 @@
-
-        {{    _infoHome | json}}
-<s-commons-basicPage [info]="_infoPaginacabecera"></s-commons-basicPage>
 <!-- 
-        {{_infoPaginacabecera | json}}
-        <hr>
-        {{    _infoHome | json}}
+{{    _infoHome['cabecera']['registro'] | json}}
+<hr>
+{{    _infoHome['cabecera']['info'] | json}}
+<hr>
+{{    _infoHome['componentesHome'] | json}}
+<hr>
  -->
+<s-commons-basicPage [info]="_infoPaginacabecera"></s-commons-basicPage>
 
-
- 
-<div *ngIf="_infoHome[1]['componentesMuestra'][0] === true" class="container homes">
-    <div class="row justify-content-md-center">
-        <form class="col-12 col-md-6 buscador">
-            <div class="form-group">
-                <input  class="form-control" type="text" placeholder="Nombre del establecimiento">
-                <p><a href="#">Buscador avanzado</a></p>
-            </div>
-            <s-commons-BotonCTextoEIcono [infoBoton]="botones.buscar"></s-commons-BotonCTextoEIcono>
-        </form>
-    </div>
-        <!-- 
-            <div class="row buscador">
-            <div class="FormularioEdicion">
-                <div class="item panelBuscador">
-                <div class="w50_">
-                    
-                    <p><a href="#">Buscador avanzado</a></p>
-                </div>
-                </div>
-            </div>
-            </div>
-        -->
-</div>
-
-<div  *ngIf="_infoHome[1]['componentesMuestra'][4] === true" >
-    <s-commons-panelImagenGrupo [infoPaneles]="_panelesInfo"></s-commons-panelImagenGrupo>
-</div>
-
-<div *ngIf="_infoHome[1]['componentesMuestra'][1] === true" class="row numeros">
-
-  <div class="{{_infoPaginacabecera[2]}}">
-      <div class="numero">
-          <h1><a href="#">26.203</a></h1>
-      </div>
-      <div class="texto">
-          <h2>Establecimientos de salud total país</h2>    
-      </div>
-  </div>
-  <div class="{{_infoPaginacabecera[2]}}">
-      <div class="numero">
-          <h1><a href="#">11.791</a></h1>
-      </div>
-      <div class="texto">
-          <h2>Públicos 45%</h2> 
-          <p>(CAPS <a href="#">1234</a> 34%, Htales <a href="#">1234</a> 56%)</p>   
-      </div>
-  </div>
-  <div class="{{_infoPaginacabecera[2]}}">
-      <div class="numero">
-          <h1><a href="#">14.412</a></h1>
-      </div>
-      <div class="texto">
-          <h2>Privados 68%</h2>    
-      </div>
-  </div>
-
-</div>
-
-
-
-<div *ngIf="_infoHome[1]['componentesMuestra'][2] === true" class="container homes botonera">
-    <div class="row">
-        <s-commons-botonera-lateral [idBotonera]="_registro"></s-commons-botonera-lateral>
-    </div>
-</div>
-
-
-
-
-<div *ngIf="_infoHome[1]['componentesMuestra'][3] === true" class="container">
-    <div class="row">
-        <s-modulos-noticias></s-modulos-noticias>
-    </div>
-</div>
+<s-modulos-homes-contenedor *ngFor="let componente of _infoHome['componentesHome']" [registro]="_infoHome['cabecera']['registro']" [inputInfo]="componente"> x {{   componente| json  }}</s-modulos-homes-contenedor>

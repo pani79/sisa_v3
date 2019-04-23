@@ -12,11 +12,9 @@ import { PaginaNoEncontradaComponent } from '../components/views/pagina-no-encon
 // Ejemplos de uso
 import { UsuariosLista } from '../examples/usuarios/usuarios-lista/usuarios-lista.component';
 import { UsuarioCrea } from '../examples/usuarios/usuarios-alta/usuarios-alta.component';
-import { HomesV2Component } from '../examples/homes-v2/homes-v2.component';
 
 const routes: Routes = [
   { path: '', component: HomeLogOutComponent },
-  { path: 'homesv2/:id', component: HomesV2Component },
   { path: 'homes/:id', component: HomesComponent },
   // { path: 'homes', component: HomesComponent },
   { path: 'residencias', component: ResidenciasExamenesComponent },

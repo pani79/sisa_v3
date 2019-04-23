@@ -44,7 +44,6 @@ import { NoticiasComponent } from './components/modulos/noticias/noticias.compon
 import { BotoneraLateralComponent } from './components/commons/botonera-lateral/botonera-lateral.component';
 import { PanelImagenComponent } from './components/commons/panel-imagen/panel-imagen.component';
 import { PanelImagenGrupoComponent } from './components/commons/panel-imagen-grupo/panel-imagen-grupo.component';
-import { HomesV2Component } from './examples/homes-v2/homes-v2.component';
 import { HomesContenedorComponent } from './components/modulos/homes-contenedor/homes-contenedor.component';
 import { PanelNumericoGrupoComponent } from './components/commons/panel-numerico-grupo/panel-numerico-grupo.component';
 import { PanelNumericoComponent } from './components/commons/panel-numerico/panel-numerico.component';
@@ -85,7 +84,6 @@ import { BuscadorComponent } from './components/commons/buscador/buscador.compon
     BotoneraLateralComponent,
     PanelImagenComponent,
     PanelImagenGrupoComponent,
-    HomesV2Component,
     HomesContenedorComponent,
     PanelNumericoGrupoComponent,
     PanelNumericoComponent,
