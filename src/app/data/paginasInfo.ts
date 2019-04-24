@@ -170,7 +170,7 @@ export class PaginasInfo {
                     registrosAccesorios: {}
                 }, {
                     tipo: 'botoneraLateral',
-                    idBotonera: 'idBlHomesCcc'
+                    idBotonera: 'homes_ccc'
                 }
             ]
         },

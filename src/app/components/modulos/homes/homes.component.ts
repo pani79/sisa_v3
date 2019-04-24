@@ -34,14 +34,6 @@ export class HomesComponent  implements OnInit {
         this.configura();
       }/* else { this.ruta = 'home';  console.log('ruta es = home');  } */
     });
-    
-/*     _ruter.events.subscribe(val => {
-      let dondeEstoy = _localizacion.path();
-      if (dondeEstoy !== '') {
-        this._ruta = dondeEstoy;
-        console.log('ruta es = ' + dondeEstoy);
-      }
-    }); */
   }
 
   ngOnInit() {
@@ -50,27 +42,26 @@ export class HomesComponent  implements OnInit {
 
   configura() {
     this._locacion = this.obtieneRuta();
-    let infoObtenida = this._infoService.obtieneInfo('homes2', this._locacion);
+    let infoObtenida = this._infoService.obtieneInfo('homes', this._locacion);
     this._infoHome['cabecera'] = {};
     this._infoHome['cabecera']['registro'] = infoObtenida[0];
     this._infoHome['cabecera']['info'] = infoObtenida[1];
     this._infoHome['componentesHome'] = infoObtenida[2];
     /*
-    this._infoHome['registro'] = this._registro;
-    
-    const infoObtenida = this._infoService.obtieneInfo('homes2', this._registro);
-    this._infoHome = this._infoService.obtieneInfo('homes', this._registro);
-    this._infoPaginacabecera[0] = this._infoHome[1]['subtitulo'];
-    this._infoPaginacabecera[1] = this._infoHome[1]['titulo'];
-    this._infoPaginacabecera[2] = this._infoHome[0]['claseColor'];
-    this._infoPaginacabecera[3] = this._infoHome[0]['claseIcono'];
-    this._infoPaginacabecera[4] = this._infoHome[1]['textoIntro'];
-    this._panelesInfo = this._infoHome[1]['componentesInfo'][4];
-          */
+      this._infoHome['registro'] = this._registro;
+      
+      const infoObtenida = this._infoService.obtieneInfo('homes2', this._registro);
+      this._infoHome = this._infoService.obtieneInfo('homes', this._registro);
+      this._infoPaginacabecera[0] = this._infoHome[1]['subtitulo'];
+      this._infoPaginacabecera[1] = this._infoHome[1]['titulo'];
+      this._infoPaginacabecera[2] = this._infoHome[0]['claseColor'];
+      this._infoPaginacabecera[3] = this._infoHome[0]['claseIcono'];
+      this._infoPaginacabecera[4] = this._infoHome[1]['textoIntro'];
+      this._panelesInfo = this._infoHome[1]['componentesInfo'][4];
+    */
     this._infoPaginacabecera[0] = this._infoHome['cabecera']['info']['subtitulo'];
     this._infoPaginacabecera[1] = this._infoHome['cabecera']['info']['titulo'];
     this._infoPaginacabecera[4] = this._infoHome['cabecera']['info']['textoIntro'];
-    
     this._infoPaginacabecera[2] = this._infoHome['cabecera']['registro']['claseColor'];
     this._infoPaginacabecera[3] = this._infoHome['cabecera']['registro']['claseIcono'];
     /*

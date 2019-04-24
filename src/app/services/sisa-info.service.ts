@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 
 // Data
 import { PaginasInfo } from '../data/paginasInfo';
+import { BotoneraLateralInfo } from '../data/botoneraLateralInfo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SisaInfoService {
-
-  laCajaDePandora = PaginasInfo;
 
   constructor() { }
 
@@ -19,29 +18,9 @@ export class SisaInfoService {
 
 
     switch (tipo) {
-      case 'homes':
-        respuesta[0] = this.obtieneRegistro(valor);
-        respuesta[1] = this.obtieneRegistroHome(valor);
-        console.log('-----------x-x--------------' + respuesta[1]['componentesInfo'][4]);
-        /* respuesta[2] = this.obtienePanelesDeImagenes(respuesta[1]['componentesInfo']); */
-        /* respuesta[2] = this.obtienePanelesDeImagenes(['1', '2']); */
-        /* this.obtienePanelesDeImagenes(['1', '2']); */
-        /*
-          respuesta[2] =  (): any[] => {
-            let paneles: any[] = ['paneles' + respuesta[2]['componentesInfo']];
-            return paneles;
-          };
-         */
-        /*
-          respuesta[2] = (respuesta[2]['componentesInfo']) => {
-            let paneles: any[] = ['paneles' + respuesta[2]['componentesInfo']];
-            return paneles;
-          };
-        */
-      break;
 
-      case 'homes2':
-          let info = this.obtieneRegistroHomex(valor);
+      case 'homes':
+          let info = this.obtieneRegistroHome(valor);
         respuesta[0] = this.obtieneRegistro(valor);
         respuesta[1] = info['cabecera'];
         respuesta[2] = info['componentes'];
@@ -61,21 +40,15 @@ export class SisaInfoService {
     return registroDatos;
   }
 
-  obtieneRegistroHomex(registro: string): object {
+  obtieneRegistroHome(registro: string): object {
     console.log('obtieneRegistroHome2  = = = = = =0=> ' + registro);
     let homeDatos =  PaginasInfo.homes[registro];
     return homeDatos;
-    /* console.log('obtieneRegistroHome 0=> ' + registro);
-    console.log('obtieneRegistroHome 1=> ' + PaginasInfo.homes[registro]); */
-    /* console.log('obtieneRegistroHome 3=> ' + homeDatos); */
-  }
-
-  obtieneRegistroHome(registro: string): object {
-    let homeDatos =  PaginasInfo.homes[registro];
-    return homeDatos;
-    /* console.log('obtieneRegistroHome 0=> ' + registro);
-    console.log('obtieneRegistroHome 1=> ' + PaginasInfo.homes[registro]); */
-    /* console.log('obtieneRegistroHome 3=> ' + homeDatos); */
+    /* 
+      console.log('obtieneRegistroHome 0=> ' + registro);
+      console.log('obtieneRegistroHome 1=> ' + PaginasInfo.homes[registro]); 
+      console.log('obtieneRegistroHome 3=> ' + homeDatos); 
+    */
   }
 
   obtienePanelesDeImagenes(ids: string[]): any[] {
@@ -84,6 +57,16 @@ export class SisaInfoService {
       panelesDeImagenes.push(PaginasInfo.panelesDeImagenes[element]);
     });
     return panelesDeImagenes;
+  }
+
+  obtieneBotoneraLateral(id: string): any[] {
+    let solapas: any[] = [];
+    /* 
+      ids.forEach(element => {
+        panelesDeImagenes.push(PaginasInfo.panelesDeImagenes[element]);
+      });
+     */
+    return solapas;
   }
 /*
     obtienePanelesDeImagenes(id: string): any {
