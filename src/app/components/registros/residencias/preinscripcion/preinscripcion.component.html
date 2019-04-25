@@ -140,32 +140,41 @@
               </select>
             </div>
           </div>
+
           <div class="item">
             <div class="w30_">
               <p>Institución</p>
             </div>
             <div class="w30_">
               <select name="_a_concursaInstitucion" ngModel>
-                <option>ADOLFO CARRANZA</option>
-                <option>80 VIVIENDAS COLONIA</option>
-                <option>DR. ALEJANDRO POSADAS</option>
-                <option>CENTOR MEDICO ESPEÑA</option>
-                <option>CENTRO INTEGRAL CITEM-CTRO. INT. TECNOLOGIAS ESPECIALES</option>
-                <option>ACCION SOCIAL PARA ESTUDIANTES - UNIVERSIDAD NACIONAL</option>
+                <option *ngFor="let instfor of _institucionesFormadoras" value="{{instfor.id}}">{{instfor.nombre}}</option>
+                <!-- 
+                  <option>ADOLFO CARRANZA</option>
+                  <option>80 VIVIENDAS COLONIA</option>
+                  <option>DR. ALEJANDRO POSADAS</option>
+                  <option>CENTOR MEDICO ESPEÑA</option>
+                  <option>CENTRO INTEGRAL CITEM-CTRO. INT. TECNOLOGIAS ESPECIALES</option>
+                  <option>ACCION SOCIAL PARA ESTUDIANTES - UNIVERSIDAD NACIONAL</option>
+                -->
               </select>
             </div>
           </div>
+
           <div class="item">
             <div class="w30_">
               <p>Especialidad</p>
             </div>
             <div class="w30_">
               <select name="_a_concursaEspecialidad" ngModel>
-                <option value="-seleccione-">-seleccione-</option>
+                  <option *ngFor="let especialidad of _especialidades" value="{{especialidad.id}}">{{especialidad.nombre}}</option>
+                <!-- 
+                  <option value="-seleccione-">-seleccione-</option>
                 <option value="3">Anestesiología</option>
                 <option value="4">Cardiología</option>
                 <option value="5">Cardiología infantil</option>
                 <option value="12">Cirugía de tórax (cirugía torácica)</option>
+                 -->
+                
               </select>
             </div>
           </div>
