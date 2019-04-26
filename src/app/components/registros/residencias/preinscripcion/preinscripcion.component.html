@@ -110,8 +110,9 @@
             </div>
             <div class="w30_">
               <select name="_a_concursaProvincia" ngModel>
-                <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}</option>
-                <!--
+                  <option value="" selected disabled hidden>Seleccione provincia</option>
+                  <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}</option>
+                  <!--
                   <option>CABA</option>
                   <option>Buenos Aires</option>
                   <option>Catamarca</option>
@@ -147,6 +148,7 @@
             </div>
             <div class="w30_">
               <select name="_a_concursaInstitucion" ngModel>
+                <option value="" selected disabled hidden>Seleccione una institución formadora</option>
                 <option *ngFor="let instfor of _institucionesFormadoras" value="{{instfor.id}}">{{instfor.nombre}}</option>
                 <!-- 
                   <option>ADOLFO CARRANZA</option>
@@ -166,6 +168,7 @@
             </div>
             <div class="w30_">
               <select name="_a_concursaEspecialidad" ngModel>
+                  <option value="" selected disabled hidden>Seleccione una especialidad</option>
                   <option *ngFor="let especialidad of _especialidades" value="{{especialidad.id}}">{{especialidad.nombre}}</option>
                 <!-- 
                   <option value="-seleccione-">-seleccione-</option>

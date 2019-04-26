@@ -48,6 +48,8 @@ import { HomesContenedorComponent } from './components/modulos/homes-contenedor/
 import { PanelNumericoGrupoComponent } from './components/commons/panel-numerico-grupo/panel-numerico-grupo.component';
 import { PanelNumericoComponent } from './components/commons/panel-numerico/panel-numerico.component';
 import { BuscadorComponent } from './components/commons/buscador/buscador.component';
+import { ComponentesVariosComponent } from './examples/componentes-varios/componentes-varios.component';
+import { PanelPasosComponent } from './components/commons/panel-pasos/panel-pasos.component';
 
 
 // const routes: Routes = [
@@ -87,7 +89,9 @@ import { BuscadorComponent } from './components/commons/buscador/buscador.compon
     HomesContenedorComponent,
     PanelNumericoGrupoComponent,
     PanelNumericoComponent,
-    BuscadorComponent//,
+    BuscadorComponent,
+    ComponentesVariosComponent,
+    PanelPasosComponent//,
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],

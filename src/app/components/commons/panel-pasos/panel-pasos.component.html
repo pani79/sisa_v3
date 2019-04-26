@@ -1,0 +1,107 @@
+<div class="contenedor">
+    <div></div>
+    <div>
+
+<ul class="contenedorDePaneles">
+  <li *ngFor="let panel of infoInput; index as i" class="">
+    
+    <div class="pasoNumero" (click)="activaPaso(1)" id="paso_{{i + 1}}">
+      <div class="color">
+        <h2>{{i + 1}}</h2>
+      </div>
+      <div class="colorFondo"></div>
+      <div class="nexo_i"></div>
+      <div class="nexo_d"></div>
+    </div>
+    <div class="pasoInfo">
+      <h3>{{panel['titlulo']}}</h3>
+      <h4>{{panel['subtitulo']}}</h4>
+      <p>{{panel['descripcion']}}</p>
+    </div>
+
+  </li>
+</ul>
+
+    </div>
+    <div></div>
+</div>
+
+
+<p>
+  panel-pasos works!
+</p>
+
+<div class="menu">
+    <div class="pasos">
+      <div>
+        <div class="pasoNumero" (click)="activaPaso(1)" id="paso_1">
+          <div class="color">
+            <h2>1</h2>
+          </div>
+          <div class="colorFondo"></div>
+          <div class="nexo_i"></div>
+          <div class="nexo_d"></div>
+        </div>
+        <div class="pasoTitulo">
+          <h3>Provincia o Institución</h3>
+          <p>Seleccione Provincia o Institución donde desea inscribirse</p>
+        </div>
+      </div>
+      <div>
+        <div class="pasoNumero" (click)="activaPaso(2)" id="paso_2">
+          <div class="color">
+            <h2>2</h2>
+          </div>
+          <div class="colorFondo"></div>
+          <div class="nexo_i"></div>
+          <div class="nexo_d"></div>
+        </div>
+        <div class="pasoTitulo">
+          <h3>Concurso</h3>
+          <p>Elegir tipo de concurso</p>
+        </div>
+      </div>
+      <div>
+        <div class="pasoNumero" (click)="activaPaso(3)" id="paso_3">
+          <div class="color">
+            <h2>3</h2>
+          </div>
+          <div class="colorFondo"></div>
+          <div class="nexo_i"></div>
+          <div class="nexo_d"></div>
+        </div>
+        <div class="pasoTitulo">
+          <h3>Confirmar</h3>
+          <p>Confirmar eleccion</p>
+        </div>
+      </div>
+      <div>
+        <div class="pasoNumero" (click)="activaPaso(4)" id="paso_4">
+          <div class="color">
+            <h2>4</h2>
+          </div>
+          <div class="colorFondo"></div>
+          <div class="nexo_i"></div>
+          <div class="nexo_d"></div>
+        </div>
+        <div class="pasoTitulo">
+          <h3>Encuesta</h3>
+          <p>Completar encuesta (opcional)</p>
+        </div>
+      </div>
+      <div>
+        <div class="pasoNumero" (click)="activaPaso(5)" id="paso_5">
+          <div class="color">
+            <h2>5</h2>
+          </div>
+          <div class="colorFondo"></div>
+          <div class="nexo_i"></div>
+          <div class="nexo_d"></div>
+        </div>
+        <div class="pasoTitulo">
+          <h3>Formulario</h3>
+          <p>Completar formulario</p>
+        </div>
+      </div>
+    </div>
+  </div>

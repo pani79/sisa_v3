@@ -6,7 +6,7 @@ import { Location/* , LocationStrategy, PathLocationStrategy */ } from '@angular
 import { SisaInfoService } from 'src/app/services/sisa-info.service';
 
 @Component({
-  selector: 'app-homes',
+  selector: 's-modulos-homes',
   templateUrl: './homes.component.html',
   styleUrls: ['./homes.component.css']
 })
