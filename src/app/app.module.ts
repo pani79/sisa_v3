@@ -50,6 +50,7 @@ import { PanelNumericoComponent } from './components/commons/panel-numerico/pane
 import { BuscadorComponent } from './components/commons/buscador/buscador.component';
 import { ComponentesVariosComponent } from './examples/componentes-varios/componentes-varios.component';
 import { PanelPasosComponent } from './components/commons/panel-pasos/panel-pasos.component';
+import { EncabezadoComponent } from './components/commons/encabezado/encabezado.component';
 
 
 // const routes: Routes = [
@@ -91,7 +92,8 @@ import { PanelPasosComponent } from './components/commons/panel-pasos/panel-paso
     PanelNumericoComponent,
     BuscadorComponent,
     ComponentesVariosComponent,
-    PanelPasosComponent//,
+    PanelPasosComponent,
+    EncabezadoComponent//,
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],

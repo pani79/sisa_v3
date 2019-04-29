@@ -4,21 +4,54 @@
 }
 
 .contenedorDePaneles{	display: flex; flex-direction: row; }
-.contenedorDePaneles > li{	display: flex; flex-direction: column; }
+.contenedorDePaneles > li{	
+	display: flex;
+	flex-direction: column;
+	/* 
+	background-color: lightpink;
+	border: 3px dotted violet; 
+	*/
+}
+.contenedorDePaneles > li:first-child .nexo_i,
+.contenedorDePaneles > li:last-child .nexo_d{	display: none;}
+
+.contenedorDePaneles .contenedorDeIndicador {
+	position: relative; 
+	width: 100%; 
+	margin-bottom: 10px;	
+	/* border: 3px dotted red; */
+}
+
+.contenedorDePaneles .contenedorDeIndicador > .nexo_i,
+.contenedorDePaneles .contenedorDeIndicador > .nexo_d{
+	position: absolute; 
+	z-index: 1;
+	top: 31px;
+	height: 6px;
+	width: 50%;
+	border-left-style: none;
+	border-right-style: none;
+	/* border: thin dotted black; */
+}
+.contenedorDePaneles .contenedorDeIndicador > .nexo_i{	margin-right: 50%;	right: 0px !important; background-color: grey;}
+.contenedorDePaneles .contenedorDeIndicador > .nexo_d{	margin-left: 50%;	left: 0px !important;	background-color: grey;}
+
 
 .contenedorDePaneles .pasoNumero {
 	position: relative; 
-	width: 68px; 
-	height: 68px; 
+	z-index: 10;
+	width: 64px; 
+	height: 64px; 
 	left: 50%;
 	margin-left: -34px;
 	border-radius: 64px; 
 	background-color: grey;
-	/* border: solid thin violet; */
+	border: thi3pxn dotted violet;
 }
+
 .contenedorDePaneles .pasoNumero > .color{ 
 	position: relative; 
-	margin-top: 6px;
+	top: 4px;
 	width: 56px; 
 	height: 56px; 
 	left: 50%;

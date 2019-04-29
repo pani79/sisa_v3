@@ -1,0 +1,12 @@
+<h1 *ngIf="infoInput['i_h1'] != null">{{infoInput['i_h1']}}</h1>
+<h2 *ngIf="infoInput['i_h2'] != null">{{infoInput['i_h2']}}</h2>
+<h3 *ngIf="infoInput['i_h3'] != null">{{infoInput['i_h3']}}</h3>
+<h4 *ngIf="infoInput['i_h4'] != null">{{infoInput['i_h4']}}</h4>
+<h5 *ngIf="infoInput['i_h5'] != null">{{infoInput['i_h5']}}</h5>
+
+<p [innerHTML]="infoInput['i_p']"  *ngIf="infoInput['i_p'] != null"></p>
+<!-- 
+<p>soy encabzado</p>
+<hr>
+{{infoInput|json}}
+ -->

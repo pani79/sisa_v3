@@ -21,6 +21,7 @@ ng g c components/commons/panelImagenGrupo
 ng g c components/commons/panelnumerico
 ng g c components/commons/panelnumericoGrupo
 ng g c components/commons/panelPasos
+ng g c components/commons/encabezado
 
 ng g c components/modulos/ayudaEnLinea
 ng g c components/modulos/homes

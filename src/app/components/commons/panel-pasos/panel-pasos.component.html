@@ -2,17 +2,23 @@
     <div></div>
     <div>
 
+      <p> 0> {{infoInput.length}}</p>  
+      <p> 1> {{_pasos.length}}</p>    
+      <p> 1> {{_pasos |json}}</p>      
 <ul class="contenedorDePaneles">
-  <li *ngFor="let panel of infoInput; index as i" class="">
+  <li *ngFor="let panel of infoInput; index as i">
     
-    <div class="pasoNumero" (click)="activaPaso(1)" id="paso_{{i + 1}}">
-      <div class="color">
-        <h2>{{i + 1}}</h2>
+    <div class="contenedorDeIndicador">
+      <div class="pasoNumero" (click)="activaPaso(1)" id="paso_{{i + 1}}">
+        <div class="color">
+          <h2>{{i + 1}}</h2>
+        </div>
+        <div class="colorFondo"></div>
       </div>
-      <div class="colorFondo"></div>
       <div class="nexo_i"></div>
       <div class="nexo_d"></div>
     </div>
+    
     <div class="pasoInfo">
       <h3>{{panel['titlulo']}}</h3>
       <h4>{{panel['subtitulo']}}</h4>
