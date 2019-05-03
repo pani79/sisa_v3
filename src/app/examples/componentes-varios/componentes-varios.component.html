@@ -5,7 +5,21 @@
 <hr>
 
 <s-commons-encabezado [infoInput]="_infocomponentes[1]"></s-commons-encabezado>
-<s-commons-panel-pasos [infoInput]="_infocomponentes[0]"></s-commons-panel-pasos>
+
+<hr>
+
+<div>
+    
+    <s-commons-panel-pasos [infoInput]="_infocomponentes[0]"></s-commons-panel-pasos>
+    <div class="contenedorDeBotones">              
+        <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_1" (click)="c0_activaDesactivaPaso(0)"></s-commons-BotonCTextoEIcono>
+        <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_2" (click)="c0_activaDesactivaPaso(1)"></s-commons-BotonCTextoEIcono>
+        <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_3" (click)="c0_activaDesactivaPaso(2)"></s-commons-BotonCTextoEIcono>      
+        <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_4" (click)="c0_activaDesactivaPaso(3)"></s-commons-BotonCTextoEIcono>
+        <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_5" (click)="c0_activaDesactivaPaso(4)"></s-commons-BotonCTextoEIcono>
+        <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.completar" (click)="c0_resetea()"></s-commons-BotonCTextoEIcono>
+    </div>
+</div>
 
 <hr>
 
