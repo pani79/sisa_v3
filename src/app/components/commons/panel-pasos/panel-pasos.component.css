@@ -47,6 +47,7 @@
 	border-radius: 64px; 
 	background-color: grey;
 	border: thi3pxn dotted violet;
+	cursor: pointer;
 }
 
 .contenedorDePaneles .pasoNumero > .color{ 

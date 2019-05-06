@@ -21,13 +21,18 @@ export class PanelPasosComponent implements OnInit {
   _pasosestado: boolean[] = [true, false, true, false, true];
 
   @Input() infoInput: any[];
-  @Output() salida: EventEmitter<string> = new EventEmitter();
+  @Output() salida: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
     this._pasos = this.infoInput;
     //console.log
+  }
+
+  CambiaDePaso(pasonumero: number) {
+    console.log('voy a emitir: ' + pasonumero);
+    this.salida.emit(pasonumero);
   }
 
 }

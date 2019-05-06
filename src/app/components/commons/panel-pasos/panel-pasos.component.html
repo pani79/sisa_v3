@@ -9,7 +9,7 @@
   <li *ngFor="let panel of infoInput; index as i">
     
     <div class="contenedorDeIndicador">
-      <div class="pasoNumero" (click)="activaPaso(1)" id="paso_{{i + 1}}" [ngClass]="{ colorCompletado: _pasos[i]['completado'] }">
+      <div class="pasoNumero" (click)="CambiaDePaso(i + 1)" id="paso_{{i + 1}}" [ngClass]="{ colorCompletado: _pasos[i]['completado'] }">
         <div class="color" [ngClass]="{ colorCompletado: _pasos[i]['completado'] }">
           <h2>{{i + 1}}</h2>
         </div>

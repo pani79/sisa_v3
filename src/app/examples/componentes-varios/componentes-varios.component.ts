@@ -98,6 +98,7 @@ export class ComponentesVariosComponent implements OnInit {
     } else {
       this.c0_pasosEstados[pasoNumero] = true;
       this._infocomponentes[0][pasoNumero]['completado'] = true;
+      this.c0_pasoActual = (pasoNumero + 1);
     }
     this.c0_chequeaEstadoDeLosPasos();
   }
@@ -114,6 +115,9 @@ export class ComponentesVariosComponent implements OnInit {
   c0_resetea() {
     this.c0_pasosEstados.forEach(element => {element = false; });
     this.c0_pasosCompletados = false;
+  }
+  c0_activaPaso(evento: number): void {
+    this.c0_activaDesactivaPaso(evento);
   }
 
 }

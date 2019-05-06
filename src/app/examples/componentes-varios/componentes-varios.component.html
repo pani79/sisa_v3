@@ -9,8 +9,20 @@
 <hr>
 
 <div>
-    
-    <s-commons-panel-pasos [infoInput]="_infocomponentes[0]"></s-commons-panel-pasos>
+    <h1>Componente: Panel pasos </h1>
+    <h4>s-commons-panel-pasos</h4>
+    <br>
+    <p>Paso actual => {{c0_pasoActual}}</p>
+    <s-commons-panel-pasos [infoInput]="_infocomponentes[0]" (salida)="c0_activaPaso($event)"></s-commons-panel-pasos>
+
+    <br>
+    <div *ngIf="c0_pasoActual === 1">Info 1</div>
+    <div *ngIf="c0_pasoActual === 2">Info 2</div>
+    <div *ngIf="c0_pasoActual === 3">Info 3</div>
+    <div *ngIf="c0_pasoActual === 4">Info 4</div>
+    <div *ngIf="c0_pasoActual === 5">Info 5</div>
+    <br>
+
     <div class="contenedorDeBotones">              
         <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_1" (click)="c0_activaDesactivaPaso(0)"></s-commons-BotonCTextoEIcono>
         <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_2" (click)="c0_activaDesactivaPaso(1)"></s-commons-BotonCTextoEIcono>
