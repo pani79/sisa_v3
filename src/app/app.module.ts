@@ -51,6 +51,8 @@ import { BuscadorComponent } from './components/commons/buscador/buscador.compon
 import { ComponentesVariosComponent } from './examples/componentes-varios/componentes-varios.component';
 import { PanelPasosComponent } from './components/commons/panel-pasos/panel-pasos.component';
 import { EncabezadoComponent } from './components/commons/encabezado/encabezado.component';
+import { TdfComponent } from './examples/formularios/tdf/tdf.component';
+import { RfComponent } from './examples/formularios/rf/rf.component';
 
 
 // const routes: Routes = [
@@ -93,7 +95,9 @@ import { EncabezadoComponent } from './components/commons/encabezado/encabezado.
     BuscadorComponent,
     ComponentesVariosComponent,
     PanelPasosComponent,
-    EncabezadoComponent//,
+    EncabezadoComponent,
+    TdfComponent,
+    RfComponent//,
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],

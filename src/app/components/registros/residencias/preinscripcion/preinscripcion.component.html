@@ -1,3 +1,29 @@
+<s-commons-panel-pasos [infoInput]="_infoPasoAPaso" (salida)="cPanelPasos_activaPaso($event)"></s-commons-panel-pasos>
+<br>
+<div *ngIf="_pasoActual === 1">
+  Info 1
+  <button (click)="temp_completaPaso(1)">completa paso</button>
+</div>
+<div *ngIf="_pasoActual === 2">
+  Info 2
+  <button (click)="temp_completaPaso(2)">completa paso</button>
+</div>
+<div *ngIf="_pasoActual === 3">
+  Info 3
+  <button (click)="temp_completaPaso(3)">completa paso</button>
+</div>
+<div *ngIf="_pasoActual === 4">
+  Info 4
+  <button (click)="temp_completaPaso(4)">completa paso</button>
+</div>
+<div *ngIf="_pasoActual === 5">
+  Info 5
+  <button (click)="temp_completaPaso(5)">completa paso</button>
+</div>
+<br>
+
+
+
 <div class="panelPasos_horizontal">
   <div class="menu">
     <div class="pasos">

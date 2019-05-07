@@ -28,13 +28,14 @@ ng g c components/modulos/homes
 ng g c components/modulos/homesContenedor
 ng g c components/modulos/noticias
 
+ng g c examples/formularios/rf
+ng g c examples/formularios/tdf
+ng g c examples/usuarios/usuariosLista
+ng g c examples/usuarios/usuariosAlta
 ng g c examples/componentes_varios
-// ng g c components/views/botoneraLateral
 
 ng g pipe pipes/PObjectPropeties
 
-ng g c examples/usuarios/usuariosLista
-ng g c examples/usuarios/usuariosAlta
 
 ng g s services/listas
 ng g s services/sisaInfo

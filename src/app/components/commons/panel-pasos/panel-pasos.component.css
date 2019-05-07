@@ -6,11 +6,12 @@
 .contenedorDePaneles{	display: flex; flex-direction: row; }
 .contenedorDePaneles > li{	
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; 
+	flex-grow: 0 !important; 
 	/* 
-	background-color: lightpink;
+	background-color: lightpink;*/
 	border: 3px dotted violet; 
-	*/
+	
 }
 .contenedorDePaneles > li:first-child .nexo_i,
 .contenedorDePaneles > li:last-child .nexo_d{	display: none;}
@@ -28,7 +29,7 @@
 	z-index: 1;
 	top: 31px;
 	height: 6px;
-	width: 50%;
+	width: 100%;
 	border-left-style: none;
 	border-right-style: none;
 	/* border: thin dotted black; */

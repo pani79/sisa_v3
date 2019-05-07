@@ -1158,4 +1158,6 @@ aside{  position: absolute; top: 140px; right: 0px;}
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
  */
 
+ .mod_developer{			  background-color: black; color: #3366ff;}
+ .mod_developer > span{			  color: #3366ff !important;}
  .dm_bor_n{ border: black solid thin !important;}

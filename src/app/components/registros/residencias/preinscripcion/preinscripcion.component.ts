@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 /* import { Subscription, Observable} from 'rxjs'; */
-/* 
+/*
 import { Ipreinscripcion_busqueda } from './ipreinscripcion_busqueda';
 import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
  */
@@ -24,13 +24,48 @@ import { RefepsService } from 'src/app/services/registros/refeps.service';
   styleUrls: ['./preinscripcion.component.css']
 })
 export class PreinscripcionComponent implements OnInit {
-  
+
   _provincias: Provincia[];
   _especialidades: RefepsEspecialidades[];
   _institucionesFormadoras: InstitucionFormadora[];
 
+
   _pasoActual = 1;
   _formularioCompleto = false;
+  _infoPasoAPaso: any[] = [
+    {
+      titlulo: 'Provincia o Institución',
+      subtitulo: null,
+      descripcion: 'Seleccione Provincia o Institución donde desea inscribirse',
+      seleccionado: false,
+      completado: false
+    }, {
+      titlulo: 'Concurso',
+      subtitulo: null,
+      descripcion: 'Elegir tipo de concurso',
+      seleccionado: false,
+      completado: false
+    }, {
+      titlulo: 'Confirmar',
+      subtitulo: null,
+      descripcion: 'Confirmar eleccion',
+      seleccionado: false,
+      completado: false
+    }, {
+      titlulo: 'Encuesta',
+      subtitulo: null,
+      descripcion: 'Completar encuesta (opcional)',
+      seleccionado: false,
+      completado: false
+    }, {
+      titlulo: 'Formulario',
+      subtitulo: null,
+      descripcion: 'Completar formulario',
+      seleccionado: false,
+      completado: false
+    }
+  ];
+
 
  /*  _preinscripcionBusqueda: Ipreinscripcion_busqueda;
  _preinscripcionDatos: Ipreinscripcion_inscripcion;
@@ -61,6 +96,42 @@ export class PreinscripcionComponent implements OnInit {
   }
 
   activaPaso(numeroDePaso: number) {
+    this._pasoActual = numeroDePaso;
+    console.log('activaPaso => ' + numeroDePaso);
+  }
+
+  cPanelPasos_activaDesactivaPaso(pasoNumero: number) {
+    if (this._infoPasoAPaso[pasoNumero]['completado'] === true) {
+      this._infoPasoAPaso[pasoNumero]['completado'] = false;
+      this._infoPasoAPaso[pasoNumero]['seleccionado'] = false;
+    } else {
+      this._infoPasoAPaso[pasoNumero]['completado'] = true;
+      this._infoPasoAPaso[pasoNumero]['seleccionado'] = true;
+    }
+    /* this.cPanelPasos_chequeaEstadoDeLosPasos(); */
+  }
+
+  cPanelPasos_chequeaEstadoDeLosPasos() {
+    let resultado = 0;
+    this._infoPasoAPaso.forEach(element => {
+      if (element['completado']  === true) {resultado++; }
+    });
+    if (resultado === this._infoPasoAPaso.length) { this._formularioCompleto = true; } else { this._formularioCompleto = false; }
+    console.log('Paso a paso completado => ' + this._formularioCompleto);
+  }
+/*  */
+/* 
+  cPanelPasos_resetea() {
+    this.cPanelPasos_pasosEstados.forEach(element => {element = false; });
+    this.cPanelPasos_pasosCompletados = false;
+  }
+ */
+  cPanelPasos_activaPaso(evento: number): void {
+    this.cPanelPasos_activaDesactivaPaso(evento);
+  }
+
+  // Temp
+  temp_completaPaso(numeroDePaso: number) {
     this._pasoActual = numeroDePaso;
     console.log('activaPaso => ' + numeroDePaso);
   }

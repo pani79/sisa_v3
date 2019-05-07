@@ -18,7 +18,7 @@ export class PanelPasosComponent implements OnInit {
   _pasos: this.paso[];
  */
   _pasos: {}[];
-  _pasosestado: boolean[] = [true, false, true, false, true];
+  _pasosestado: boolean[] = [];
 
   @Input() infoInput: any[];
   @Output() salida: EventEmitter<number> = new EventEmitter();

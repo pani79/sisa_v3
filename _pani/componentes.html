@@ -1,0 +1,100 @@
+
+<!--  Pagina base - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   -->
+
+<s-commons-panel-pasos [infoInput]="_infocomponentes[0]" (salida)="c0_activaPaso($event)"></s-commons-panel-pasos>
+<!-- 
+  _infoPaginacabecera: string[] = [
+    null,
+    'Componentes varios',
+    'mod_sisa',
+    'askeletor',
+    'Lista de componentes desarrollados para su uso.'
+      /* 
+        info[0] = subtitulo
+        info[1] = titulo
+        info[2] = color registro
+        info[3] = icono registro
+        info[4] = texto introductorio
+        info[5] = location volver
+        info[6] = info ayuda
+     */
+  ];
+ -->
+
+
+
+
+<!--  Botones - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   -->
+
+<div class="contenedorDeBotones">              
+    <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_1" (click)="c0_activaDesactivaPaso(0)"></s-commons-BotonCTextoEIcono>
+    <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_2" (click)="c0_activaDesactivaPaso(1)"></s-commons-BotonCTextoEIcono>
+    <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_3" (click)="c0_activaDesactivaPaso(2)"></s-commons-BotonCTextoEIcono>      
+    <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_4" (click)="c0_activaDesactivaPaso(3)"></s-commons-BotonCTextoEIcono>
+    <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.paso_5" (click)="c0_activaDesactivaPaso(4)"></s-commons-BotonCTextoEIcono>
+    <s-commons-BotonCTextoEIcono [infoBoton]="c0_pasos_botones.completar" (click)="c0_resetea()"></s-commons-BotonCTextoEIcono>
+</div>
+<!-- 
+  c0_pasos_botones = {
+    paso_1: ['boton_general', 'bot_ico_aceptar', 'Paso 1'],
+    paso_2: ['boton_general', 'bot_ico_aceptar', 'Paso 2'],
+    paso_3: ['boton_general', 'bot_ico_aceptar', 'Paso 3'],
+    paso_4: ['boton_general', 'bot_ico_aceptar', 'Paso 4'],
+    paso_5: ['boton_general', 'bot_ico_aceptar', 'Paso 5'],
+    completar: ['boton_pos', 'askeletor', 'Completar paso a paso']
+  };
+ -->
+
+
+
+<!--  Botones - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   -->
+
+<s-commons-panel-pasos [infoInput]="_infocomponentes[0]" (salida)="c0_activaPaso($event)"></s-commons-panel-pasos>
+
+<br>
+<div *ngIf="c0_pasoActual === 1">Info 1</div>
+<div *ngIf="c0_pasoActual === 2">Info 2</div>
+<div *ngIf="c0_pasoActual === 3">Info 3</div>
+<div *ngIf="c0_pasoActual === 4">Info 4</div>
+<div *ngIf="c0_pasoActual === 5">Info 5</div>
+<br>
+
+<!-- 
+    _infocomponentes: any[] = [
+      {
+        titlulo: 'Paso 1',
+        subtitulo: 'subtitulo paso 1',
+        descripcion: 'lorem ipsum loco lorem ipsum loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        seleccionado: true,
+        completado: false
+      }, {
+        titlulo: 'Paso 2',
+        subtitulo: null,
+        descripcion: 'lore loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        seleccionado: false,
+        completado: false
+      }, {
+        titlulo: 'Paso 3',
+        subtitulo: 'subtitulo paso 3',
+        descripcion: 'lore loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        seleccionado: false,
+        completado: false
+      }, {
+        titlulo: 'Paso 4',
+        subtitulo: null,
+        descripcion: 'lore loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        seleccionado: false,
+        completado: false
+      }, {
+        titlulo: 'Paso 5',
+        subtitulo: 'subtitulo paso 3',
+        descripcion: 'lore loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        seleccionado: false,
+        completado: false
+      }
+    ]
+ -->
+
+<!--  Angular *ng - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   -->
+
+<div *ngIf="c0_pasoActual === 1">Info 1</div>
