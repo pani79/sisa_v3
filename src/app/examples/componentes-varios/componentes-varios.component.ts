@@ -92,14 +92,22 @@ export class ComponentesVariosComponent implements OnInit {
 
   // componente pasos (_c_panelPasos)
   c0_activaDesactivaPaso(pasoNumero: number) {
-    if (this.c0_pasosEstados[pasoNumero] === true) {
-      this.c0_pasosEstados[pasoNumero] = false;
-      this._infocomponentes[0][pasoNumero]['completado'] = false;
-    } else {
+    if (pasoNumero !== this.c0_pasoActual) {
+      this.c0_pasoActual = pasoNumero;
       this.c0_pasosEstados[pasoNumero] = true;
       this._infocomponentes[0][pasoNumero]['completado'] = true;
-      this.c0_pasoActual = (pasoNumero + 1);
+      this._infocomponentes[0][pasoNumero]['seleccionado'] = true;
     }
+    /* 
+        if (this.c0_pasosEstados[pasoNumero] === true) {
+          this.c0_pasosEstados[pasoNumero] = false;
+          this._infocomponentes[0][pasoNumero]['completado'] = false;
+        } else {
+          this.c0_pasosEstados[pasoNumero] = true;
+          this._infocomponentes[0][pasoNumero]['completado'] = true;
+          this.c0_pasoActual = (pasoNumero + 1);
+        }
+     */
     this.c0_chequeaEstadoDeLosPasos();
   }
 

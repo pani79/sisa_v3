@@ -10,7 +10,7 @@
     
     <div class="contenedorDeIndicador">
       <div class="pasoNumero" (click)="CambiaDePaso(i)" id="paso_{{i}}" [ngClass]="{ colorCompletado: _pasos[i]['completado'] }">
-        <div class="color" [ngClass]="{ colorCompletado: _pasos[i]['completado'] }">
+        <div class="color" [ngClass]="{ colorCompletado: _pasos[i]['seleccionado'] }">
           <h2>{{i + 1}}</h2>
         </div>
         <div class="colorFondo"></div>

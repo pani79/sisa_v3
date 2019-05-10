@@ -10,7 +10,7 @@
 	flex-grow: 0 !important; 
 	/* 
 	background-color: lightpink;*/
-	border: 3px dotted violet; 
+	border: thin dotted rgba(238, 130, 238, 0.219); 
 	
 }
 .contenedorDePaneles > li:first-child .nexo_i,
@@ -47,7 +47,7 @@
 	margin-left: -34px;
 	border-radius: 64px; 
 	background-color: grey;
-	border: thi3pxn dotted violet;
+	/* border: thin dotted rgba(238, 130, 238, 0.308); */
 	cursor: pointer;
 }
 

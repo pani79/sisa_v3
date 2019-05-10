@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 /* import { Subscription, Observable} from 'rxjs'; */
-/*
-import { Ipreinscripcion_busqueda } from './ipreinscripcion_busqueda';
-import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
- */
 
 //  Modelos
 import { Provincia } from 'src/app/models/provincia';
@@ -14,6 +10,11 @@ import { RefepsEspecialidades } from 'src/app/models/refepsEspecialidades';
 import { GeoService } from 'src/app/services/tas/geo.service';
 import { ResidenciasService } from 'src/app/services/registros/residencias.service';
 import { RefepsService } from 'src/app/services/registros/refeps.service';
+
+
+import { Ipreinscripcion_busqueda } from './ipreinscripcion_busqueda';
+import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
+/* */
 
 // Informacion falsa
 /* import { PROVINCIAS } from '../../../../../assets/fakeData/tablas_auxiliares'; */
@@ -30,14 +31,14 @@ export class PreinscripcionComponent implements OnInit {
   _institucionesFormadoras: InstitucionFormadora[];
 
 
-  _pasoActual = 1;
+  _pasoActual = 0;
   _formularioCompleto = false;
   _infoPasoAPaso: any[] = [
     {
       titlulo: 'Provincia o Institución',
       subtitulo: null,
       descripcion: 'Seleccione Provincia o Institución donde desea inscribirse',
-      seleccionado: false,
+      seleccionado: true,
       completado: false
     }, {
       titlulo: 'Concurso',
@@ -70,13 +71,7 @@ export class PreinscripcionComponent implements OnInit {
  /*  _preinscripcionBusqueda: Ipreinscripcion_busqueda;
  _preinscripcionDatos: Ipreinscripcion_inscripcion;
   */
-  bot_cancelar: string[] = ['boton_neg', 'bot_ico_cancelar', 'Cancelar'];
-  bot_anterior: string[] = ['boton_general', 'bot_ico_listas_anterior', 'Paso anterior'];
-  bot_siguiente: string[] = ['boton_general', 'bot_ico_listas_siguiente', 'Paso siguiente'];
-  //  = {    _a__a_concursaId = 1; };
 
-  // Informacion falsa
-  /* provincias = PROVINCIAS; */
 
   constructor(
     public _servicio_geo: GeoService,
@@ -92,15 +87,38 @@ export class PreinscripcionComponent implements OnInit {
       .subscribe(data => this._institucionesFormadoras = data);
     this._servicio_refeps.especialidadesObtienetodas()
       .subscribe(data => this._especialidades = data);
-    console.log('Esp => ' + this._especialidades);
+    //console.log('Esp => ' + this._especialidades);
   }
 
-  activaPaso(numeroDePaso: number) {
+  cPanelPasos_activaPaso(evento: number): void {
+    //this.cPanelPasos_activaDesactivaPaso(evento);
+    if (this._pasoActual !== evento) {
+      this._infoPasoAPaso.forEach(element => {element['seleccionado'] = false; });
+      this._infoPasoAPaso[evento]['seleccionado'] = true;
+      this._pasoActual = evento;
+    }
+  }
+
+  /* cPanelPasos_reseteaSeleccion() {
+    this._infoPasoAPaso.forEach(element => {
+      element['seleccionado']  = false;
+    });
+  } */
+
+/*   activaPaso(numeroDePaso: number) {
     this._pasoActual = numeroDePaso;
     console.log('activaPaso => ' + numeroDePaso);
-  }
+  } */
 
-  cPanelPasos_activaDesactivaPaso(pasoNumero: number) {
+  cPanelPasos_activaDesactivaPaso(pasoLlega: number) {
+    /* let pasoNumero = (pasoLlega + 1); */
+    let pasoNumero = pasoLlega;
+    if (this._pasoActual !== pasoNumero) {
+      this._infoPasoAPaso.forEach(element => {element['seleccionado'] = false; });
+      this._infoPasoAPaso[pasoNumero]['seleccionado'] = true;
+      this._pasoActual = pasoNumero;
+    }
+/* 
     if (this._infoPasoAPaso[pasoNumero]['completado'] === true) {
       this._infoPasoAPaso[pasoNumero]['completado'] = false;
       this._infoPasoAPaso[pasoNumero]['seleccionado'] = false;
@@ -108,6 +126,7 @@ export class PreinscripcionComponent implements OnInit {
       this._infoPasoAPaso[pasoNumero]['completado'] = true;
       this._infoPasoAPaso[pasoNumero]['seleccionado'] = true;
     }
+     */
     /* this.cPanelPasos_chequeaEstadoDeLosPasos(); */
   }
 
@@ -126,14 +145,15 @@ export class PreinscripcionComponent implements OnInit {
     this.cPanelPasos_pasosCompletados = false;
   }
  */
-  cPanelPasos_activaPaso(evento: number): void {
-    this.cPanelPasos_activaDesactivaPaso(evento);
-  }
 
   // Temp
   temp_completaPaso(numeroDePaso: number) {
-    this._pasoActual = numeroDePaso;
-    console.log('activaPaso => ' + numeroDePaso);
+    if (this._infoPasoAPaso[numeroDePaso]['completado'] === true){
+      this._infoPasoAPaso[numeroDePaso]['completado'] = false;
+    } else {
+      this._infoPasoAPaso[numeroDePaso]['completado'] = true;
+    }
+    console.log('Paso => ' + this._infoPasoAPaso[numeroDePaso]['completado'] );
   }
 
 }
