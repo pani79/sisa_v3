@@ -1,4 +1,4 @@
-<s-commons-panel-pasos [infoInput]="_infoPasoAPaso" (salida)="cPanelPasos_activaPaso($event)"></s-commons-panel-pasos>
+<s-commons-panel-pasos [infoInput]="_infoPasoAPaso" (salida)="cPanelPasos_activaPaso($event)" class="panelPasos"></s-commons-panel-pasos>
 <hr>
 {{_pasoActual}}
 <hr>
@@ -12,7 +12,7 @@
 
 
 
-<div *ngIf="_pasoActual === 0">
+<div class="container" *ngIf="_pasoActual === 0">
 
   <h2>Seleccione Provincia o Institución donde desea inscribirse</h2>
   <div class="row">

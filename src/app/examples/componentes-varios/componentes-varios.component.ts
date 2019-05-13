@@ -29,8 +29,8 @@ export class ComponentesVariosComponent implements OnInit {
     [
       {
         titlulo: 'Paso 1',
-        subtitulo: 'subtitulo paso 1',
-        descripcion: 'lorem ipsum loco lorem ipsum loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        subtitulo: 'subtitulo paso 1 complicado con el texto',
+        descripcion: 'Seleccione Provincia o Institución donde desea inscribirse',
         seleccionado: true,
         completado: false
       }, {
@@ -41,6 +41,18 @@ export class ComponentesVariosComponent implements OnInit {
         completado: false
       }, {
         titlulo: 'Paso 3',
+        subtitulo: 'subtitulo paso 3',
+        descripcion: 'lore loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        seleccionado: false,
+        completado: false
+      }, {
+        titlulo: 'Paso 4',
+        subtitulo: null,
+        descripcion: 'lore loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
+        seleccionado: false,
+        completado: false
+      }, {
+        titlulo: 'Paso 5',
         subtitulo: 'subtitulo paso 3',
         descripcion: 'lore loco lorem ipsum loco lorem ipsum loco lorem. ipsum loco lorem ipsum loco',
         seleccionado: false,

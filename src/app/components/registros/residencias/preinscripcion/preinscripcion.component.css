@@ -1,3 +1,18 @@
+.panelPasos > .contenedor > div > .contenedorDePaneles {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+}
+.panelPasos { background-color: red !important;}
+
+
+form h2{ margin: 10px 0 20px 0; }
+
+form .row > .col-6{ 
+/* 	background-color: lightgray; border-radius: 8px; padding: 20px;  */
+}
+.container{	border: thin blue dotted;}
+.row{	border: thin green dotted;}
+.col-6{	border: thin pink dotted;}
 
 /* SISA_panelPasos  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*
@@ -79,7 +94,7 @@
 
 */
 /* panelPasos_horizontal  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
+/*
 .SISA_panelPasos{ 
 	display: flex;
 	flex-direction: column;
@@ -150,12 +165,4 @@
 .panelPasos_horizontal > .menu > .pasos > div > .pasoTitulo > p{	margin: -6px 0px 0px 0px !important; line-height: 1.2; }
 
 .panelPasos_horizontal .seccionesPaso > div > h2:first-child{ margin: 20px 0px 40px 0px; }
-
-form h2{ margin: 10px 0 20px 0; }
-
-form .row > .col-6{ 
-/* 	background-color: lightgray; border-radius: 8px; padding: 20px;  */
-}
-.container{	border: thin blue dotted;}
-.row{	border: thin green dotted;}
-.col-6{	border: thin pink dotted;}
+*/
