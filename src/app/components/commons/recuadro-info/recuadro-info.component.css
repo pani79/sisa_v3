@@ -1,0 +1,16 @@
+.recuadro{
+    display: flex;
+    padding: 20px;
+    margin: 0 10px 0 20px;
+    border-radius: 8px;
+    background-color: white;
+    /* border: 1px solid red; */
+}
+
+.recuadro .contenedor.iconoA{   display: flex; flex-direction: row;}
+.recuadro .contenedor.iconoA .icono{    width: 48px;}
+
+.recuadro p,
+.recuadro span{
+    color: white;
+}

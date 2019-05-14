@@ -75,11 +75,39 @@ export class ComponentesVariosComponent implements OnInit {
     {
       i_h1: 'Componente Enabezado',
       i_h2: null,
-      i_h3: null,
-      i_h4: 'Esto es un H4',
+      i_h3: 'Esto es un H3',
+      i_h4: '<s-commons-encabezado [infoInput]="_informacionDeInput"></s-commons-encabezado>',
       i_h5: null,
       i_p: 'Este componentese usa basicamente para poner titulos y textos dentro de paginas/componentes. <a target="_blank" href="http://www.msal.gov.ar/residencias">Esto es un link mágico</a>.',
-    }
+    },
+    // 2 = componente recuadro
+    [
+      {
+        configuracion: {
+          tipo: 'simple', // simple
+          color: 'blue',
+          distribucionHorizontal: true // T-F
+        },
+        informacion: {
+          titulo: 'Titulo',
+          subtitulo: 'Subtitulo',
+          texto: 'IMPORTANTE: El correo electrónico es imprescindible para la gestión de su pre-inscripción ya que el sistema lo utiliza para notificar diferentes operaciones</p><p>(Por ejemplo para el envío del código que le permitirá consultar el estado de su inscripción). Verifique que sea correcto y que lo utilice actualmente.'
+        }
+      },
+      {
+        configuracion: {
+          tipo: 'icono', // simple
+          icono: 'askeletor',
+          color: 'orange',
+          distribucionHorizontal: true // T-F
+        },
+        informacion: {
+          titulo: 'Titulo',
+          subtitulo: 'Subtitulo',
+          texto: '<a>NO IMPORTANTE</a>: El correo electrónico es imprescindible para la gestión de su pre-inscripción ya que el sistema lo utiliza para notificar diferentes operaciones <br><br>(Por ejemplo para el envío del código que le permitirá consultar el estado de su inscripción). Verifique que sea correcto y que lo utilice actualmente.'
+        }
+      }
+    ]
   ];
 
   // componente pasos (_c_panelPasos)

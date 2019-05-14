@@ -1,0 +1,17 @@
+<p>
+  {{infoInput | json}}
+</p>
+<div class="recuadro" [style.background-color]="infoInput['configuracion']['color']">
+
+  <div class="contenedor" *ngIf="infoInput['configuracion']['tipo'] === 'simple'"> 
+    <p [innerHTML]="_infoInput['informacion']['texto']"></p>
+  </div>
+ 
+  <div class="contenedor iconoA" *ngIf="infoInput['configuracion']['tipo'] === 'icono'">
+      <div class="icono"><span class="icon-{{infoInput['configuracion']['icono']}}"></span></div>
+      <div>
+        <p [innerHTML]="_infoInput['informacion']['texto']"></p>
+      </div>
+    </div>
+
+</div>

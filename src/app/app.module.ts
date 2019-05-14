@@ -53,6 +53,7 @@ import { PanelPasosComponent } from './components/commons/panel-pasos/panel-paso
 import { EncabezadoComponent } from './components/commons/encabezado/encabezado.component';
 import { TdfComponent } from './examples/formularios/tdf/tdf.component';
 import { RfComponent } from './examples/formularios/rf/rf.component';
+import { RecuadroInfoComponent } from './components/commons/recuadro-info/recuadro-info.component';
 
 
 // const routes: Routes = [
@@ -97,7 +98,8 @@ import { RfComponent } from './examples/formularios/rf/rf.component';
     PanelPasosComponent,
     EncabezadoComponent,
     TdfComponent,
-    RfComponent//,
+    RfComponent,
+    RecuadroInfoComponent//,
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],
