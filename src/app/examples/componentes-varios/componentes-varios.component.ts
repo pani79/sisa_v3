@@ -85,13 +85,13 @@ export class ComponentesVariosComponent implements OnInit {
       {
         configuracion: {
           tipo: 'simple', // simple
-          color: 'blue',
+          colorRegistro: 'reg_refes',
           distribucionHorizontal: true // T-F
         },
         informacion: {
           titulo: 'Titulo',
           subtitulo: 'Subtitulo',
-          texto: 'IMPORTANTE: El correo electrónico es imprescindible para la gestión de su pre-inscripción ya que el sistema lo utiliza para notificar diferentes operaciones</p><p>(Por ejemplo para el envío del código que le permitirá consultar el estado de su inscripción). Verifique que sea correcto y que lo utilice actualmente.'
+          texto: ['<strong>IMPORTANTE</strong>: El correo electrónico es imprescindible para la gestión de su pre-inscripción ya que el sistema lo utiliza para notificar diferentes operaciones.', '(Por ejemplo para el envío del código que le permitirá consultar el estado de su inscripción). Verifique que sea correcto y que lo utilice actualmente.']
         }
       },
       {
@@ -104,7 +104,10 @@ export class ComponentesVariosComponent implements OnInit {
         informacion: {
           titulo: 'Titulo',
           subtitulo: 'Subtitulo',
-          texto: '<a>NO IMPORTANTE</a>: El correo electrónico es imprescindible para la gestión de su pre-inscripción ya que el sistema lo utiliza para notificar diferentes operaciones <br><br>(Por ejemplo para el envío del código que le permitirá consultar el estado de su inscripción). Verifique que sea correcto y que lo utilice actualmente.'
+          texto: [
+            '<strong>NO IMPORTANTE</strong>: El correo electrónico es imprescindible para la gestión de su pre-inscripción ya que el sistema lo utiliza para notificar diferentes operaciones.',
+            '(Por ejemplo para el envío del código que le permitirá consultar el estado de su inscripción). <a target="_blank" href="http://www.msal.gov.ar/residencias">Verifique que sea correcto</a> y que lo utilice actualmente.'
+          ]
         }
       }
     ]

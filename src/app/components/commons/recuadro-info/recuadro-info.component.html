@@ -1,16 +1,30 @@
+<!-- 
 <p>
   {{infoInput | json}}
 </p>
-<div class="recuadro" [style.background-color]="infoInput['configuracion']['color']">
+ -->
+<div
+  [className]="'recuadro ' + infoInput['configuracion']['colorRegistro']"
+  [style.background-color]="infoInput['configuracion']['color']"
+  >
+  <!-- 
+    {{infoInput['configuracion']['colorRegistro']}}
+    [class.class-name]="infoInput['configuracion']['colorRegistro']"  
+    [ngClass]="{ infoInput['configuracion']['colorRegistro'] }" 
+   -->
 
   <div class="contenedor" *ngIf="infoInput['configuracion']['tipo'] === 'simple'"> 
-    <p [innerHTML]="_infoInput['informacion']['texto']"></p>
+    <p *ngFor="let pe of _infoInput['informacion']['texto']" [innerHTML]="pe"></p>
+    <!-- <p *ngfor=" let p of _infoInput['informacion']['texto']">{{p}}</p> -->
   </div>
  
   <div class="contenedor iconoA" *ngIf="infoInput['configuracion']['tipo'] === 'icono'">
       <div class="icono"><span class="icon-{{infoInput['configuracion']['icono']}}"></span></div>
       <div>
-        <p [innerHTML]="_infoInput['informacion']['texto']"></p>
+        <p *ngFor="let pe of _infoInput['informacion']['texto']" [innerHTML]="pe"></p>
+        <!-- <p [innerHTML]="_infoInput['informacion']['texto']"></p> -->
+        <!-- <p *ngfor="let pe in _infoInput['informacion']['texto']">{{pe}}</p> -->
+        <!-- {{_infoInput['informacion']['texto'].length}} <p>{{_infoInput['informacion']['texto']}}</p> -->
       </div>
     </div>
 
