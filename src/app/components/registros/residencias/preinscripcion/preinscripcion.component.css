@@ -7,12 +7,29 @@
 
 form h2{ margin: 10px 0 20px 0; }
 
-form .row > .col-6{ 
-/* 	background-color: lightgray; border-radius: 8px; padding: 20px;  */
+form .row > .col-6 > .contenedor{ 
+	background-color: lightgray; 
+	border-radius: 8px;
+	margin: 10px;
+	padding: 20px;
 }
+
+
+
 .container{	border: thin blue dotted;}
 .row{	border: thin green dotted;}
+
+form label{	border: thin violet dotted; }
+
+.row > *,
+.row > * > *,
+.form-group > *,
+.form-group > * > *{	border: thin green dotted;}
 .col-6{	border: thin pink dotted;}
+
+
+
+
 
 /* SISA_panelPasos  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*

@@ -92,23 +92,13 @@ export class PreinscripcionComponent implements OnInit {
 
   cPanelPasos_activaPaso(evento: number): void {
     //this.cPanelPasos_activaDesactivaPaso(evento);
-    if (this._pasoActual !== evento) {
+    console.log('cPanelPasos_activaPaso <-> ' + evento);
+    if (this._pasoActual !== evento && this.validaPaso(evento)) {
       this._infoPasoAPaso.forEach(element => {element['seleccionado'] = false; });
       this._infoPasoAPaso[evento]['seleccionado'] = true;
       this._pasoActual = evento;
     }
   }
-
-  /* cPanelPasos_reseteaSeleccion() {
-    this._infoPasoAPaso.forEach(element => {
-      element['seleccionado']  = false;
-    });
-  } */
-
-/*   activaPaso(numeroDePaso: number) {
-    this._pasoActual = numeroDePaso;
-    console.log('activaPaso => ' + numeroDePaso);
-  } */
 
   cPanelPasos_activaDesactivaPaso(pasoLlega: number) {
     /* let pasoNumero = (pasoLlega + 1); */
@@ -118,16 +108,6 @@ export class PreinscripcionComponent implements OnInit {
       this._infoPasoAPaso[pasoNumero]['seleccionado'] = true;
       this._pasoActual = pasoNumero;
     }
-/* 
-    if (this._infoPasoAPaso[pasoNumero]['completado'] === true) {
-      this._infoPasoAPaso[pasoNumero]['completado'] = false;
-      this._infoPasoAPaso[pasoNumero]['seleccionado'] = false;
-    } else {
-      this._infoPasoAPaso[pasoNumero]['completado'] = true;
-      this._infoPasoAPaso[pasoNumero]['seleccionado'] = true;
-    }
-     */
-    /* this.cPanelPasos_chequeaEstadoDeLosPasos(); */
   }
 
   cPanelPasos_chequeaEstadoDeLosPasos() {
@@ -138,13 +118,12 @@ export class PreinscripcionComponent implements OnInit {
     if (resultado === this._infoPasoAPaso.length) { this._formularioCompleto = true; } else { this._formularioCompleto = false; }
     console.log('Paso a paso completado => ' + this._formularioCompleto);
   }
-/*  */
-/* 
-  cPanelPasos_resetea() {
-    this.cPanelPasos_pasosEstados.forEach(element => {element = false; });
-    this.cPanelPasos_pasosCompletados = false;
+
+  validaPaso(pasoNumero: number): boolean {
+    let respuesta = true;
+    console.log('validaPaso - > ' + respuesta);
+    return respuesta;
   }
- */
 
   // Temp
   temp_completaPaso(numeroDePaso: number) {
@@ -156,4 +135,22 @@ export class PreinscripcionComponent implements OnInit {
     console.log('Paso => ' + this._infoPasoAPaso[numeroDePaso]['completado'] );
   }
 
+/*  */
+/* 
+  cPanelPasos_resetea() {
+    this.cPanelPasos_pasosEstados.forEach(element => {element = false; });
+    this.cPanelPasos_pasosCompletados = false;
+  }
+ */
+
+  /* cPanelPasos_reseteaSeleccion() {
+    this._infoPasoAPaso.forEach(element => {
+      element['seleccionado']  = false;
+    });
+  } */
+
+/*   activaPaso(numeroDePaso: number) {
+    this._pasoActual = numeroDePaso;
+    console.log('activaPaso => ' + numeroDePaso);
+  } */
 }
