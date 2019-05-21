@@ -7,19 +7,37 @@
 
   {{formularioTDF.value | json}}
   
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Nombre</label>
-      <input type="text" class="form-control col-sm-2" name="nombre" ngModel>
+    <div class="form-group row">      
+      <label class="col-2 col-form-label">Nombre</label>
+      <div class="col-4">
+        <input type="text" class="form-control" 
+          name="nombre" #nombre="ngModel"
+          [(ngModel)]="usuarioModelo.nombre"
+          required>
+        <small>val</small>
+      </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Apellido</label>
-      <input type="text" class="form-control col-sm-2" name="apellido" ngModel>
+      <div class="col-4">
+        <input type="text" class="form-control" 
+          name="apellido" #apellido="ngModel"
+          [(ngModel)]="usuarioModelo.apellido"
+          required>
+        <small>val</small>
+      </div>
     </div>
     
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Email</label>
-      <input type="text" class="form-control col-sm-2" name="email" ngModel>
+      <div class="col-4">
+        <input type="text" class="form-control" 
+          name="email" #email="ngModel"
+          [(ngModel)]="usuarioModelo.email"
+          required>
+        <small>val</small>
+      </div>
     </div>
 
     <div class="form-group  row">

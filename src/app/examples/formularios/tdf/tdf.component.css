@@ -5,3 +5,6 @@ form{
 }
 
 form label{ text-align: right;}
+
+.form-group > *,
+.form-group > * > *{    border: gray 1px dotted; }

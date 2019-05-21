@@ -31,3 +31,15 @@ export class StylishComponent {
 
 _pasos[i]['completado'] = true;
 .colorCompletado{	background-color: #006633 !important; }
+
+
+3
+	
+ 
+<p [style.background-color]="'grey'">some paragraph with grey background</p>
+
+<h1 [class.class-name]="Class Value"></h1>
+<h1 [style.style-name]="Style Value"></h1>
+
+
+<div class="container" [style.display]="_pasoActual === 4 ? 'block': 'none'">

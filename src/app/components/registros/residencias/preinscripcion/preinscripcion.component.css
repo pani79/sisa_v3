@@ -7,8 +7,10 @@
 
 form h2{ margin: 10px 0 20px 0; }
 
+form .row > .col-12 > .contenedor,
+form .row > .col-md-6 > .contenedor,
 form .row > .col-6 > .contenedor{ 
-	background-color: lightgray; 
+	background-color: #e8e8e8; 
 	border-radius: 8px;
 	margin: 10px;
 	padding: 20px;
