@@ -1,24 +1,25 @@
 
 <!--  Pagina base - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   -->
 
-<s-commons-panel-pasos [infoInput]="_infocomponentes[0]" (salida)="c0_activaPaso($event)"></s-commons-panel-pasos>
+<s-commons-basicPage [info]="info"></s-commons-basicPage>
+
 <!-- 
-  _infoPaginacabecera: string[] = [
-    null,
-    'Componentes varios',
-    'mod_sisa',
-    'askeletor',
-    'Lista de componentes desarrollados para su uso.'
-      /* 
-        info[0] = subtitulo
-        info[1] = titulo
-        info[2] = color registro
-        info[3] = icono registro
-        info[4] = texto introductorio
-        info[5] = location volver
-        info[6] = info ayuda
-     */
+/*  textoIntro: string = 'Para información sobre los distintos concursos de residencias consulte la web del Ministerio de Salud de la Nación www.msal.gov.ar/residencias';  */
+
+  //  info es la informacion que se pasa a traves del <s-commons-basicPage> para que se muestre
+  // 0 = Subtitulo o sigla. Si no lleva no se muestra y se reordena
+  // 1 = Titulo o sigla
+  // 2 = Color del registro o modulo
+  // 3 = Icono del registro o modulo
+  // 4 = Texto de la intro
+  info: string[] = [
+    '',
+    'Exámenes para residencias',
+    'reg_residencias',
+    'reg_residencias',
+    'Para información sobre los distintos concursos de residencias consulte la web del Ministerio de Salud de la Nación www.msal.gov.ar/residencias'
   ];
+
  -->
 
 
@@ -94,6 +95,37 @@
       }
     ]
  -->
+
+
+<!--  Recuadro Info - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   -->
+
+<s-commons-recuadroInfo [infoInput]="_x"></s-commons-recuadroInfo>
+
+<!-- 
+
+    _x:  {
+        configuracion: {
+          tipo: 'icono', // simple
+          icono: 'askeletor',
+          color: 'orange',
+          distribucionHorizontal: true // T-F
+        },
+        informacion: {
+          titulo: 'Titulo',
+          subtitulo: 'Subtitulo',
+          texto: [
+            '<strong>NO IMPORTANTE</strong>: El correo electrónico es imprescindible para la gestión de su pre-inscripción ya que el sistema lo utiliza para notificar diferentes operaciones.',
+            '(Por ejemplo para el envío del código que le permitirá consultar el estado de su inscripción). <a target="_blank" href="http://www.msal.gov.ar/residencias">Verifique que sea correcto</a> y que lo utilice actualmente.'
+          ]
+        }
+      }
+-->
+
+
+
+
+
+
 
 <!--  Angular *ng - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   -->
 

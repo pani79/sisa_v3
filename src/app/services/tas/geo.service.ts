@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 //  modelos
 import { Provincia } from 'src/app/models/provincia';
+import { Pais } from 'src/app/models/paises';
 
 
 @Injectable({
@@ -17,4 +18,13 @@ export class GeoService {
   provinciasObtieneTodas(): Observable<Provincia[]> {
     return this._http.get<Provincia[]>('http://localhost:8080/provincia/all');
   }
+
+  paisesObtieneTodos(): Observable<Pais[]> {
+    return this._http.get<Pais[]>('http://localhost:8080/pais/all');
+  }
+  /*
+      nacionalidadesObtieneTodas(): Observable<Provincia[]> {
+        return this._http.get<Provincia[]>('http://localhost:8080/provincia/all');
+      }
+   */
 }

@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { Provincia } from 'src/app/models/provincia';
 import { InstitucionFormadora } from 'src/app/models/institucionFormadora';
 import { RefepsEspecialidades } from 'src/app/models/refepsEspecialidades';
+import { Pais } from 'src/app/models/paises';
 
 //  Servicios
 import { GeoService } from 'src/app/services/tas/geo.service';
@@ -28,6 +29,7 @@ export class PreinscripcionComponent implements OnInit {
 
   _provincias: Provincia[];
   _especialidades: RefepsEspecialidades[];
+  _paises: Pais[];
   _institucionesFormadoras: InstitucionFormadora[];
 
 
@@ -83,8 +85,12 @@ export class PreinscripcionComponent implements OnInit {
   ngOnInit() {
     this._servicio_geo.provinciasObtieneTodas()
       .subscribe(data => this._provincias = data);
+    this._servicio_geo.paisesObtieneTodos()
+      .subscribe(data => this._paises = data);
+
     this._servicio_residencias.institucionesFormadorasObtienetodas()
       .subscribe(data => this._institucionesFormadoras = data);
+
     this._servicio_refeps.especialidadesObtienetodas()
       .subscribe(data => this._especialidades = data);
     //console.log('Esp => ' + this._especialidades);

@@ -28,12 +28,14 @@
             </div>
             <div class="rb w70_">
               <div>
-                <input type="radio" id="radio01" name="radio" value="true" name="_a_concursaTipoProvincia" ngModel />
+                <input type="radio" id="radio01" name="radio" value="true" 
+                  ngModel  name="_a_concursaTipoProvincia" />
                 <label for="radio01">
                   <span></span>Provincia</label>
               </div>
               <div>
-                <input type="radio" id="radio02" name="radio" value="false" name="_a_concursaTipoProvincia" ngModel />
+                <input type="radio" id="radio02" name="radio" value="false" 
+                  ngModel name="_a_concursaTipoProvincia" />
                 <label for="radio02">
                   <span></span>Institución</label>
               </div>
@@ -41,15 +43,19 @@
           </div>
 
         </div>
+        
       </div>
 
       <!--  -->
       <div class="col-6">
-          <div class="contenedor">
+        <!-- 
+          <p>=> {{preinscripcionForm.value|json}}</p>
+          <p>=> {{preinscripcionForm.value['_a_concursaTipoProvincia'] |json}}</p>
+         -->
+        <div class="contenedor" [style.display]="preinscripcionForm.value['_a_concursaTipoProvincia'] !== '' ? 'block': 'none'">
         <!-- <p>=> {{_provincias | json}}</p> -->
-        <div class="contenedor">
 
-          <div class="item">
+          <div class="item" [style.display]="preinscripcionForm.value['_a_concursaTipoProvincia'] === 'true' ? 'block': 'none'">
             <div class="w30_">
               <p>Provincia</p>
             </div>
@@ -62,7 +68,8 @@
             </div>
           </div>
 
-          <div class="item">
+          <!--   <div class="container" [style.display]="_pasoActual === 2 ? 'block': 'none'"> -->
+          <div class="item" [style.display]="preinscripcionForm.value['_a_concursaTipoProvincia'] === 'false' ? 'block': 'none'">
             <div class="w30_">
               <p>Institución</p>
             </div>
@@ -75,7 +82,7 @@
             </div>
           </div>
 
-          <div class="item">
+          <div class="item"  [style.display]="preinscripcionForm.value['_a_concursaTipoProvincia'] !== '' ? 'block': 'none'">
             <div class="w30_">
               <p>Especialidad</p>
             </div>
@@ -88,7 +95,6 @@
             </div>
           </div>
         </div>
-      </div>
       </div>
 
 
@@ -111,37 +117,44 @@
   <!-- <div *ngIf="_pasoActual === 1"> -->
   <div class="container" [style.display]="_pasoActual === 1 ? 'block': 'none'">
 
-
     <h2>Tipo de concurso al que desea inscribirse</h2>
     <div class="row">
       <div class="col-12">
         <div class="contenedor">
-          <div class="item">
-            <div class="w30_">
-              <p>Tipo de concurso</p>
+          <div class="row">
+
+            <div class="col-6">
+              <div class="item">
+                <div class="w30_">
+                  <p>Tipo de concurso</p>
+                </div>
+                <div class="w70_">
+                  <select>
+                    <option value="-seleccione-">-seleccione-</option>
+                    <option value="1">Examen Unico</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div class="w30_">
-              <select>
-                <option value="-seleccione-">-seleccione-</option>
-                <option value="1">Examen Unico</option>
-              </select>
+
+            <div class="col-6">
+              <div class="item">
+                <div class="w30_">
+                  <p>Subtipo de concurso</p>
+                </div>
+                <div class="w70_">
+                  <select>
+                    <option value="-seleccione-">-seleccione-</option>
+                    <option value="1">Médico</option>
+                  </select>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="w30_">
-              <p>Subtipo de concurso</p>
-            </div>
-            <div class="w30_">
-              <select>
-                <option value="-seleccione-">-seleccione-</option>
-                <option value="1">Médico</option>
-              </select>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
-
 
   </div>
 
@@ -436,6 +449,12 @@
   </div>
 
 
+
+
+
+
+
+
   <!-- <div *ngIf="_pasoActual === 4"> -->
   <div class="container" [style.display]="_pasoActual === 4 ? 'block': 'none'">
 
@@ -527,554 +546,53 @@
             <p>Edad</p>
           </div>
         </div>
+
+
+        
+
         <div class="item">
           <div class="w30_">
             <p>Nacionalidad</p>
           </div>
           <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option value="301">Afgana</option>
-              <option value="401">Albanesa</option>
-              <option value="438">Alemana</option>
-              <option value="404">Andorrana</option>
-              <option value="149">Angoleña</option>
-              <option value="551">Anguilense</option>
-              <option value="237">Antiguana</option>
-              <option value="552">Antillana</option>
-              <option value="553">Antártica</option>
-              <option value="102">Argelina</option>
-              <option value="200">Argentina</option>
-              <option value="349">Armenia</option>
-              <option value="554">Arubeña</option>
-              <option value="501">Australiana</option>
-              <option value="405">Austríaca</option>
-              <option value="350">Azerbaiyana</option>
-              <option value="239">Bahamesa</option>
-              <option value="303">Bahreiní</option>
-              <option value="201">Barbadense</option>
-              <option value="406">Belga</option>
-              <option value="236">Beliceña</option>
-              <option value="345">Bengalí</option>
-              <option value="112">Beninesa</option>
-              <option value="555">Bermudeña</option>
-              <option value="439">Bielorrusa</option>
-              <option value="304">Birmana</option>
-              <option value="583">Birmano</option>
-              <option value="202">Boliviana</option>
-              <option value="446">Bosnia</option>
-              <option value="103">Botsuanesa</option>
-              <option value="556">Bouvet Island</option>
-              <option value="203">Brasilera</option>
-              <option value="346">Bruneana</option>
-              <option value="101">Burquinesa</option>
-              <option value="104">Burundesa</option>
-              <option value="305">Butanesa</option>
-              <option value="407">Búlgara</option>
-              <option value="150">Caboverdiana</option>
-              <option value="570">Caimanés</option>
-              <option value="306">Camboyana</option>
-              <option value="105">Camerunesa</option>
-              <option value="204">Canadiense</option>
-              <option value="307">Ceilanesa</option>
-              <option value="107">Centroafricana</option>
-              <option value="111">Chadiana</option>
-              <option value="557">Chaguense</option>
-              <option value="451">Checa</option>
-              <option value="208">Chilena</option>
-              <option value="310">China</option>
-              <option value="435">Chipriota</option>
-              <option value="205">Colombiana</option>
-              <option value="155">Comorense</option>
-              <option value="108">Congoleña</option>
-              <option value="206">Costarricense</option>
-              <option value="447">Croata</option>
-              <option value="207">Cubana</option>
-              <option value="409">Danesa</option>
-              <option value="209">Dominicana</option>
-              <option value="233">Dominiquesa</option>
-              <option value="119">Ecuatoguineana</option>
-              <option value="210">Ecuatoriana</option>
-              <option value="113">Egipcia</option>
-              <option value="331">Emiratense</option>
-              <option value="160">Eritrea</option>
-              <option value="448">Eslovaca</option>
-              <option value="449">Eslovena</option>
-              <option value="410">Española</option>
-              <option value="212">Estadounidense</option>
-              <option value="440">Estonia</option>
-              <option value="161">Etíope</option>
-              <option value="312">Filipina</option>
-              <option value="411">Finlandesa</option>
-              <option value="512">Fiyiana</option>
-              <option value="412">Francesa</option>
-              <option value="561">French Southern Territories</option>
-              <option value="115">Gabonés</option>
-              <option value="116">Gambiana</option>
-              <option value="351">Georgiana</option>
-              <option value="117">Ghanesa</option>
-              <option value="562">Gibraltareña</option>
-              <option value="240">Granadina</option>
-              <option value="413">Griega</option>
-              <option value="563">Groenlandés</option>
-              <option value="564">Guadalupeño</option>
-              <option value="565">Guameña</option>
-              <option value="213">Guatemalteca</option>
-              <option value="559">Guayanés</option>
-              <option value="156">Guineana</option>
-              <option value="118">Guineana</option>
-              <option value="214">Guyanesa</option>
-              <option value="215">Haitiana</option>
-              <option value="566">Heard Island and Mcdonald Isla</option>
-              <option value="315">Hindú</option>
-              <option value="423">Holandesa</option>
-              <option value="216">Hondureña</option>
-              <option value="341">Hongkonesa</option>
-              <option value="414">Húngara</option>
-              <option value="316">Indonesia</option>
-              <option value="426">Inglesa</option>
-              <option value="318">Iraní</option>
-              <option value="317">Iraquí</option>
-              <option value="415">Irlandesa</option>
-              <option value="416">Islandesa</option>
-              <option value="319">Israelí</option>
-              <option value="417">Italiana</option>
-              <option value="217">Jamaiquina</option>
-              <option value="320">Japonesa</option>
-              <option value="321">Jordana</option>
-              <option value="352">Kazaka</option>
-              <option value="120">Keniana</option>
-              <option value="353">Kirguís</option>
-              <option value="514">Kiribatiana</option>
-              <option value="396">Kosovar</option>
-              <option value="323">Kuwaití</option>
-              <option value="324">Laosiana</option>
-              <option value="121">Lesotense</option>
-              <option value="441">Letona</option>
-              <option value="578">Letón</option>
-              <option value="325">Libanesa</option>
-              <option value="122">Liberiana</option>
-              <option value="123">Libia</option>
-              <option value="418">Liechtensteiniana</option>
-              <option value="442">Lituana</option>
-              <option value="419">Luxemburguesa</option>
-              <option value="579">Macaense</option>
-              <option value="450">Macedonia</option>
-              <option value="326">Malasia</option>
-              <option value="125">Malauí</option>
-              <option value="327">Maldiva</option>
-              <option value="124">Malgache</option>
-              <option value="420">Maltesa</option>
-              <option value="573">Malvinés/Malvinense</option>
-              <option value="126">Malí</option>
-              <option value="110">Marfileña</option>
-              <option value="521">Mariana</option>
-              <option value="127">Marroquí</option>
-              <option value="520">Marshalesa</option>
-              <option value="580">Martiniqués</option>
-              <option value="128">Mauriciana</option>
-              <option value="574">Mauriciano</option>
-              <option value="129">Mauritana</option>
-              <option value="218">Mexicana</option>
-              <option value="515">Micronesia</option>
-              <option value="443">Moldava</option>
-              <option value="421">Monegasca</option>
-              <option value="329">Mongola</option>
-              <option value="582">Monserratera</option>
-              <option value="151">Mozambiqueña</option>
-              <option value="158">Namibia</option>
-              <option value="503">Nauruana</option>
-              <option value="587">Neocaledonia</option>
-              <option value="504">Neocelandesa</option>
-              <option value="330">Nepalí</option>
-              <option value="219">Nicaragüense</option>
-              <option value="131">Nigeriana</option>
-              <option value="130">Nigerina</option>
-              <option value="584">Niuano</option>
-              <option value="308">Norcoreana</option>
-              <option value="585">Norfolkense</option>
-              <option value="586">Normariana</option>
-              <option value="422">Noruega</option>
-              <option value="328">Omaní</option>
-              <option value="332">Pakistaní</option>
-              <option value="516">Palaoana</option>
-              <option value="588">Palestina</option>
-              <option value="357">Palestina</option>
-              <option value="220">Panameña</option>
-              <option value="513">Papú</option>
-              <option value="221">Paraguaya</option>
-              <option value="222">Peruana</option>
-              <option value="589">Pitcairnés</option>
-              <option value="424">Polaca</option>
-              <option value="560">Polinesio</option>
-              <option value="425">Portuguesa</option>
-              <option value="223">Puertorriqueña</option>
-              <option value="322">Qatarí</option>
-              <option value="133">Ruandesa</option>
-              <option value="427">Rumana</option>
-              <option value="444">Rusa</option>
-              <option value="599">Saharaui</option>
-              <option value="518">Salomonense</option>
-              <option value="211">Salvadoreña</option>
-              <option value="550">Samoamericana</option>
-              <option value="506">Samoana</option>
-              <option value="238">Sancristobaleña</option>
-              <option value="428">Sanmarinense</option>
-              <option value="592">Sanpedrina</option>
-              <option value="234">Santalucense</option>
-              <option value="157">Santotomense</option>
-              <option value="235">Sanvicentina</option>
-              <option value="302">Saudí</option>
-              <option value="134">Sengalesa</option>
-              <option value="452">Serbomontenegrina</option>
-              <option value="152">Seychellense</option>
-              <option value="135">Sierraleonesa</option>
-              <option value="333">Singapurense</option>
-              <option value="334">Siria</option>
-              <option value="136">Somalí</option>
-              <option value="498">Soviética</option>
-              <option value="137">Suazí</option>
-              <option value="159">Sudafricana</option>
-              <option value="138">Sudanesa</option>
-              <option value="429">Sueca</option>
-              <option value="430">Suiza</option>
-              <option value="309">Surcoreana</option>
-              <option value="232">Surinamesa</option>
-              <option value="594">Svalbarense</option>
-              <option value="335">Tailandesa</option>
-              <option value="313">Taiwanesa</option>
-              <option value="139">Tanzana</option>
-              <option value="354">Tayika</option>
-              <option value="558">Timorense</option>
-              <option value="140">Togolesa</option>
-              <option value="595">Tokelauana</option>
-              <option value="519">Tongana</option>
-              <option value="224">Trinitense</option>
-              <option value="141">Tunecina</option>
-              <option value="436">Turca</option>
-              <option value="355">Turcomana</option>
-              <option value="517">Tuvaluana</option>
-              <option value="445">Ucraniana</option>
-              <option value="142">Ugandesa</option>
-              <option value="596">United States Minor Outlying I</option>
-              <option value="225">Uruguaya</option>
-              <option value="356">Uzbeka</option>
-              <option value="505">Vanuatuense</option>
-              <option value="431">Vaticano</option>
-              <option value="226">Venezolana</option>
-              <option value="337">Vietnamita</option>
-              <option value="598">Virgenense americana</option>
-              <option value="597">Virgenense británica</option>
-              <option value="348">Yemení</option>
-              <option value="153">Yibutiana</option>
-              <option value="600">Yugoslava</option>
-              <option value="109">Zaireña</option>
-              <option value="144">Zambiana</option>
-              <option value="132">Zimbabuense</option>
-              <option value="591">de San Kitts y Nevis</option>
-              <option value="569">de la Isla Christmas</option>
-              <option value="568">de la Isla Cocos</option>
-              <option value="571">de las Islas Cook</option>
-              <option value="575">de las islas Georgias del Sur y Sandwich del Sur</option>
-              <option value="576">de las islas Turcas y Caicos</option>
-              <option value="577">de las islas Wallis y Futuna</option>
-              <option value="572">feroés</option>
-              <option value="581">mahorés</option>
-              <option value="593">santahelena</option>
+            <select name="_a_xxxxxx" ngModel>
+              <option value="" selected disabled hidden>Seleccione nacionalidad</option>
+              <option *ngFor="let pais of _paises" value="{{pais.idPais}}">{{pais.nacionalidad}}
+              </option>
             </select>
           </div>
         </div>
+
+
         <div class="item">
-          <div class="w30_">
-            <p>País de nacimiento</p>
+            <div class="w30_">
+              <p>País de nacimiento</p>
+            </div>
+            <div class="w30_">
+              <select name="_a_xxxxxx" ngModel>
+                <option value="" selected disabled hidden>Seleccione pais</option>
+                <option *ngFor="let pais of _paises" value="{{pais.idPais}}">{{pais.nombre}}
+                </option>
+              </select>
+            </div>
           </div>
-          <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option value="301">Afganistán</option>
-              <option value="401">Albania</option>
-              <option value="438">Alemania</option>
-              <option value="550">American Samoa</option>
-              <option value="404">Andorra</option>
-              <option value="149">Angola</option>
-              <option value="551">Anguila</option>
-              <option value="553">Antartida</option>
-              <option value="237">Antigua y Barbuda</option>
-              <option value="552">Antillas Holandesas</option>
-              <option value="302">Arabia Saudita</option>
-              <option value="200">Argentina</option>
-              <option value="349">Armenia</option>
-              <option value="554">Aruba</option>
-              <option value="501">Australia</option>
-              <option value="405">Austria</option>
-              <option value="350">Azerbaidahan</option>
-              <option value="239">Bahamas</option>
-              <option value="303">Bahrein</option>
-              <option value="345">Bangladesh</option>
-              <option value="201">Barbados</option>
-              <option value="112">Benín</option>
-              <option value="555">Bermuda</option>
-              <option value="439">Bielorrusia</option>
-              <option value="304">Birmania</option>
-              <option value="202">Bolivia</option>
-              <option value="446">Bosnia Herzegovina</option>
-              <option value="103">Botswana</option>
-              <option value="556">Bouvet Island</option>
-              <option value="203">Brasil</option>
-              <option value="557">British Indian Ocean Territory</option>
-              <option value="346">Brunei</option>
-              <option value="407">Bulgaria</option>
-              <option value="101">Burkina Faso</option>
-              <option value="104">Burundi</option>
-              <option value="305">Bután</option>
-              <option value="406">Bélgica</option>
-              <option value="236">Bélice</option>
-              <option value="150">Cabo Verde</option>
-              <option value="306">Camboya</option>
-              <option value="105">Camerún</option>
-              <option value="204">Canadá</option>
-              <option value="111">Chad</option>
-              <option value="208">Chile</option>
-              <option value="310">China</option>
-              <option value="435">Chipre</option>
-              <option value="205">Colombia</option>
-              <option value="155">Comoras</option>
-              <option value="108">Congo</option>
-              <option value="308">Corea Democrática</option>
-              <option value="309">Corea Republicana</option>
-              <option value="206">Costa Rica</option>
-              <option value="110">Costa de Marfil</option>
-              <option value="447">Croacia</option>
-              <option value="207">Cuba</option>
-              <option value="409">Dinamarca</option>
-              <option value="153">Djibouti</option>
-              <option value="233">Dominica</option>
-              <option value="212">EE.UU.</option>
-              <option value="498">EX - U.R.S.S.</option>
-              <option value="210">Ecuador</option>
-              <option value="113">Egipto</option>
-              <option value="211">El Salvador</option>
-              <option value="331">Emiratos Árabes Unidos</option>
-              <option value="160">Eritrea</option>
-              <option value="448">Eslovaquia</option>
-              <option value="449">Eslovenia</option>
-              <option value="410">España</option>
-              <option value="440">Estonia</option>
-              <option value="161">Etiopía</option>
-              <option value="512">Fiji</option>
-              <option value="312">Filipinas</option>
-              <option value="411">Finlandia</option>
-              <option value="412">Francia</option>
-              <option value="559">French Guiana</option>
-              <option value="560">French Polynesia</option>
-              <option value="561">French Southern Territories</option>
-              <option value="115">Gabón</option>
-              <option value="116">Gambia</option>
-              <option value="351">Georgia</option>
-              <option value="117">Ghana</option>
-              <option value="562">Gibraltar</option>
-              <option value="413">Grecia</option>
-              <option value="240">Grenada</option>
-              <option value="563">Groenlandia</option>
-              <option value="564">Guadalupe</option>
-              <option value="565">Guam</option>
-              <option value="213">Guatemala</option>
-              <option value="118">Guinea</option>
-              <option value="156">Guinea Bissau</option>
-              <option value="119">Guinea Ecuatorial</option>
-              <option value="214">Guyana</option>
-              <option value="215">Haití</option>
-              <option value="566">Heard Island and Mcdonald Isla</option>
-              <option value="216">Honduras</option>
-              <option value="341">Hong Kong</option>
-              <option value="414">Hungría</option>
-              <option value="315">India</option>
-              <option value="316">Indonesia</option>
-              <option value="317">Irak</option>
-              <option value="415">Irlanda</option>
-              <option value="318">Irán</option>
-              <option value="569">Isla Christmas</option>
-              <option value="416">Islandia</option>
-              <option value="570">Islas Caiman</option>
-              <option value="568">Islas Cocos</option>
-              <option value="571">Islas Cook</option>
-              <option value="572">Islas Feroe</option>
-              <option value="573">Islas Malvinas</option>
-              <option value="521">Islas Marianas</option>
-              <option value="520">Islas Marshall</option>
-              <option value="574">Islas Mauricio</option>
-              <option value="518">Islas Salomón</option>
-              <option value="575">Islas Sandwich</option>
-              <option value="576">Islas Turks y Caicos</option>
-              <option value="577">Islas Wallis y Futuna</option>
-              <option value="319">Israel</option>
-              <option value="417">Italia</option>
-              <option value="217">Jamaica</option>
-              <option value="320">Japón</option>
-              <option value="321">Jordania</option>
-              <option value="352">Kazajstán</option>
-              <option value="120">Kenya</option>
-              <option value="353">Kirguistán</option>
-              <option value="514">Kiribati</option>
-              <option value="396">Kosovo</option>
-              <option value="323">Kuwait</option>
-              <option value="324">Laos</option>
-              <option value="578">Latvia</option>
-              <option value="121">Lesotho</option>
-              <option value="441">Letonia</option>
-              <option value="122">Liberia</option>
-              <option value="123">Libia</option>
-              <option value="418">Liechtenstein</option>
-              <option value="442">Lituania</option>
-              <option value="419">Luxemburgo</option>
-              <option value="325">Líbano</option>
-              <option value="579">Macao</option>
-              <option value="450">Macedonia</option>
-              <option value="124">Madagascar</option>
-              <option value="326">Malasia</option>
-              <option value="125">Malawi</option>
-              <option value="327">Maldivas</option>
-              <option value="420">Malta</option>
-              <option value="126">Malí</option>
-              <option value="127">Marruecos</option>
-              <option value="580">Martinique</option>
-              <option value="128">Mauricio</option>
-              <option value="129">Mauritania</option>
-              <option value="581">Mayotte</option>
-              <option value="515">Micronesia Estados Federados</option>
-              <option value="443">Moldova</option>
-              <option value="329">Mongolia</option>
-              <option value="582">Montserrat</option>
-              <option value="151">Mozambique</option>
-              <option value="583">Myanmar</option>
-              <option value="218">México</option>
-              <option value="421">Mónaco</option>
-              <option value="158">Namibia</option>
-              <option value="503">Nauru</option>
-              <option value="330">Nepal</option>
-              <option value="219">Nicaragua</option>
-              <option value="131">Nigeria</option>
-              <option value="584">Niue</option>
-              <option value="585">Norfolk Island</option>
-              <option value="586">Northern Mariana Islands</option>
-              <option value="422">Noruega</option>
-              <option value="587">Nueva Caledonia</option>
-              <option value="504">Nueva Zelanda</option>
-              <option value="130">Níger</option>
-              <option value="328">Omán</option>
-              <option value="516">Palau</option>
-              <option value="588">Palestina</option>
-              <option value="220">Panamá</option>
-              <option value="513">Papúa Nueva Guinea</option>
-              <option value="332">Paquistán</option>
-              <option value="221">Paraguay</option>
-              <option value="423">Países Bajos</option>
-              <option value="222">Perú</option>
-              <option value="589">Pitcairn</option>
-              <option value="424">Polonia</option>
-              <option value="425">Portugal</option>
-              <option value="223">Puerto Rico (Estado Asociado)</option>
-              <option value="322">Qatar</option>
-              <option value="426">Reino Unido</option>
-              <option value="107">República Centroafricana</option>
-              <option value="451">República Checa</option>
-              <option value="209">República Dominicana</option>
-              <option value="348">República de Yemen</option>
-              <option value="427">Rumania</option>
-              <option value="444">Rusia</option>
-              <option value="133">Rwanda</option>
-              <option value="591">Saint Kitts and Nevis</option>
-              <option value="592">Saint Pierre y Miquelon</option>
-              <option value="506">Samoa occidental</option>
-              <option value="238">San Cristobal y Nevis</option>
-              <option value="428">San Marino</option>
-              <option value="235">San Vicente y las Granadinas</option>
-              <option value="593">Santa Elena</option>
-              <option value="234">Santa Lucía</option>
-              <option value="157">Santo Tomé y Príncipe</option>
-              <option value="134">Senegal</option>
-              <option value="452">Serbia y Montenegro</option>
-              <option value="152">Seychelles</option>
-              <option value="135">Sierra Leona</option>
-              <option value="333">Singapur</option>
-              <option value="334">Siria</option>
-              <option value="136">Somalia</option>
-              <option value="307">Sri Lanka</option>
-              <option value="159">Sudáfrica</option>
-              <option value="138">Sudán</option>
-              <option value="429">Suecia</option>
-              <option value="430">Suiza</option>
-              <option value="232">Suriname</option>
-              <option value="594">Svalbard and Jan Mayen</option>
-              <option value="137">Swazilandia</option>
-              <option value="335">Tailandia</option>
-              <option value="313">Taiwán</option>
-              <option value="139">Tanzania</option>
-              <option value="354">Tayikistán</option>
-              <option value="357">Territorios Autónomos Palestinos</option>
-              <option value="558">Timor Oriental</option>
-              <option value="140">Togo</option>
-              <option value="519">Tonga</option>
-              <option value="595">Toquelau</option>
-              <option value="224">Trinidad y Tobago</option>
-              <option value="355">Turkmenistán</option>
-              <option value="436">Turquía</option>
-              <option value="517">Tuvalu</option>
-              <option value="141">Túnez</option>
-              <option value="445">Ucrania</option>
-              <option value="142">Uganda</option>
-              <option value="596">United States Minor Outlying I</option>
-              <option value="225">Uruguay</option>
-              <option value="356">Uzbekistán</option>
-              <option value="505">Vanuatu</option>
-              <option value="431">Vaticano</option>
-              <option value="226">Venezuela</option>
-              <option value="337">Vietnam</option>
-              <option value="597">Virgin Islands British</option>
-              <option value="598">Virgin Islands U.S.</option>
-              <option value="599">Western Sahara</option>
-              <option value="600">Yugoslavia</option>
-              <option value="109">Zaire</option>
-              <option value="144">Zambia</option>
-              <option value="132">Zimbabwe</option>
-              <option value="102">argelia2</option>
-            </select>
-          </div>
-        </div>
+
+        
+
         <div class="item">
           <div class="w30_">
             <p>Provincia de nacimiento</p>
           </div>
           <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option value="2">Buenos Aires</option>
-              <option value="1">CABA</option>
-              <option value="3">Catamarca</option>
-              <option value="4">Chaco</option>
-              <option value="5">Chubut</option>
-              <option value="7">Corrientes</option>
-              <option value="6">Córdoba</option>
-              <option value="8">Entre Ríos</option>
-              <option value="9">Formosa</option>
-              <option value="10">Jujuy</option>
-              <option value="11">La Pampa</option>
-              <option value="12">La Rioja</option>
-              <option value="13">Mendoza</option>
-              <option value="14">Misiones</option>
-              <option value="15">Neuquén</option>
-              <option value="16">Río Negro</option>
-              <option value="17">Salta</option>
-              <option value="18">San Juan</option>
-              <option value="19">San Luis</option>
-              <option value="20">Santa Cruz</option>
-              <option value="21">Santa Fe</option>
-              <option value="22">Santiago del Estero</option>
-              <option value="23">Tierra del Fuego</option>
-              <option value="24">Tucumán</option>
+            <select name="_a_xxxxxx" ngModel>
+              <option value="" selected disabled hidden>Seleccione provincia</option>
+              <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
+              </option>
             </select>
           </div>
         </div>
+
+
         <div class="itemImportante">
           <div class="item">
             <div class="w40_">
@@ -1103,6 +621,8 @@
           </div>
         </div>
         </div>
+
+
       </div>
 
       <div class="col-6">
@@ -1110,40 +630,22 @@
           <div class="contenedor">
         <h3>Domicilio de residencia actual</h3>
 
+        
+
         <div class="item">
-          <div class="w30_">
-            <p>Provincia</p>
+            <div class="w30_">
+              <p>Provincia</p>
+            </div>
+            <div class="w30_">
+              <select name="_a_xxxxxx" ngModel>
+                <option value="" selected disabled hidden>Seleccione provincia</option>
+                <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
+                </option>
+              </select>
+            </div>
           </div>
-          <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option value="2">Buenos Aires</option>
-              <option value="1">CABA</option>
-              <option value="3">Catamarca</option>
-              <option value="4">Chaco</option>
-              <option value="5">Chubut</option>
-              <option value="7">Corrientes</option>
-              <option value="6">Córdoba</option>
-              <option value="8">Entre Ríos</option>
-              <option value="9">Formosa</option>
-              <option value="10">Jujuy</option>
-              <option value="11">La Pampa</option>
-              <option value="12">La Rioja</option>
-              <option value="13">Mendoza</option>
-              <option value="14">Misiones</option>
-              <option value="15">Neuquén</option>
-              <option value="16">Río Negro</option>
-              <option value="17">Salta</option>
-              <option value="18">San Juan</option>
-              <option value="19">San Luis</option>
-              <option value="20">Santa Cruz</option>
-              <option value="21">Santa Fe</option>
-              <option value="22">Santiago del Estero</option>
-              <option value="23">Tierra del Fuego</option>
-              <option value="24">Tucumán</option>
-            </select>
-          </div>
-        </div>
+          
+          
         <div class="item">
           <div class="w30_">
             <p>Localidad</p>
@@ -1194,40 +696,8 @@
             <p>Formato tradicional de 4 dígitos o el nuevo de 8 caracteres</p>
           </div>
         </div>
-        <div class="item">
-          <div class="w30_">
-            <p>Provincia</p>
-          </div>
-          <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option value="2">Buenos Aires</option>
-              <option value="1">CABA</option>
-              <option value="3">Catamarca</option>
-              <option value="4">Chaco</option>
-              <option value="5">Chubut</option>
-              <option value="7">Corrientes</option>
-              <option value="6">Córdoba</option>
-              <option value="8">Entre Ríos</option>
-              <option value="9">Formosa</option>
-              <option value="10">Jujuy</option>
-              <option value="11">La Pampa</option>
-              <option value="12">La Rioja</option>
-              <option value="13">Mendoza</option>
-              <option value="14">Misiones</option>
-              <option value="15">Neuquén</option>
-              <option value="16">Río Negro</option>
-              <option value="17">Salta</option>
-              <option value="18">San Juan</option>
-              <option value="19">San Luis</option>
-              <option value="20">Santa Cruz</option>
-              <option value="21">Santa Fe</option>
-              <option value="22">Santiago del Estero</option>
-              <option value="23">Tierra del Fuego</option>
-              <option value="24">Tucumán</option>
-            </select>
-          </div>
-        </div>
+
+
         <div class="item">
           <div class="w30_">
             <p>Teléfono 1</p>
@@ -1251,6 +721,12 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+      <div class="col-6">
+        
+          <div class="contenedor">
         <h3>Profesión actual</h3>
         <div class="item">
           <div class="w30_">
@@ -1327,7 +803,7 @@
           </div>
       </div>
 
-      <div class="col-12"></div>
+      <div class="col-12">
       <h3>Datos de la preinscripción</h3>
       <div class="col-12 col-md-6">
         
@@ -1370,40 +846,22 @@
       <div class="col-12 col-md-6">
         
         <div class="contenedor">
-          <div class="item">
-          <div class="w40_">
-            <p>Provincia en la que concursa</p>
+
+          
+
+        <div class="item">
+            <div class="w30_">
+              <p>Provincia en la que concursa</p>
+            </div>
+            <div class="w30_">
+              <select name="_a_xxxxxx" ngModel>
+                <option value="" selected disabled hidden>Seleccione provincia</option>
+                <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
+                </option>
+              </select>
+            </div>
           </div>
-          <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option value="2">Buenos Aires</option>
-              <option value="1">CABA</option>
-              <option value="3">Catamarca</option>
-              <option value="4">Chaco</option>
-              <option value="5">Chubut</option>
-              <option value="7">Corrientes</option>
-              <option value="6">Córdoba</option>
-              <option value="8">Entre Ríos</option>
-              <option value="9">Formosa</option>
-              <option value="10">Jujuy</option>
-              <option value="11">La Pampa</option>
-              <option value="12">La Rioja</option>
-              <option value="13">Mendoza</option>
-              <option value="14">Misiones</option>
-              <option value="15">Neuquén</option>
-              <option value="16">Río Negro</option>
-              <option value="17">Salta</option>
-              <option value="18">San Juan</option>
-              <option value="19">San Luis</option>
-              <option value="20">Santa Cruz</option>
-              <option value="21">Santa Fe</option>
-              <option value="22">Santiago del Estero</option>
-              <option value="23">Tierra del Fuego</option>
-              <option value="24">Tucumán</option>
-            </select>
-          </div>
-        </div>
+
         <div class="item">
           <div class="w40_">
             <p>Especialidad en la que concursa</p>
@@ -1429,40 +887,20 @@
             </select>
           </div>
         </div>
+
         <div class="item">
-          <div class="w40_">
-            <p>Provincia en la que se rinde</p>
+            <div class="w30_">
+              <p>Provincia en la que se rinde</p>
+            </div>
+            <div class="w30_">
+              <select name="_a_xxxxxx" ngModel>
+                <option value="" selected disabled hidden>Seleccione provincia</option>
+                <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
+                </option>
+              </select>
+            </div>
           </div>
-          <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option value="2">Buenos Aires</option>
-              <option value="1">CABA</option>
-              <option value="3">Catamarca</option>
-              <option value="4">Chaco</option>
-              <option value="5">Chubut</option>
-              <option value="7">Corrientes</option>
-              <option value="6">Córdoba</option>
-              <option value="8">Entre Ríos</option>
-              <option value="9">Formosa</option>
-              <option value="10">Jujuy</option>
-              <option value="11">La Pampa</option>
-              <option value="12">La Rioja</option>
-              <option value="13">Mendoza</option>
-              <option value="14">Misiones</option>
-              <option value="15">Neuquén</option>
-              <option value="16">Río Negro</option>
-              <option value="17">Salta</option>
-              <option value="18">San Juan</option>
-              <option value="19">San Luis</option>
-              <option value="20">Santa Cruz</option>
-              <option value="21">Santa Fe</option>
-              <option value="22">Santiago del Estero</option>
-              <option value="23">Tierra del Fuego</option>
-              <option value="24">Tucumán</option>
-            </select>
-          </div>
-        </div>
+
         <div class="item">
           <div class="w40_">
             <p>Localidad en la que se rinde</p>
@@ -1498,6 +936,7 @@
         </div>
       </div>
       </div>
+    </div>
     </div>
 
   </div>
