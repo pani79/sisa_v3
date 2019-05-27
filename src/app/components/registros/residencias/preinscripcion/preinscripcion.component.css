@@ -2,7 +2,7 @@
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
 }
-.panelPasos { background-color: red !important;}
+/* .panelPasos { background-color: red !important;} */
 
 
 form h2{ margin: 10px 0 20px 0; }
@@ -17,7 +17,7 @@ form .row > .col-6 > .contenedor{
 }
 
 
-
+/* 
 .container{	border: thin blue dotted;}
 .row{	border: thin green dotted;}
 
@@ -29,7 +29,7 @@ form label{	border: thin violet dotted; }
 .form-group > * > *{	border: thin green dotted;}
 .col-6{	border: thin pink dotted;}
 
-
+ */
 
 
 

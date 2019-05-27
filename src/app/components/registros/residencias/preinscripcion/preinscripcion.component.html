@@ -19,7 +19,7 @@
     <h2>Seleccione Provincia o Institución donde desea inscribirse</h2>
     <div class="row">
 
-      <div class="col-6">
+      <div class="col-12 col-md-6">
         <div class="contenedor">
 
           <div class="item">
@@ -47,7 +47,7 @@
       </div>
 
       <!--  -->
-      <div class="col-6">
+      <div class="col-12 col-md-6">
         <!-- 
           <p>=> {{preinscripcionForm.value|json}}</p>
           <p>=> {{preinscripcionForm.value['_a_concursaTipoProvincia'] |json}}</p>
@@ -625,7 +625,7 @@
 
       </div>
 
-      <div class="col-6">
+      <div class="col-12 col-md-6">
         
           <div class="contenedor">
         <h3>Domicilio de residencia actual</h3>
@@ -724,7 +724,7 @@
       </div>
     </div>
 
-      <div class="col-6">
+      <div class="col-12 col-md-6">
         
           <div class="contenedor">
         <h3>Profesión actual</h3>
@@ -803,141 +803,141 @@
           </div>
       </div>
 
-      <div class="col-12">
-      <h3>Datos de la preinscripción</h3>
-      <div class="col-12 col-md-6">
-        
-          <div class="contenedor">
-        <div class="item">
-          <div class="w50_">
-            <p>Nombre del Concurso al cual se inscribe</p>
-          </div>
-          <div class="w50_">
-            <p>Examen Unico 2018</p>
-          </div>
+<div class="col-12">
+  <h3>Datos de la preinscripción</h3>
+</div>
+  <div class="col-12 col-md-6">
+
+    <div class="contenedor">
+      <div class="item">
+        <div class="w50_">
+          <p>Nombre del Concurso al cual se inscribe</p>
         </div>
-        <div class="item">
-          <div class="w50_">
-            <p>Fecha de inicio de la inscripción</p>
-          </div>
-          <div class="w50_">
-            <p>14-11-2017</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="w50_">
-            <p>Fecha de finalización de la inscripción</p>
-          </div>
-          <div class="w50_">
-            <p>29-12-2017</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="w50_">
-            <p>Fecha de examen</p>
-          </div>
-          <div class="w50_">
-            <p>20-06-2018</p>
-          </div>
+        <div class="w50_">
+          <p>Examen Unico 2018</p>
         </div>
       </div>
-      </div>
-
-      <div class="col-12 col-md-6">
-        
-        <div class="contenedor">
-
-          
-
-        <div class="item">
-            <div class="w30_">
-              <p>Provincia en la que concursa</p>
-            </div>
-            <div class="w30_">
-              <select name="_a_xxxxxx" ngModel>
-                <option value="" selected disabled hidden>Seleccione provincia</option>
-                <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
-                </option>
-              </select>
-            </div>
-          </div>
-
-        <div class="item">
-          <div class="w40_">
-            <p>Especialidad en la que concursa</p>
-          </div>
-          <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option>Psicólogo</option>
-              <option>Psicopedagogo</option>
-              <option>Kinesiólogo</option>
-              <option>Terapista ocupacional</option>
-              <option>Fonoaudiólogo</option>
-              <option>Licenciado en nutrición</option>
-              <option>Obstétrica/o</option>
-              <option>Bioquímico</option>
-              <option>Profesional de análisis clínicos</option>
-              <option>Trabajador social</option>
-              <option>Biólogo</option>
-              <option>Microbiólogo</option>
-              <option>Bacteriólogo</option>
-              <option>Tecnología alimentaria</option>
-              <option>Enfermero</option>
-            </select>
-          </div>
+      <div class="item">
+        <div class="w50_">
+          <p>Fecha de inicio de la inscripción</p>
         </div>
-
-        <div class="item">
-            <div class="w30_">
-              <p>Provincia en la que se rinde</p>
-            </div>
-            <div class="w30_">
-              <select name="_a_xxxxxx" ngModel>
-                <option value="" selected disabled hidden>Seleccione provincia</option>
-                <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
-                </option>
-              </select>
-            </div>
-          </div>
-
-        <div class="item">
-          <div class="w40_">
-            <p>Localidad en la que se rinde</p>
-          </div>
-          <div class="w30_">
-            <select>
-              <option value="-seleccione-">-seleccione-</option>
-              <option>Ciudad de Buenos Aires </option>
-              <option>Carhué</option>
-              <option>Colonia San Miguel Arcángel </option>
-              <option>Delfín Huergo </option>
-              <option>Espartillar </option>
-              <option>Esteban Agustín Gascón</option>
-              <option>La Pala</option>
-              <option>Maza</option>
-              <option>Rivera</option>
-              <option>Thames</option>
-              <option>Villa Margarita</option>
-              <option>Yutuyaco</option>
-              <option>Adolfo Gonzales Chaves (Est. Chaves)</option>
-              <option>De la Garma</option>
-              <option>Juan E. Barra</option>
-              <option>Vásquez</option>
-              <option>Alberti (Est. Andrés Vaccarezza)</option>
-              <option>Coronel Seguí</option>
-              <option>Mechita </option>
-              <option>Pla </option>
-              <option>Villa Grisolía (Est. Achupallas)</option>
-              <option>Villa María</option>
-              <option>Villa Ortiz (Est. Coronel Mom)</option>
-            </select>
-          </div>
+        <div class="w50_">
+          <p>14-11-2017</p>
         </div>
       </div>
+      <div class="item">
+        <div class="w50_">
+          <p>Fecha de finalización de la inscripción</p>
+        </div>
+        <div class="w50_">
+          <p>29-12-2017</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="w50_">
+          <p>Fecha de examen</p>
+        </div>
+        <div class="w50_">
+          <p>20-06-2018</p>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="col-12 col-md-6">
+
+    <div class="contenedor">
+
+
+
+      <div class="item">
+        <div class="w30_">
+          <p>Provincia en la que concursa</p>
+        </div>
+        <div class="w30_">
+          <select name="_a_xxxxxx" ngModel>
+            <option value="" selected disabled hidden>Seleccione provincia</option>
+            <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="w40_">
+          <p>Especialidad en la que concursa</p>
+        </div>
+        <div class="w30_">
+          <select>
+            <option value="-seleccione-">-seleccione-</option>
+            <option>Psicólogo</option>
+            <option>Psicopedagogo</option>
+            <option>Kinesiólogo</option>
+            <option>Terapista ocupacional</option>
+            <option>Fonoaudiólogo</option>
+            <option>Licenciado en nutrición</option>
+            <option>Obstétrica/o</option>
+            <option>Bioquímico</option>
+            <option>Profesional de análisis clínicos</option>
+            <option>Trabajador social</option>
+            <option>Biólogo</option>
+            <option>Microbiólogo</option>
+            <option>Bacteriólogo</option>
+            <option>Tecnología alimentaria</option>
+            <option>Enfermero</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="w30_">
+          <p>Provincia en la que se rinde</p>
+        </div>
+        <div class="w30_">
+          <select name="_a_xxxxxx" ngModel>
+            <option value="" selected disabled hidden>Seleccione provincia</option>
+            <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="w40_">
+          <p>Localidad en la que se rinde</p>
+        </div>
+        <div class="w30_">
+          <select>
+            <option value="-seleccione-">-seleccione-</option>
+            <option>Ciudad de Buenos Aires </option>
+            <option>Carhué</option>
+            <option>Colonia San Miguel Arcángel </option>
+            <option>Delfín Huergo </option>
+            <option>Espartillar </option>
+            <option>Esteban Agustín Gascón</option>
+            <option>La Pala</option>
+            <option>Maza</option>
+            <option>Rivera</option>
+            <option>Thames</option>
+            <option>Villa Margarita</option>
+            <option>Yutuyaco</option>
+            <option>Adolfo Gonzales Chaves (Est. Chaves)</option>
+            <option>De la Garma</option>
+            <option>Juan E. Barra</option>
+            <option>Vásquez</option>
+            <option>Alberti (Est. Andrés Vaccarezza)</option>
+            <option>Coronel Seguí</option>
+            <option>Mechita </option>
+            <option>Pla </option>
+            <option>Villa Grisolía (Est. Achupallas)</option>
+            <option>Villa María</option>
+            <option>Villa Ortiz (Est. Coronel Mom)</option>
+          </select>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
   </div>
 
