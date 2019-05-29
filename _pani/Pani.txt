@@ -31,9 +31,11 @@ ng g c components/modulos/noticias
 
 ng g c examples/formularios/rf
 ng g c examples/formularios/tdf
+ng g s examples/formularios/tdf/tdfServicio
 ng g c examples/usuarios/usuariosLista
 ng g c examples/usuarios/usuariosAlta
 ng g c examples/componentes_varios
+
 
 ng g pipe pipes/PObjectPropeties
 

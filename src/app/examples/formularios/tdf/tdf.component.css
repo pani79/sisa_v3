@@ -8,3 +8,15 @@ form label{ text-align: right;}
 
 .form-group > *,
 .form-group > * > *{    border: gray 1px dotted; }
+
+.fila{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: lightgray 1px solid;
+}
+.fila > *{
+    border-right: rgba(0, 0, 0, .2) 1px solid;
+}
+.fila > *:last-child{
+    border-right: none;
+}

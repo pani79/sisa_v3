@@ -1,91 +1,122 @@
 <s-commons-basicPage [info]="_infoPaginacabecera"></s-commons-basicPage>
 
 
-<h1>Formulario de prueba</h1>
-
-<form #formularioTDF="ngForm">
-
-  {{formularioTDF.value | json}}
-  
-    <div class="form-group row">      
-      <label class="col-2 col-form-label">Nombre</label>
-      <div class="col-4">
-        <input type="text" class="form-control" 
-          name="nombre" #nombre="ngModel"
-          [(ngModel)]="usuarioModelo.nombre"
-          required>
-        <small>val</small>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Apellido</label>
-      <div class="col-4">
-        <input type="text" class="form-control" 
-          name="apellido" #apellido="ngModel"
-          [(ngModel)]="usuarioModelo.apellido"
-          required>
-        <small>val</small>
-      </div>
-    </div>
+<div class="container">
+  <div class="row">
     
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Email</label>
-      <div class="col-4">
-        <input type="text" class="form-control" 
-          name="email" #email="ngModel"
-          [(ngModel)]="usuarioModelo.email"
-          required>
-        <small>val</small>
+    <div class="col-6">
+      <h1>Formulario de prueba</h1>
+
+      <form #formularioTDF="ngForm">
+
+        {{formularioTDF.value | json}}
+        <hr/>
+        {{usuarioModelo | json}}
+        
+          <div class="form-group row">      
+            <label class="col-4 col-form-label">Nombre</label>
+            <div class="col-8">
+              <input type="text" class="form-control" 
+                name="nombre" #nombre="ngModel"
+                [(ngModel)]="usuarioModelo.nombre"
+                required>
+              <small>val</small>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Apellido</label>
+            <div class="col-8">
+              <input type="text" class="form-control" 
+                name="apellido" #apellido="ngModel"
+                [(ngModel)]="usuarioModelo.apellido"
+                required>
+              <small>val</small>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Email</label>
+            <div class="col-8">
+              <input type="text" class="form-control" 
+                name="email" #email="ngModel"
+                [(ngModel)]="usuarioModelo.email"
+                required>
+              <small>val</small>
+            </div>
+          </div>
+
+          <div class="form-group  row">
+            <label class="col-sm-4 col-form-label">Provincia</label>
+            <select class="custom-select col-sm-4" name="provincia" #provincia="ngModel" [(ngModel)]="usuarioModelo.provincia">
+              <option value="">seleccione provincia</option>
+              <option *ngFor="let provincia of _provincias" value="{{provincia.id}}">{{provincia.nombre}}</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label>Opciones</label>
+            <div class="form-check">
+              <input type="radio" class="form-check-input col-sm-4" value="a" name="opcion" [(ngModel)]="usuarioModelo.opcion">
+              <label class="form-check-label">opcion A</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input col-sm-4" value="b" name="opcion" [(ngModel)]="usuarioModelo.opcion">
+              <label class="form-check-label">opcion B</label>
+            </div>
+          </div>
+          
+          <!-- 
+            <div ngModelGroup="direccion">     
+              <div class="form-group">
+                <label class="col-sm-4 col-form-label">Calle</label>
+                <input type="text" class="form-control col-sm-4" name="calle" ngModel>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-form-label">Ciudad</label>
+                <input type="text" class="form-control col-sm-4" name="ciudad" ngModel>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-form-label">Localidad</label>
+                <input type="text" class="form-control col-sm-4" name="localidad" ngModel>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-form-label">CP</label>
+                <input type="text" class="form-control col-sm-4" name="cp" ngModel>
+              </div>
+            </div>
+          -->
+          
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input col-sm-4" value="true" name="subscribir" [(ngModel)]="usuarioModelo.subscribir">
+            <label class="form-check-label">Subscribirme</label>
+          </div>
+
+          <button class="btn btn-primary" type="submit" (click)="usuarioEnvia(usuarioModelo)">Enviar</button>
+
+      </form>
+
+    </div>
+
+    <div class="col-6">
+
+      <h1>Registros</h1>
+      <!-- 
+            <app-listab [idLista]="1" (salida)="modifica($event)"></app-listab>
+      
+       -->
+      <div *ngFor="let elUsuario of usuariosLista" class="fila">
+          <div>{{elUsuario.nombre}}</div>
+          <div>{{elUsuario.apellido}}</div>
+          <div>{{elUsuario.provincia}}</div>
+          <div>{{elUsuario.email}}</div>
+          <div>{{elUsuario.opcion}}</div>
+          <div>{{elUsuario.subscribir}}</div>
+          <div class="acciones">
+            <span class="icon-askeletor"></span>
+          </div>
       </div>
     </div>
 
-    <div class="form-group  row">
-      <label class="col-sm-2 col-form-label">Provincia</label>
-      <select name="" id="" class="custom-select col-sm-2" name="provincia" ngModel>
-        <option value="">x</option>
-        <option *ngFor="let prov of _provincias" value="{{prov.id}}">{{prov.nombre}}</option>
-      </select>
-    </div>
-
-    <div class="mb-3">
-      <label>Opciones</label>
-      <div class="form-check">
-        <input type="radio" class="form-check-input col-sm-2" value="a" name="opcion" ngModel>
-        <label class="form-check-label">opcion A</label>
-      </div>
-      <div class="form-check">
-        <input type="radio" class="form-check-input col-sm-2" value="b" name="opcion" ngModel>
-        <label class="form-check-label">opcion B</label>
-      </div>
-    </div>
-    
-    <!-- 
-      <div ngModelGroup="direccion">     
-        <div class="form-group">
-          <label class="col-sm-2 col-form-label">Calle</label>
-          <input type="text" class="form-control col-sm-2" name="calle" ngModel>
-        </div>
-        <div class="form-group">
-          <label class="col-sm-2 col-form-label">Ciudad</label>
-          <input type="text" class="form-control col-sm-2" name="ciudad" ngModel>
-        </div>
-        <div class="form-group">
-          <label class="col-sm-2 col-form-label">Localidad</label>
-          <input type="text" class="form-control col-sm-2" name="localidad" ngModel>
-        </div>
-        <div class="form-group">
-          <label class="col-sm-2 col-form-label">CP</label>
-          <input type="text" class="form-control col-sm-2" name="cp" ngModel>
-        </div>
-      </div>
-     -->
-    
-    <div class="form-check mb-3">
-      <input type="checkbox" class="form-check-input col-sm-2" value="true" name="subscribir" ngModel>
-      <label class="form-check-label">Subscribirme</label>
-    </div>
-
-    <button class="btn btn-primary" type="submit">Enviar</button>
-
-</form>
+  </div>
+</div>
