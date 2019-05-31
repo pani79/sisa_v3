@@ -9,14 +9,24 @@ form label{ text-align: right;}
 .form-group > *,
 .form-group > * > *{    border: gray 1px dotted; }
 
+.listado{ 
+	background-color: #e8e8e8; 
+	border-radius: 8px;
+	margin: 10px;
+	padding: 20px;
+	box-shadow: 0 1px 4px rgba(0,0,0,.5) !important;
+}
+
 .fila{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    border-bottom: lightgray 1px solid;
+    grid-template-columns: 15% 15% 15% 25% 5% 10% 15%;
+    border-bottom: rgba(0, 0, 0, .2) 2px solid;
 }
 .fila > *{
-    border-right: rgba(0, 0, 0, .2) 1px solid;
+    /* border-right: rgba(0, 0, 0, .2) 1px solid;  */
+    padding: 4px 10px;
 }
 .fila > *:last-child{
     border-right: none;
 }
+.acciones{  display: flex; flex-direction: row; }

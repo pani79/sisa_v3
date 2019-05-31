@@ -29,7 +29,7 @@ export class TdfComponent implements OnInit {
     'a',
     true
   );
-  usuariosLista: UsuarioModel[];
+  usuariosLista: any[];
   keyCodigo: string;
 
   constructor(private _tdfservice: TdfServicioService) { }

@@ -10,6 +10,8 @@
   <!-- seccionesPaso i - - - - - - - - - - - - - - - - - - -    -->
 
   {{preinscripcionForm.value | json}}
+  <hr/>
+  => {{_preinscripcionModelo | json}}
 
 
 
@@ -29,13 +31,13 @@
             <div class="rb w70_">
               <div>
                 <input type="radio" id="radio01" name="radio" value="true" 
-                  ngModel  name="_a_concursaTipoProvincia" />
+                [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia"  name="_a_concursaTipoProvincia" />
                 <label for="radio01">
                   <span></span>Provincia</label>
               </div>
               <div>
                 <input type="radio" id="radio02" name="radio" value="false" 
-                  ngModel name="_a_concursaTipoProvincia" />
+                [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia"  name="_a_concursaTipoProvincia" />
                 <label for="radio02">
                   <span></span>Institución</label>
               </div>
@@ -60,7 +62,7 @@
               <p>Provincia</p>
             </div>
             <div class="w30_">
-              <select name="_a_concursaProvincia" ngModel>
+              <select name="_a_concursaProvincia" [(ngModel)]="_preinscripcionModelo._a_concursaProvincia">
                 <option value="" selected disabled hidden>Seleccione provincia</option>
                 <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
                 </option>
@@ -74,7 +76,7 @@
               <p>Institución</p>
             </div>
             <div class="w30_">
-              <select name="_a_concursaInstitucion" ngModel>
+              <select name="_a_concursaInstitucion" [(ngModel)]="_preinscripcionModelo._a_concursaInstitucion">
                 <option value="" selected disabled hidden>Seleccione una institución formadora</option>
                 <option *ngFor="let instfor of _institucionesFormadoras" value="{{instfor.id}}">{{instfor.nombre}}
                 </option>
@@ -87,7 +89,7 @@
               <p>Especialidad</p>
             </div>
             <div class="w30_">
-              <select name="_a_concursaEspecialidad" ngModel>
+              <select name="_a_concursaEspecialidad" [(ngModel)]="_preinscripcionModelo._a_concursaEspecialidad">
                 <option value="" selected disabled hidden>Seleccione una especialidad</option>
                 <option *ngFor="let especialidad of _especialidades" value="{{especialidad.id}}">{{especialidad.nombre}}
                 </option>
@@ -129,7 +131,7 @@
                   <p>Tipo de concurso</p>
                 </div>
                 <div class="w70_">
-                  <select>
+                  <select name="_b_concursotipo" [(ngModel)]="_preinscripcionModelo._b_concursotipo">
                     <option value="-seleccione-">-seleccione-</option>
                     <option value="1">Examen Unico</option>
                   </select>
@@ -143,7 +145,7 @@
                   <p>Subtipo de concurso</p>
                 </div>
                 <div class="w70_">
-                  <select>
+                  <select name="_b_concursosubtipo" [(ngModel)]="_preinscripcionModelo._b_concursosubtipo">
                     <option value="-seleccione-">-seleccione-</option>
                     <option value="1">Médico</option>
                   </select>

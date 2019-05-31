@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 /* import { Subscription, Observable} from 'rxjs'; */
 
 //  Modelos
+import { PreinscripcionModel } from './preinscripcion_model';
+
 import { Provincia } from 'src/app/models/provincia';
 import { InstitucionFormadora } from 'src/app/models/institucionFormadora';
 import { RefepsEspecialidades } from 'src/app/models/refepsEspecialidades';
@@ -26,6 +28,17 @@ import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
   styleUrls: ['./preinscripcion.component.css']
 })
 export class PreinscripcionComponent implements OnInit {
+
+  _preinscripcionModelo = new PreinscripcionModel (
+    null,     // public _a_concursaId: number,
+    false,    // public _a_concursaTipoProvincia: boolean,
+    null,     // public _a_concursaProvincia: number,
+    null,     // public _a_concursaInstitucion: number,
+    null,     // public _a_concursaEspecialidad: number,
+    
+    null,     // public _b_concursotipo: number,
+    null     // public _b_concursosubtipo: number
+  );
 
   _provincias: Provincia[];
   _especialidades: RefepsEspecialidades[];

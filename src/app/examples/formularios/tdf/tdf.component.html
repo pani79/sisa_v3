@@ -105,7 +105,9 @@
             <app-listab [idLista]="1" (salida)="modifica($event)"></app-listab>
       
        -->
-      <div *ngFor="let elUsuario of usuariosLista" class="fila">
+      <div class="listado">
+        
+        <div *ngFor="let elUsuario of usuariosLista" class="fila">
           <div>{{elUsuario.nombre}}</div>
           <div>{{elUsuario.apellido}}</div>
           <div>{{elUsuario.provincia}}</div>
@@ -113,8 +115,12 @@
           <div>{{elUsuario.opcion}}</div>
           <div>{{elUsuario.subscribir}}</div>
           <div class="acciones">
-            <span class="icon-askeletor"></span>
+              <div class="al"><span class="icon-bot_ico_acceder_ver"></span></div>
+              <div class="al"><span class="icon-bot_ico_cancelar"></span></div>
+              <div class="al"><span class="icon-askeletor"></span></div>
+            
           </div>
+      </div>
       </div>
     </div>
 
