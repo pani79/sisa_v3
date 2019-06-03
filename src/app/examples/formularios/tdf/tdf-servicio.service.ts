@@ -16,10 +16,10 @@ export class TdfServicioService {
 
   constructor(private _firebase: AngularFireDatabase) { }
 
-  usuariosObtiene(){
+  usuariosObtiene() {
     return this._usuariosLista = this._firebase.list('ex_usuariosFormularios');
   }
-  usuarioInserta(usuario: UsuarioModel){
+  usuarioInserta(usuario: UsuarioModel) {
     this.usuariosObtiene();
     this._usuariosLista.push(
       {

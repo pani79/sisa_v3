@@ -14,6 +14,8 @@ import { GeoService } from 'src/app/services/tas/geo.service';
 import { ResidenciasService } from 'src/app/services/registros/residencias.service';
 import { RefepsService } from 'src/app/services/registros/refeps.service';
 
+import { PreinscripcionServiceDebugService } from './preinscripcion-service-debug.service';
+
 
 import { Ipreinscripcion_busqueda } from './ipreinscripcion_busqueda';
 import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
@@ -44,7 +46,10 @@ export class PreinscripcionComponent implements OnInit {
   _especialidades: RefepsEspecialidades[];
   _paises: Pais[];
   _institucionesFormadoras: InstitucionFormadora[];
-
+  
+//  _preinscripciones: PreinscripcionModel[];
+  preinscripciones: any[];
+  keyCodigo: string;
 
   _pasoActual = 0;
   _formularioCompleto = false;
@@ -81,6 +86,9 @@ export class PreinscripcionComponent implements OnInit {
       completado: false
     }
   ];
+  _botones = {
+    enviarFormulario: ['boton_pos', 'bot_ico_aceptar', 'Enviar formulario de preinscripción']
+  };
 
 
  /*  _preinscripcionBusqueda: Ipreinscripcion_busqueda;
@@ -91,11 +99,15 @@ export class PreinscripcionComponent implements OnInit {
   constructor(
     public _servicio_geo: GeoService,
     private _servicio_residencias: ResidenciasService,
-    private _servicio_refeps: RefepsService
+    private _servicio_refeps: RefepsService,
+    private _servicio_degug_preinscripcion: PreinscripcionServiceDebugService
     /* public _servicio_t_provincia: ProvinciaService */
   ) { }
 
   ngOnInit() {
+    this.keyCodigo = '$key';  // esto es el key de firebase
+    this.configura();
+
     this._servicio_geo.provinciasObtieneTodas()
       .subscribe(data => this._provincias = data);
     this._servicio_geo.paisesObtieneTodos()
@@ -107,6 +119,23 @@ export class PreinscripcionComponent implements OnInit {
     this._servicio_refeps.especialidadesObtienetodas()
       .subscribe(data => this._especialidades = data);
     //console.log('Esp => ' + this._especialidades);
+
+    //this._servicio_degug_preinscripcion.preinscripcionesObtieneTodas()
+    //.subscribe(data => this._preinscripciones = data);
+  }
+
+  configura() {
+
+    this._servicio_degug_preinscripcion.preinscripcionesObtieneTodas()
+    .snapshotChanges()
+    .subscribe(item => {
+      this.preinscripciones = [];
+      item.forEach(element => {
+        let x = element.payload.toJSON();
+        x[this.keyCodigo] = element.key;
+        this.preinscripciones.push(x);
+      });
+    });
   }
 
   cPanelPasos_activaPaso(evento: number): void {
@@ -152,6 +181,10 @@ export class PreinscripcionComponent implements OnInit {
       this._infoPasoAPaso[numeroDePaso]['completado'] = true;
     }
     console.log('Paso => ' + this._infoPasoAPaso[numeroDePaso]['completado'] );
+  }
+
+  preinscripcionEnvia() {
+    this._servicio_degug_preinscripcion.preinscripcionesInserta(this._preinscripcionModelo);
   }
 
 /*  */

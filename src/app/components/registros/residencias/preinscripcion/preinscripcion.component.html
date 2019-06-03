@@ -1,8 +1,6 @@
 <s-commons-panel-pasos [infoInput]="_infoPasoAPaso" (salida)="cPanelPasos_activaPaso($event)" class="panelPasos">
 </s-commons-panel-pasos>
 <hr>
-{{_pasoActual}}
-<hr>
 
 
 
@@ -168,85 +166,24 @@
 
     <h2>Pre-inscripción a Concursos de Residencias - Confirmar elección</h2>
 
-    <table id="la_lista" width="100%" border="0" cellspacing="0" cellpadding="0" class="sisa_tablas_x1">
 
-      <tr>
-        <th>
-          <a href="">
-            <b>Nombre</b>
-          </a>
-          <a href="">
-            <span class="icon-bot_ico_listas_ordenar_descendente util_margen_iz10"></span>
-          </a>
-        </th>
-        <th>
-          <a href="">Provincia </a>
-        </th>
-        <th>
-          <a href="">Tipo de concurso</a>
-        </th>
-        <th>
-          <a href="">Subtipo de concurso</a>
-        </th>
-        <th>
-          <a href="">Especialidad</a>
-        </th>
-        <th style="width: 20px;"></th>
-      </tr>
-
-      <tr>
-        <td>DR. ALEJANDRO POSADAS - Médico</td>
-        <td>Catamarca</td>
-        <td>Examen Unico</td>
-        <td>Medico</td>
-        <td>Anestesiología</td>
-        <td>
-          <div>
-            <span class="bot_al bot_al_pos icon-bot_ico_acceder_ver"></span>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>ADOLFO CARRANZA - Médico</td>
-        <td>Buenos Aires</td>
-        <td>Examen Unico</td>
-        <td>Medico</td>
-        <td>Anestesiología</td>
-        <td>
-          <div>
-            <span class="bot_al bot_al_pos icon-bot_ico_acceder_ver"></span>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>ACCION SOCIAL PARA ESTUDIANTES - UNIVERSIDAD NACIONAL - Médico</td>
-        <td>Catamarca</td>
-        <td>Examen Unico</td>
-        <td>Medico</td>
-        <td>Anestesiología</td>
-        <td>
-          <div>
-            <span class="bot_al bot_al_pos icon-bot_ico_acceder_ver"></span>
-          </div>
-        </td>
-      </tr>
-    </table>
-
-
-
-    <!-- Lista - icono i -------------------------- -->
-    <div class="nobarra util_padding_10">
-      <span id="MuestraBarra" class="icon-bot_ico_int_menu bot_al_bot util_textsize20"></span>
-    </div>
-    <!-- Lista - icono f -------------------------- -->
-
-    <div class="col-12">
-      <div class="boton boton_pos" id="paso_3_ok">
-        <span class="icon-bot_ico_aceptar"></span>Enviar datos
+    <div class="listado">
+      {{preinscripciones |json}}  
+      <div *ngFor="let preinscripcion of preinscripciones" class="fila">
+        <div>{{preinscripcion.$key}}</div>
+        <div>{{preinscripcion._a_concursaTipoProvincia}}</div>
+        <div>{{preinscripcion._a_concursaProvincia}}</div>
+        <div>{{preinscripcion._a_concursaInstitucion}}</div>
+        <div>{{preinscripcion._a_concursaEspecialidad}}</div>
+        <div>{{preinscripcion._b_concursotipo}}</div>
+        <div>{{preinscripcion._b_concursosubtipo}}</div>
+        <div class="acciones">
+            <div class="al"><span class="icon-bot_ico_acceder_ver"></span></div>
+            <div class="al"><span class="icon-bot_ico_cancelar"></span></div>
+            <div class="al"><span class="icon-askeletor"></span></div>     
+        </div>
       </div>
     </div>
-
 
   </div>
 
@@ -255,33 +192,29 @@
 
 
 
+<!-- <div *ngIf="_pasoActual === 3"> -->
+<div class="container" [style.display]="_pasoActual === 3 ? 'block': 'none'">
 
+  <h2>Pre-inscripción a Concursos de Residencias - Completar encuesta (opcional)</h2>
+  <p>
+    La siguiente encuesta es opcional. La misma forma parte de una investigación que indaga los condicionamientos que
+    tienen
+    los profesionales al momento de elegir las especialidades. Sus resultados nos permitirán contar con información
+    para
+    mejorar la oferta y los procesos de formación de residencias. La información será rigurosamente analizada de
+    manera anónima
+    por personas autorizadas y no tendrán acceso a la misma los responsables del concurso para el cual se presenta.
+    Agradeceremos
+    mucho que pueda responder con absoluta sinceridad.
+  </p>
 
-  <!-- <div *ngIf="_pasoActual === 3"> -->
-  <div class="container" [style.display]="_pasoActual === 3 ? 'block': 'none'">
+  <div class="row">
 
-    <h2>Pre-inscripción a Concursos de Residencias - Completar encuesta (opcional)</h2>
-    <p>
-      La siguiente encuesta es opcional. La misma forma parte de una investigación que indaga los condicionamientos que
-      tienen
-      los profesionales al momento de elegir las especialidades. Sus resultados nos permitirán contar con información
-      para
-      mejorar la oferta y los procesos de formación de residencias. La información será rigurosamente analizada de
-      manera anónima
-      por personas autorizadas y no tendrán acceso a la misma los responsables del concurso para el cual se presenta.
-      Agradeceremos
-      mucho que pueda responder con absoluta sinceridad.
-    </p>
+    <div class="col-12 col-md-6">
+      <div class="contenedor">
 
-    <strong>De las siguientes, distribuya el 100% de las razones que influyeron en usted para la elección de la
-      especialidad a la que
-      se presenta (sus respuestas deben sumar 100%):</strong>
-
-    <div class="row">
-      <div class="col-12 col-md-6">
-          <div class="contenedor">
-
-        <h3>Concurso por</h3>
+        <h3>De las siguientes, distribuya el 100% de las razones que influyeron en usted para la elección de la especialidad a la que se presenta (sus respuestas deben sumar 100%):</h3>
+        <hr />
         <div class="item">
           <div class="w70_">
             <p>1.Tradición familiar</p>
@@ -340,7 +273,8 @@
         </div>
         <div class="item">
           <div class="w70_">
-            <p>8.Le resulta compatible con su expectativa de distribución del tiempo entre trabajo, familia, recreación,
+            <p>8.Le resulta compatible con su expectativa de distribución del tiempo entre trabajo, familia,
+              recreación,
               etc.</p>
           </div>
           <div class="w20_">
@@ -370,85 +304,122 @@
           <div class="w20_">
             <input type="text" placeholder="Ingrese el valor">
           </div>
+
         </div>
       </div>
+
     </div>
 
-      <div class="col-12 col-md-6">
-          <div class="contenedor">
-        <h4>En un lapso de 8 años a partir de hoy, usted considera que se encontrará:</h4>
-        <div class="item">
-          <div class="form_rb w70_">
-            <div>
-              <input type="radio" id="radio01" name="radio" />
-              <label for="radio01">
-                <span></span>Practicando la especialidad en la cual se inscribe, en el mismo lugar</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>Practicando la especialidad en la cual se inscribe, en otro sitio</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>Practicando una subespecialidad</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>Practicando otra especialidad</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>Trabajando fuera del sector salud</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>Trabajando en gestión o administración de servicios</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>No lo sabe</label>
-            </div>
-          </div>
+    <div class="col-12 col-md-6">
+      <div class="contenedor">
+
+        <h3>En un lapso de 8 años a partir de hoy, usted considera que se encontrará:</h3>
+        <hr />
+
+
+        <div>
+          <input type="radio" id="s4_b_radio01" name="radio" value="1"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia" name="_a_concursaTipoProvincia" />
+          <label for="s4_b_radio01">
+            <span></span>
+            Practicando la especialidad en la cual se inscribe, en el mismo lugar
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_b_radio02" name="radio" value="2"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia" name="_a_concursaTipoProvincia" />
+          <label for="s4_b_radio02">
+            <span></span>
+            Practicando la especialidad en la cual se inscribe, en otro sitio
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_b_radio03" name="radio" value="3"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia" name="_a_concursaTipoProvincia" />
+          <label for="s4_b_radio03">
+            <span></span>
+            Practicando una subespecialidad
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_b_radio04" name="radio" value="4"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia" name="_a_concursaTipoProvincia" />
+          <label for="s4_b_radio04">
+            <span></span>
+            Practicando otra especialidad
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_b_radio05" name="radio" value="5"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia" name="_a_concursaTipoProvincia" />
+          <label for="s4_b_radio05">
+            <span></span>
+            Trabajando fuera del sector salud
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_b_radio06" name="radio" value="6"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia" name="_a_concursaTipoProvincia" />
+          <label for="s4_b_radio06">
+            <span></span>
+            Trabajando en gestión o administración de servicios
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_b_radio07" name="radio" value="7"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia" name="_a_concursaTipoProvincia" />
+          <label for="s4_b_radio07">
+            <span></span>
+            No lo sabe
+          </label>
         </div>
 
-        <h4>Respecto del ámbito en el que espera desarrollarse en el futuro:</h4>
-        <div class="item util_margen_ar20">
 
-          <div class="form_rb w70_">
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>A igualdad de ingresos y modalidades de contratación preferiría el subsector
-                público</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>A igualdad de ingresos y modalidades de contratación preferiría el subsector
-                privado</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>Trabajaría indistintamente en ambos subsectores</label>
-            </div>
-            <div>
-              <input type="radio" id="radio02" name="radio" />
-              <label for="radio02">
-                <span></span>No lo sabe</label>
-            </div>
-          </div>
+        <h3>Respecto del ámbito en el que espera desarrollarse en el futuro:</h3>
+        <hr />
+
+
+        <div>
+          <input type="radio" id="s4_c_radio01" name="radio" value="1"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvinciax" name="_a_concursaTipoProvinciax" />
+          <label for="s4_c_radio01">
+            <span></span>
+            A igualdad de ingresos y modalidades de contratación preferiría el subsector público
+          </label>
         </div>
+        <div>
+          <input type="radio" id="s4_c_radio02" name="radio" value="2"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvinciax" name="_a_concursaTipoProvinciax" />
+          <label for="s4_c_radio02">
+            <span></span>
+            A igualdad de ingresos y modalidades de contratación preferiría el subsector privado
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_c_radio03" name="radio" value="3"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvinciax" name="_a_concursaTipoProvinciax" />
+          <label for="s4_c_radio03">
+            <span></span>
+            Trabajaría indistintamente en ambos subsectores
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="s4_c_radio04" name="radio" value="4"
+            [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvinciax" name="_a_concursaTipoProvinciax" />
+          <label for="s4_c_radio04">
+            <span></span>
+            No lo sabe
+          </label>
+        </div>
+
+
       </div>
+
     </div>
+
+
   </div>
-  </div>
+</div>
 
 
 
@@ -945,4 +916,7 @@
   </div>
 
 
+  <div class="contenedorDeBotones inverso" [style.display]="_pasoActual === 4 ? 'flex': 'none'">              
+    <s-commons-BotonCTextoEIcono [infoBoton]="_botones.enviarFormulario" (click)="preinscripcionEnvia()"></s-commons-BotonCTextoEIcono>
+  </div>
 </form>

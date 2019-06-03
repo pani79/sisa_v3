@@ -18,6 +18,32 @@ form .row > .col-6 > .contenedor{
 }
 
 
+
+/* Temp */
+
+
+.listado{ 
+	background-color: #e8e8e8; 
+	border-radius: 8px;
+	margin: 10px;
+	padding: 20px;
+	box-shadow: 0 1px 4px rgba(0,0,0,.5) !important;
+}
+
+.fila{
+    display: grid;
+    grid-template-columns: 20% 5% 15% 25% 10% 5% 5% 15%;
+    border-bottom: rgba(0, 0, 0, .2) 2px solid;
+}
+.fila > *{
+    border-right: rgba(0, 0, 0, .2) 1px solid; /*   */
+    padding: 4px 10px;
+}
+.fila > *:last-child{
+    border-right: none;
+}
+.acciones{  display: flex; flex-direction: row; }
+
 /* 
 .container{	border: thin blue dotted;}
 .row{	border: thin green dotted;}

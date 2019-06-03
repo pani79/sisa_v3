@@ -24,6 +24,9 @@ ng g c components/commons/panelPasos
 ng g c components/commons/encabezado
 ng g c components/commons/recuadroInfo
 
+ng g s components/registros/residencias/preinscripcion/preinscripcionServiceDebug
+
+
 ng g c components/modulos/ayudaEnLinea
 ng g c components/modulos/homes
 ng g c components/modulos/homesContenedor
