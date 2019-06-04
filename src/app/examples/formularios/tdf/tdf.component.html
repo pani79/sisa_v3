@@ -19,10 +19,19 @@
               <input type="text" class="form-control" 
                 name="nombre" #nombre="ngModel"
                 [(ngModel)]="usuarioModelo.nombre"
-                required>
-              <small>val</small>
+                required
+                [class.is-invalid]="nombre.invalid && nombre.touched">
+                
+          <hr/>
+          {{nombre.className}}
+          <hr/>
+              <small [style.display]="(nombre.valid === false) ? 'block': 'none'">Este campo es requerido y debe ser editado </small>
             </div>
           </div>
+
+          <hr/>
+          {{nombre.className}}
+          <hr/>
 
           <div class="form-group row">
             <label class="col-sm-4 col-form-label">Apellido</label>
@@ -30,11 +39,11 @@
               <input type="text" class="form-control" 
                 name="apellido" #apellido="ngModel"
                 [(ngModel)]="usuarioModelo.apellido"
-                required>
-              <small>val</small>
+                [class.is-invalid]="apellido.invalid">
+              <small [style.display]="(apellido.touched && apellido.dirty) ? 'block': 'none'">Este campo debe haber sido visitado</small>
             </div>
           </div>
-          
+          {{apellido.className}}
           <div class="form-group row">
             <label class="col-sm-4 col-form-label">Email</label>
             <div class="col-8">

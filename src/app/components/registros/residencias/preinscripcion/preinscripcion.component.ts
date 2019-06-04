@@ -33,7 +33,7 @@ export class PreinscripcionComponent implements OnInit {
 
   _preinscripcionModelo = new PreinscripcionModel (
     null,     // public _a_concursaId: number,
-    false,    // public _a_concursaTipoProvincia: boolean,
+    null,    // public _a_concursaTipoProvincia: boolean,
     null,     // public _a_concursaProvincia: number,
     null,     // public _a_concursaInstitucion: number,
     null,     // public _a_concursaEspecialidad: number,
@@ -148,6 +148,43 @@ export class PreinscripcionComponent implements OnInit {
     }
   }
 
+            validaPaso(pasoNumero: number): boolean {
+              let respuesta = false;
+              console.log('validaPaso - > ' + respuesta);
+              console.log('validaPaso - > ' + pasoNumero + ' / ' + this._pasoActual);
+              
+              switch (this._pasoActual) {
+                case 0:
+                  if (this._preinscripcionModelo._a_concursaTipoProvincia !== null) {
+                    respuesta = true;
+                  }
+                  
+                  console.log('validaPaso 1 (' + pasoNumero + ') ');
+                  break;
+                case 1:
+                  respuesta = true;
+                  console.log('validaPaso 2 (' + pasoNumero + ') ');
+                  break;
+                case 2:
+                  respuesta = true;
+                  console.log('validaPaso 3 (' + pasoNumero + ') ');
+                  break;
+                case 3:
+                  respuesta = true;
+                  console.log('validaPaso 4 (' + pasoNumero + ') ');
+                  break;
+                case 4:
+                  respuesta = true;
+                  console.log('validaPaso 5 (' + pasoNumero + ') ');
+                  break;
+              
+                default:
+                console.log('validaPaso ERROR - > ' + pasoNumero + ' // ' + respuesta);
+                  break;
+              }
+              return respuesta;
+            }
+
   cPanelPasos_activaDesactivaPaso(pasoLlega: number) {
     /* let pasoNumero = (pasoLlega + 1); */
     let pasoNumero = pasoLlega;
@@ -165,12 +202,6 @@ export class PreinscripcionComponent implements OnInit {
     });
     if (resultado === this._infoPasoAPaso.length) { this._formularioCompleto = true; } else { this._formularioCompleto = false; }
     console.log('Paso a paso completado => ' + this._formularioCompleto);
-  }
-
-  validaPaso(pasoNumero: number): boolean {
-    let respuesta = true;
-    console.log('validaPaso - > ' + respuesta);
-    return respuesta;
   }
 
   // Temp

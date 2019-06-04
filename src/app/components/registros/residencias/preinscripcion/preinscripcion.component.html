@@ -28,17 +28,18 @@
             </div>
             <div class="rb w70_">
               <div>
-                <input type="radio" id="radio01" name="radio" value="true" 
+                <input type="radio" id="radio01" name="radio" value=true 
                 [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia"  name="_a_concursaTipoProvincia" />
                 <label for="radio01">
                   <span></span>Provincia</label>
               </div>
               <div>
-                <input type="radio" id="radio02" name="radio" value="false" 
+                <input type="radio" id="radio02" name="radio" value=false 
                 [(ngModel)]="_preinscripcionModelo._a_concursaTipoProvincia"  name="_a_concursaTipoProvincia" />
                 <label for="radio02">
                   <span></span>Institución</label>
               </div>
+              <small [style.display]="(_pasoActual === 0 && _preinscripcionModelo._a_concursaTipoProvincia === 'true') ? 'block': 'none'">validation</small>
             </div>
           </div>
 
