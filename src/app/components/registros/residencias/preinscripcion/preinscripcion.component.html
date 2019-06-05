@@ -62,6 +62,7 @@
             </div>
             <div class="w30_">
               <select name="_a_concursaProvincia" [(ngModel)]="_preinscripcionModelo._a_concursaProvincia">
+                <option value="999" selected>x</option>
                 <option value="" selected disabled hidden>Seleccione provincia</option>
                 <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
                 </option>
@@ -76,6 +77,7 @@
             </div>
             <div class="w30_">
               <select name="_a_concursaInstitucion" [(ngModel)]="_preinscripcionModelo._a_concursaInstitucion">
+                <option value="999" selected>x</option>
                 <option value="" selected disabled hidden>Seleccione una institución formadora</option>
                 <option *ngFor="let instfor of _institucionesFormadoras" value="{{instfor.id}}">{{instfor.nombre}}
                 </option>
@@ -89,6 +91,7 @@
             </div>
             <div class="w30_">
               <select name="_a_concursaEspecialidad" [(ngModel)]="_preinscripcionModelo._a_concursaEspecialidad">
+                  <option value="999" selected>x</option>
                 <option value="" selected disabled hidden>Seleccione una especialidad</option>
                 <option *ngFor="let especialidad of _especialidades" value="{{especialidad.id}}">{{especialidad.nombre}}
                 </option>
@@ -161,6 +164,11 @@
 
 
 
+
+
+
+
+
   <!-- <div *ngIf="_pasoActual === 2"> -->
   <div class="container" [style.display]="_pasoActual === 2 ? 'block': 'none'">
 
@@ -186,6 +194,13 @@
       </div>
     </div>
 
+    <div class="estadoInscripciones" (click)="chequeaEstadoInscripciones()">
+      <span class="icon-bot_ico_auditoriaconsultar"></span>
+      <p>Consulte el estado actual de las inscripciones</p>
+    </div>
+    <div class="listado" [style.display]="_muestraEstadoInscripciones === true ? 'block': 'none'">
+      <div><p>Todavia no llegue a hacer esto</p></div>
+    </div>
   </div>
 
 

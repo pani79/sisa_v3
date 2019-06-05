@@ -42,6 +42,7 @@ export class PreinscripcionComponent implements OnInit {
     null     // public _b_concursosubtipo: number
   );
 
+  //  Info de tablas
   _provincias: Provincia[];
   _especialidades: RefepsEspecialidades[];
   _paises: Pais[];
@@ -89,6 +90,7 @@ export class PreinscripcionComponent implements OnInit {
   _botones = {
     enviarFormulario: ['boton_pos', 'bot_ico_aceptar', 'Enviar formulario de preinscripción']
   };
+  _muestraEstadoInscripciones = false;
 
 
  /*  _preinscripcionBusqueda: Ipreinscripcion_busqueda;
@@ -155,11 +157,20 @@ export class PreinscripcionComponent implements OnInit {
               
               switch (this._pasoActual) {
                 case 0:
-                  if (this._preinscripcionModelo._a_concursaTipoProvincia !== null) {
+                  if (this._preinscripcionModelo._a_concursaTipoProvincia !== null &&
+                    (
+                      (this._preinscripcionModelo._a_concursaTipoProvincia === 'true' && this._preinscripcionModelo._a_concursaProvincia !== null) ||
+                      (this._preinscripcionModelo._a_concursaTipoProvincia === 'false' && this._preinscripcionModelo._a_concursaInstitucion !== null)
+                    ) &&
+                    this._preinscripcionModelo._a_concursaEspecialidad !== null) {
                     respuesta = true;
+                    this._infoPasoAPaso[0].completado = true;
+                  } else {
+                    this._infoPasoAPaso[0].completado = false;
                   }
-                  
-                  console.log('validaPaso 1 (' + pasoNumero + ') ');
+                  console.log(' A [' + (this._preinscripcionModelo._a_concursaTipoProvincia !== null) + ']');
+                  console.log(' B [' + ((this._preinscripcionModelo._a_concursaTipoProvincia === 'true' && this._preinscripcionModelo._a_concursaProvincia !== null) || (this._preinscripcionModelo._a_concursaTipoProvincia === 'false' && this._preinscripcionModelo._a_concursaInstitucion !== null)) + ']');
+                  console.log(' C [' +  (this._preinscripcionModelo._a_concursaEspecialidad !== null) + ']');
                   break;
                 case 1:
                   respuesta = true;
@@ -182,6 +193,7 @@ export class PreinscripcionComponent implements OnInit {
                 console.log('validaPaso ERROR - > ' + pasoNumero + ' // ' + respuesta);
                   break;
               }
+              console.log('la respuesta fue ' + respuesta);
               return respuesta;
             }
 
@@ -212,6 +224,14 @@ export class PreinscripcionComponent implements OnInit {
       this._infoPasoAPaso[numeroDePaso]['completado'] = true;
     }
     console.log('Paso => ' + this._infoPasoAPaso[numeroDePaso]['completado'] );
+  }
+  chequeaEstadoInscripciones() {
+    console.log('chequeaEstadoInscripciones => ' + this._muestraEstadoInscripciones );
+    if (this._muestraEstadoInscripciones === true) {
+      this._muestraEstadoInscripciones = false;
+    } else {
+      this._muestraEstadoInscripciones = true;
+    }
   }
 
   preinscripcionEnvia() {

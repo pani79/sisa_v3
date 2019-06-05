@@ -18,6 +18,9 @@ form .row > .col-6 > .contenedor{
 }
 
 
+.estadoInscripciones{	display: flex; flex-direction: row; cursor: pointer;  }
+.estadoInscripciones > span{	font-size: 32px; color: #003366; margin-right: 20px; }
+.estadoInscripciones > p{		margin-top: 8px; }
 
 /* Temp */
 

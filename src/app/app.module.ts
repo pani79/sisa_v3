@@ -54,6 +54,9 @@ import { EncabezadoComponent } from './components/commons/encabezado/encabezado.
 import { TdfComponent } from './examples/formularios/tdf/tdf.component';
 import { RfComponent } from './examples/formularios/rf/rf.component';
 import { RecuadroInfoComponent } from './components/commons/recuadro-info/recuadro-info.component';
+//  revisar estos ultimos dos si son necesarios en la version
+import { UsuariosComponent } from './components/modulos/usuarios/usuarios/usuarios.component';
+import { UsuarioCreaComponent } from './components/modulos/usuarios/usuario-crea/usuario-crea.component';
 
 
 // const routes: Routes = [
@@ -100,6 +103,9 @@ import { RecuadroInfoComponent } from './components/commons/recuadro-info/recuad
     TdfComponent,
     RfComponent,
     RecuadroInfoComponent//,
+
+    // estos lo tuve que agregar pal deploy en prod
+    , UsuariosComponent, UsuarioCreaComponent
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],

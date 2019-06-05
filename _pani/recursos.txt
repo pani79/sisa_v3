@@ -1,2 +1,13 @@
+GitHub Pages - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+Quickly deploy Angular CLI project to GitHub Pages
+https://medium.com/@swarnakishore/deploying-angular-cli-project-to-github-pages-db49246598a1
+
+npm i -g angular-cli-ghpages
+ng build --prod --base-href "https://pani79.github.io/sisa_v3/"
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 Style binding in Angular
 https://www.tektutorialshub.com/angular/angular-style-binding/
