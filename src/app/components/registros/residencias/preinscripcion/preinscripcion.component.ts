@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 /* import { Subscription, Observable} from 'rxjs'; */
 
 //  Modelos
-import { PreinscripcionModel } from './preinscripcion_model';
+import { ResidenciasPreinscripcionModel } from '../../../../models/residencias_preinscripcion';
+import { ResidenciasResidenciasModel } from 'src/app/models/residencias_residencias';
 
 import { Provincia } from 'src/app/models/provincia';
 import { InstitucionFormadora } from 'src/app/models/institucionFormadora';
@@ -31,7 +32,7 @@ import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
 })
 export class PreinscripcionComponent implements OnInit {
 
-  _preinscripcionModelo = new PreinscripcionModel (
+  _preinscripcionModelo = new ResidenciasPreinscripcionModel (
     null,     // public _a_concursaId: number,
     null,    // public _a_concursaTipoProvincia: boolean,
     null,     // public _a_concursaProvincia: number,
@@ -47,9 +48,11 @@ export class PreinscripcionComponent implements OnInit {
   _especialidades: RefepsEspecialidades[];
   _paises: Pais[];
   _institucionesFormadoras: InstitucionFormadora[];
+  _residencias: ResidenciasResidenciasModel[];
   
 //  _preinscripciones: PreinscripcionModel[];
-  preinscripciones: any[];
+  preinscripciones: any[];  // esto no va fue reemplazado por lo otro/
+  residencias: any[];
   keyCodigo: string;
 
   _pasoActual = 0;
@@ -87,6 +90,12 @@ export class PreinscripcionComponent implements OnInit {
       completado: false
     }
   ];
+  _validacionesPasos: any[] = [
+    {
+      completado: null,
+      info: 'Seleccione Provincia o Institución donde desea inscribirse'
+    }
+  ];
   _botones = {
     enviarFormulario: ['boton_pos', 'bot_ico_aceptar', 'Enviar formulario de preinscripción']
   };
@@ -115,8 +124,10 @@ export class PreinscripcionComponent implements OnInit {
     this._servicio_geo.paisesObtieneTodos()
       .subscribe(data => this._paises = data);
 
-    this._servicio_residencias.institucionesFormadorasObtienetodas()
-      .subscribe(data => this._institucionesFormadoras = data);
+    this._servicio_residencias.institucionesFormadorasObtieneTodas()
+    .subscribe(data => this._institucionesFormadoras = data);
+    this._servicio_residencias.residenciasObtieneTodas()
+      .subscribe(data => this._residencias = data);
 
     this._servicio_refeps.especialidadesObtienetodas()
       .subscribe(data => this._especialidades = data);
@@ -151,26 +162,38 @@ export class PreinscripcionComponent implements OnInit {
   }
 
             validaPaso(pasoNumero: number): boolean {
-              let respuesta = false;
+              let respuesta = true;
               console.log('validaPaso - > ' + respuesta);
               console.log('validaPaso - > ' + pasoNumero + ' / ' + this._pasoActual);
               
               switch (this._pasoActual) {
                 case 0:
-                  if (this._preinscripcionModelo._a_concursaTipoProvincia !== null &&
-                    (
-                      (this._preinscripcionModelo._a_concursaTipoProvincia === 'true' && this._preinscripcionModelo._a_concursaProvincia !== null) ||
-                      (this._preinscripcionModelo._a_concursaTipoProvincia === 'false' && this._preinscripcionModelo._a_concursaInstitucion !== null)
-                    ) &&
-                    this._preinscripcionModelo._a_concursaEspecialidad !== null) {
-                    respuesta = true;
-                    this._infoPasoAPaso[0].completado = true;
-                  } else {
-                    this._infoPasoAPaso[0].completado = false;
-                  }
-                  console.log(' A [' + (this._preinscripcionModelo._a_concursaTipoProvincia !== null) + ']');
-                  console.log(' B [' + ((this._preinscripcionModelo._a_concursaTipoProvincia === 'true' && this._preinscripcionModelo._a_concursaProvincia !== null) || (this._preinscripcionModelo._a_concursaTipoProvincia === 'false' && this._preinscripcionModelo._a_concursaInstitucion !== null)) + ']');
-                  console.log(' C [' +  (this._preinscripcionModelo._a_concursaEspecialidad !== null) + ']');
+                if (this._preinscripcionModelo._a_concursaTipoProvincia === null) {
+                  respuesta = false;
+                  this._validacionesPasos[0]['completado'] = false;
+                } else { this._validacionesPasos[0]['completado'] = true; }
+                console.log(' A [' + this._preinscripcionModelo._a_concursaTipoProvincia + '](' + this._validacionesPasos[0]['completado'] + ')');
+                  /* 
+                    if (this._preinscripcionModelo._a_concursaTipoProvincia !== null &&
+                      ((this._preinscripcionModelo._a_concursaTipoProvincia === true && this._preinscripcionModelo._a_concursaProvincia !== null) || (this._preinscripcionModelo._a_concursaTipoProvincia === false && this._preinscripcionModelo._a_concursaInstitucion !== null)) &&
+                      this._preinscripcionModelo._a_concursaEspecialidad !== null) {
+                      respuesta = true;
+                      this._infoPasoAPaso[0].completado = true;
+                    } else {
+                      this._infoPasoAPaso[0].completado = false;
+                    }
+                    console.log(' A [' + (this._preinscripcionModelo._a_concursaTipoProvincia !== null) + ']');
+                    console.log(' B1 [' + (this._preinscripcionModelo._a_concursaTipoProvincia === true && this._preinscripcionModelo._a_concursaProvincia !== null)  + ']');
+                    console.log(' B2 [' + (this._preinscripcionModelo._a_concursaTipoProvincia === false && this._preinscripcionModelo._a_concursaInstitucion !== null) + ']');
+                    console.log(' C [' +  (this._preinscripcionModelo._a_concursaEspecialidad !== null) + ']');
+                    
+                    console.log(' - - - - - - -- - - - -');
+                    console.log(this._preinscripcionModelo._a_concursaTipoProvincia);
+                    console.log(this._preinscripcionModelo._a_concursaTipoProvincia);
+                    console.log(this._preinscripcionModelo._a_concursaProvincia);
+                    console.log(this._preinscripcionModelo._a_concursaInstitucion);
+                    console.log(this._preinscripcionModelo._a_concursaEspecialidad);
+                   */  
                   break;
                 case 1:
                   respuesta = true;

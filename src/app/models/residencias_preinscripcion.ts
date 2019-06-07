@@ -1,4 +1,4 @@
-export class PreinscripcionModel {
+export class ResidenciasPreinscripcionModel {
     constructor(
         /* 
             public nombre: string,

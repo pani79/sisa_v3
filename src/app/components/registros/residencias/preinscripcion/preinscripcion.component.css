@@ -35,11 +35,11 @@ form .row > .col-6 > .contenedor{
 
 .fila{
     display: grid;
-    grid-template-columns: 20% 5% 15% 25% 10% 5% 5% 15%;
+    grid-template-columns: 5% 25% 25% 25% 5% 5% 5% 5%;
     border-bottom: rgba(0, 0, 0, .2) 2px solid;
 }
 .fila > *{
-    border-right: rgba(0, 0, 0, .2) 1px solid; /*   */
+    /* border-right: rgba(0, 0, 0, .2) 1px solid;   */
     padding: 4px 10px;
 }
 .fila > *:last-child{

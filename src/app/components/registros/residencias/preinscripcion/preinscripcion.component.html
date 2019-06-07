@@ -39,7 +39,9 @@
                 <label for="radio02">
                   <span></span>Institución</label>
               </div>
-              <small [style.display]="(_pasoActual === 0 && _preinscripcionModelo._a_concursaTipoProvincia === 'true') ? 'block': 'none'">validation</small>
+              <small>{{_validacionesPasos[0]['completado']}}</small>
+            
+              <small [style.display]="(_validacionesPasos[0]['completado'] === false) ? 'block': 'none'">Este campo es requerido. - {{_validacionesPasos[0]['info']}}</small>
             </div>
           </div>
 
@@ -52,8 +54,10 @@
         <!-- 
           <p>=> {{preinscripcionForm.value|json}}</p>
           <p>=> {{preinscripcionForm.value['_a_concursaTipoProvincia'] |json}}</p>
+         <p> -> {{preinscripcionForm.value['_a_concursaTipoProvincia']}}</p>
          -->
-        <div class="contenedor" [style.display]="preinscripcionForm.value['_a_concursaTipoProvincia'] !== '' ? 'block': 'none'">
+         
+        <div class="contenedor" [style.display]="preinscripcionForm.value['_a_concursaTipoProvincia'] === null ? 'none': 'block'">
         <!-- <p>=> {{_provincias | json}}</p> -->
 
           <div class="item" [style.display]="preinscripcionForm.value['_a_concursaTipoProvincia'] === 'true' ? 'block': 'none'">
@@ -177,19 +181,19 @@
 
 
     <div class="listado">
-      {{preinscripciones |json}}  
-      <div *ngFor="let preinscripcion of preinscripciones" class="fila">
-        <div>{{preinscripcion.$key}}</div>
-        <div>{{preinscripcion._a_concursaTipoProvincia}}</div>
-        <div>{{preinscripcion._a_concursaProvincia}}</div>
-        <div>{{preinscripcion._a_concursaInstitucion}}</div>
-        <div>{{preinscripcion._a_concursaEspecialidad}}</div>
-        <div>{{preinscripcion._b_concursotipo}}</div>
-        <div>{{preinscripcion._b_concursosubtipo}}</div>
+      <!-- 
+        <p> {{_residencias.length}} </p>
+        <p> {{_residencias |json}} </p>
+       --> 
+      <div *ngFor="let residencia of _residencias" class="fila">
+        <div>{{residencia.idPreinscripcion}}</div>
+        <div>{{residencia.nombre}}</div>
+        <div>{{residencia.descripcion}}</div>
+        <div>{{residencia.comentario}}</div>
+        <div>{{residencia.id_tipoConcurso}}</div>
+        <div>{{residencia.id_subTipoConcurso}}</div>
         <div class="acciones">
             <div class="al"><span class="icon-bot_ico_acceder_ver"></span></div>
-            <div class="al"><span class="icon-bot_ico_cancelar"></span></div>
-            <div class="al"><span class="icon-askeletor"></span></div>     
         </div>
       </div>
     </div>

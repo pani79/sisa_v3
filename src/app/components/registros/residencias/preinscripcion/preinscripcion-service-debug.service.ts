@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 //  Base
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 //  Modelo
-import { PreinscripcionModel } from './preinscripcion_model';
+import { ResidenciasPreinscripcionModel } from '../../../../models/residencias_preinscripcion';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class PreinscripcionServiceDebugService {
     return this._preinscripcionesLista = this._fireBase.list('residencias_preinscripciones');
   }
 
-  preinscripcionesInserta(preinscripcion: PreinscripcionModel) {
+  preinscripcionesInserta(preinscripcion: ResidenciasPreinscripcionModel) {
     this.preinscripcionesObtieneTodas();
     this._preinscripcionesLista.push(
       {

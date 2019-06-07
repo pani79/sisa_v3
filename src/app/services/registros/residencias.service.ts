@@ -7,37 +7,26 @@ import { Observable } from 'rxjs';
 //  models
 import { Provincia } from '../../classes/tas';
 import { InstitucionFormadora } from 'src/app/models/institucionFormadora';
+import { ResidenciasPreinscripcionModel } from 'src/app/models/residencias_preinscripcion';
+import { ResidenciasResidenciasModel } from 'src/app/models/residencias_residencias';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResidenciasService {
-    /* 
-      _url = 'http://localhost:3000/api/residencias';
-      _provincias: Provincia[];
-      _provinciaInscripcion: Provincia;
-      t_residencias = [];
-     */
+
   constructor(private _http: HttpClient) { }
 
-  institucionesFormadorasObtienetodas(): Observable<InstitucionFormadora[]> {
+  institucionesFormadorasObtieneTodas(): Observable<InstitucionFormadora[]> {
     return this._http.get<InstitucionFormadora[]>('http://localhost:8080/institucion/all');
   }
 
+  residenciasObtieneTodas(): Observable<ResidenciasResidenciasModel[]> {
+    return this._http.get<ResidenciasResidenciasModel[]>('http://localhost:8080/residencias/all'); 
+  }
 
+  preinscripcionesObtieneTodas(): Observable<ResidenciasPreinscripcionModel[]> {
+    return this._http.get<ResidenciasPreinscripcionModel[]>('http://localhost:8080/preinscripciones/all'); 
+  }
 
-  getResidencias() { return null; }
-  /* 
-    inscripcionConsulta(id: string) {
-      console.log('inscripcionConsulta' + id);
-    }
-
-    getProvincias(): Observable<Provincia[]> { return this._httpService.get<Provincia[]>(environment.apiUrl + '/inscripcion/provincias'); }
-
-    getResidencias(): Observable<any[]> {
-      const _residencias = this._httpService.get<any[]>(this._url);
-      console.log('has llamado a ' + _residencias.toString());
-      return this._httpService.get<any[]>('/api/residencias');
-    }
- */
 }
