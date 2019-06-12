@@ -47,6 +47,11 @@ form .row > .col-6 > .contenedor{
 }
 .acciones{  display: flex; flex-direction: row; }
 
+
+form .item > *,
+form .item > * > *{	border: thin blue dotted;}
+form .item .columna{	display: flex; flex-direction: column; }
+
 /* 
 .container{	border: thin blue dotted;}
 .row{	border: thin green dotted;}

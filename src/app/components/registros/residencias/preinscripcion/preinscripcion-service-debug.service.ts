@@ -22,7 +22,7 @@ export class PreinscripcionServiceDebugService {
     this.preinscripcionesObtieneTodas();
     this._preinscripcionesLista.push(
       {
-        _a_concursaTipoProvincia: preinscripcion._a_concursaTipoProvincia,
+        _a_concursaTipo: preinscripcion._a_concursaTipo,
         _a_concursaProvincia: preinscripcion._a_concursaProvincia,
         _a_concursaInstitucion: preinscripcion._a_concursaInstitucion,
         _a_concursaEspecialidad: preinscripcion._a_concursaEspecialidad,

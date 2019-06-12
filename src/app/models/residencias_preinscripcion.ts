@@ -6,7 +6,7 @@ export class ResidenciasPreinscripcionModel {
             public email: string
          */
         public _a_concursaId: number,
-        public _a_concursaTipoProvincia: boolean,
+        public _a_concursaTipo: boolean,
         public _a_concursaProvincia: number,
         public _a_concursaInstitucion: number,
         public _a_concursaEspecialidad: number,
