@@ -40,7 +40,20 @@ export class PreinscripcionComponent implements OnInit {
     null,     // public _a_concursaEspecialidad: number,
     
     null,     // public _b_concursotipo: number,
-    null     // public _b_concursosubtipo: number
+    null,     // public _b_concursosubtipo: number
+
+    null,     // public _c_concurso: number,
+
+    null,     // public _d_razoneseleccion: number[],
+    null,     // public _d_dondeseencontrara: number,
+    null,     // public _d_ambitodesarrollo: number,
+
+    null,     // public _e_nombre: string,
+    null,     // public _e_apellido: string,
+    null,     // public _e_numerodocumento: number,
+    null,     // public _e_sexo: number,
+    null,     // public _e_estadocivil: number,
+    null     // public _e_hijos: number
   );
 
   //  Info de tablas
@@ -115,25 +128,29 @@ export class PreinscripcionComponent implements OnInit {
       completado: null,
       info: 'Seleccione un subtipo de concurso en el cual desea inscribirse'
     },
-    { // 
+    { //  _c_concurso
       completado: null,
-      info: 'Seleccione un subtipo de concurso en el cual desea inscribirse'
+      info: 'Seleccione el concurso en el cual desea inscribirse'
     },
-    { // 
+    { //  _d_razoneseleccion
       completado: null,
-      info: 'Seleccione un subtipo de concurso en el cual desea inscribirse'
+      info: 'Seleccione...'
     },
-    { // 
+    { //  _d_dondeseencontrara
       completado: null,
-      info: 'Seleccione un subtipo de concurso en el cual desea inscribirse'
+      info: 'Seleccione...'
     },
-    { // 
+    { //  _d_ambitodesarrollo
       completado: null,
-      info: 'Seleccione un subtipo de concurso en el cual desea inscribirse'
+      info: 'Seleccione...'
     },
-    { // 
+    { //  _e_nombre
       completado: null,
-      info: 'Seleccione un subtipo de concurso en el cual desea inscribirse'
+      info: 'Ingrese su nombre'
+    },
+    { //  _e_apellido
+      completado: null,
+      info: 'Ingrese su apellido'
     }
   ];
   _botones = {
@@ -205,7 +222,7 @@ export class PreinscripcionComponent implements OnInit {
               let respuesta = true;
               console.log('validaPaso - > ' + respuesta);
               console.log('validaPaso - > ' + pasoNumero + ' / ' + this._pasoActual);
-              
+
               switch (this._pasoActual) {
                 case 0:
                   this._validacionesPasos[0]['completado'] = false;
@@ -263,7 +280,7 @@ export class PreinscripcionComponent implements OnInit {
                     this._validacionesPasos[4]['completado'] = false;
                     console.log(' A [ FALSE ]');
                   } else {
-                    this._validacionesPasos[5]['completado'] = true;
+                    this._validacionesPasos[4]['completado'] = true;
                     console.log(' A [ OK ]');
                   }
                   if (this._preinscripcionModelo._b_concursosubtipo === null) {
@@ -274,20 +291,77 @@ export class PreinscripcionComponent implements OnInit {
                     this._validacionesPasos[5]['completado'] = true;
                     console.log(' A [ OK ]');
                   }
-                  if (respuesta === true) { this._infoPasoAPaso[1]['completado'] = true; console.log(' VALIDA paso 1 OK'); } else{ this._infoPasoAPaso[1]['completado'] = false;}                
-                  
+                  if (respuesta === true) { this._infoPasoAPaso[1]['completado'] = true; console.log(' VALIDA paso 2 OK'); } else{ this._infoPasoAPaso[1]['completado'] = false;}                
                   break;
 
                 case 2:
-                  respuesta = true;
-                  console.log('validaPaso 3 (' + pasoNumero + ') ');
+                  this._validacionesPasos[6]['completado'] = false;
+                  if (this._preinscripcionModelo._c_concurso === null) {
+                    respuesta = false;
+                    this._validacionesPasos[6]['completado'] = false;
+                    console.log(' A [ FALSE ]');
+                  } else {
+                    this._validacionesPasos[6]['completado'] = true;
+                    console.log(' A [ OK ]');
+                  }
+                  if (respuesta === true) { this._infoPasoAPaso[2]['completado'] = true; console.log(' VALIDA paso 3 OK'); } else{ this._infoPasoAPaso[2]['completado'] = false;}                
                   break;
+
                 case 3:
-                  respuesta = true;
-                  console.log('validaPaso 4 (' + pasoNumero + ') ');
+                  this._validacionesPasos[7]['completado'] = false;
+                  this._validacionesPasos[8]['completado'] = false;
+                  this._validacionesPasos[9]['completado'] = false;
+/* 
+                  if (this._preinscripcionModelo._b_concursotipo === null) {
+                    respuesta = false;
+                    this._validacionesPasos[4]['completado'] = false;
+                    console.log(' A [ FALSE ]');
+                  } else {
+                    this._validacionesPasos[5]['completado'] = true;
+                    console.log(' A [ OK ]');
+                  }
+                   */
+                  if (this._preinscripcionModelo._d_dondeseencontrara === null) {
+                    respuesta = false;
+                    this._validacionesPasos[8]['completado'] = false;
+                    console.log(' B [ FALSE ]');
+                  } else {
+                    this._validacionesPasos[8]['completado'] = true;
+                    console.log(' B [ OK ]');
+                  }
+                  if (this._preinscripcionModelo._d_ambitodesarrollo === null) {
+                    respuesta = false;
+                    this._validacionesPasos[9]['completado'] = false;
+                    console.log(' C [ FALSE ]');
+                  } else {
+                    this._validacionesPasos[9]['completado'] = true;
+                    console.log(' C [ OK ]');
+                  }
+                  if (respuesta === true) { this._infoPasoAPaso[3]['completado'] = true; console.log(' VALIDA paso 3 OK'); } else{ this._infoPasoAPaso[3]['completado'] = false;}                
                   break;
+
+
+
                 case 4:
-                  respuesta = true;
+                  this._validacionesPasos[10]['completado'] = false;
+                  this._validacionesPasos[11]['completado'] = false;
+                  
+                  if (this._preinscripcionModelo._e_nombre === null) {
+                    respuesta = false;
+                    this._validacionesPasos[10]['completado'] = false;
+                    console.log(' A [ FALSE ]');
+                  } else {
+                    this._validacionesPasos[10]['completado'] = true;
+                    console.log(' A [ OK ]');
+                  }
+                  if (this._preinscripcionModelo._e_apellido === null) {
+                    respuesta = false;
+                    this._validacionesPasos[11]['completado'] = false;
+                    console.log(' B [ FALSE ]');
+                  } else {
+                    this._validacionesPasos[11]['completado'] = true;
+                    console.log(' B [ OK ]');
+                  }
                   console.log('validaPaso 5 (' + pasoNumero + ') ');
                   break;
               
@@ -318,15 +392,6 @@ export class PreinscripcionComponent implements OnInit {
     console.log('Paso a paso completado => ' + this._formularioCompleto);
   }
 
-  // Temp
-  temp_completaPaso(numeroDePaso: number) {
-    if (this._infoPasoAPaso[numeroDePaso]['completado'] === true){
-      this._infoPasoAPaso[numeroDePaso]['completado'] = false;
-    } else {
-      this._infoPasoAPaso[numeroDePaso]['completado'] = true;
-    }
-    console.log('Paso => ' + this._infoPasoAPaso[numeroDePaso]['completado'] );
-  }
   chequeaEstadoInscripciones() {
     console.log('chequeaEstadoInscripciones => ' + this._muestraEstadoInscripciones );
     if (this._muestraEstadoInscripciones === true) {
@@ -335,6 +400,24 @@ export class PreinscripcionComponent implements OnInit {
       this._muestraEstadoInscripciones = true;
     }
   }
+
+  seleccionaResidencia(evento: number): void {
+    console.log('seleccionaResidencia => ' + evento );
+      this._preinscripcionModelo._c_concurso = evento;
+  }
+
+
+  // Temp
+  /* 
+    temp_completaPaso(numeroDePaso: number) {
+      if (this._infoPasoAPaso[numeroDePaso]['completado'] === true){
+        this._infoPasoAPaso[numeroDePaso]['completado'] = false;
+      } else {
+        this._infoPasoAPaso[numeroDePaso]['completado'] = true;
+      }
+      console.log('Paso => ' + this._infoPasoAPaso[numeroDePaso]['completado'] );
+    }
+  */
 
   preinscripcionEnvia() {
     this._servicio_degug_preinscripcion.preinscripcionesInserta(this._preinscripcionModelo);

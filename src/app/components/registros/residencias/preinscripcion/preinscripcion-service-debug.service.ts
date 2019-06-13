@@ -26,6 +26,7 @@ export class PreinscripcionServiceDebugService {
         _a_concursaProvincia: preinscripcion._a_concursaProvincia,
         _a_concursaInstitucion: preinscripcion._a_concursaInstitucion,
         _a_concursaEspecialidad: preinscripcion._a_concursaEspecialidad,
+        
         _b_concursotipo: preinscripcion._b_concursotipo,
         _b_concursosubtipo: preinscripcion._b_concursosubtipo
       }

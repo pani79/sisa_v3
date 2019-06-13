@@ -46,6 +46,20 @@ form .row > .col-6 > .contenedor{
     border-right: none;
 }
 .acciones{  display: flex; flex-direction: row; }
+.acciones .al{  
+	width: 24px;
+	height: 24px;
+	background-color: #009933;
+	border-radius: 16px;
+	cursor: pointer;
+}
+.acciones .al > span{ 
+	color: white;
+    font-size: 16px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
 
 
 form .item > *,

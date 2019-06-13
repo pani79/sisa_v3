@@ -206,14 +206,14 @@
         <div>{{residencia.id_tipoConcurso}}</div>
         <div>{{residencia.id_subTipoConcurso}}</div>
         <div class="acciones">
-            <div class="al"><span class="icon-bot_ico_acceder_ver"></span></div>
+            <div class="al" (click)="seleccionaResidencia(residencia.idPreinscripcion)"><span class="icon-bot_ico_acceder_ver"></span></div>
         </div>
       </div>
       
       <small [style.display]="(_validacionesPasos[6]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[6]['info']}}</small>
     </div>
 
-    <div class="estadoInscripciones" (click)="chequeaEstadoInscripciones()">
+    <div class="estadoInscripciones" (click)="chequeaEstadoInscripciones(residencia.idPreinscripcion)">
       <span class="icon-bot_ico_auditoriaconsultar"></span>
       <p>Consulte el estado actual de las inscripciones</p>
     </div>
@@ -341,9 +341,10 @@
           </div>
 
         </div>
-      </div>
+        
       <small [style.display]="(_validacionesPasos[7]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[7]['info']}}</small>
 
+      </div>
     </div>
 
     <div class="col-12 col-md-6">
@@ -478,16 +479,20 @@
           <div class="w30_">
             <p>Nombres</p>
           </div>
-          <div class="w70_">
+          <div class="columna w70_">
             <input type="text" placeholder="Ingrese el valor">
+            <small [style.display]="(_validacionesPasos[10]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[10]['info']}}</small>
+      
           </div>
         </div>
         <div class="item">
           <div class="w30_">
             <p>Apellidos</p>
           </div>
-          <div class="w70_">
+          <div class="columna w70_">
             <input type="text" placeholder="Ingrese el valor">
+            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
+      
           </div>
         </div>
         <div class="item">
