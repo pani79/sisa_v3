@@ -255,7 +255,7 @@
             <p>1.Tradición familiar</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_radio01">
           </div>
         </div>
         <div class="item">
@@ -341,7 +341,7 @@
           </div>
 
         </div>
-        
+
       <small [style.display]="(_validacionesPasos[7]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[7]['info']}}</small>
 
       </div>
@@ -458,6 +458,11 @@
 
 
   </div>
+    => {{_validacionesPasos[7] | json}}
+    <br>
+    => {{_validacionesPasos[8] | json}}
+    <br>
+    => {{_validacionesPasos[9] | json}}
 </div>
 
 

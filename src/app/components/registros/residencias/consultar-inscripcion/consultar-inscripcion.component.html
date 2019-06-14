@@ -2,16 +2,14 @@
   consultar-inscripcion works!!!!
 </p>
 <div class="row Formulario">
-  <form #formConsulta="ngForm" class="col-6">
+  <form #formConsulta="ngForm" class="col-12">
       
       <div class="item">
-          <div class="w70_">
+          <div class="w50_">
               <input type="text" placeholder="Ingrese código" name="dato">
           </div>
-          <div class="w30_">
-              <div (click)="consultarInscripcionConsulta(dato)" class="boton boton_general" id="bot_prof">
-                  <span class="icon-bot_ico_buscar"></span>Buscar
-              </div>
+          <div class="w50_">
+              <s-commons-BotonCTextoEIcono [infoBoton]="_botones.buscar" (click)="consultarPreinscripcionConsulta(dato)" ></s-commons-BotonCTextoEIcono>
           </div>
       </div>
       
@@ -26,23 +24,16 @@
 </div>  
 
 
-<!-- <div *ngIf="_pasoActual === 2"> -->
-<div class="container">
-
-
-  <h2>Pre-inscripción a Concursos de Residencias - Confirmar elección</h2>
-
-
   <div class="listado">
-    {{preinscripciones |json}}  
-    <div *ngFor="let preinscripcion of preinscripciones" class="fila">
-      <div>{{preinscripcion.$key}}</div>
-      <div>{{preinscripcion._a_concursaTipoProvincia}}</div>
-      <div>{{preinscripcion._a_concursaProvincia}}</div>
-      <div>{{preinscripcion._a_concursaInstitucion}}</div>
-      <div>{{preinscripcion._a_concursaEspecialidad}}</div>
-      <div>{{preinscripcion._b_concursotipo}}</div>
-      <div>{{preinscripcion._b_concursosubtipo}}</div>
+    <!-- {{_residentes |json}}   -->
+    <div *ngFor="let residente of _residentes" class="fila">
+      <div>{{residente.id}}</div>
+      <div>{{residente.apellido}}</div>
+      <div>{{residente.nombre}}</div>
+      <div>{{residente.tipodoc}}</div>
+      <div>{{residente.ndoc}}</div>
+      <div>{{residente.paisnacimiento}}</div>
+      <!-- <div>{{residente.}}</div> -->
       <div class="acciones">
           <div class="al"><span class="icon-bot_ico_acceder_ver"></span></div>
           <div class="al"><span class="icon-bot_ico_cancelar"></span></div>
@@ -50,12 +41,3 @@
       </div>
     </div>
   </div>
-
-  <div class="estadoInscripciones" (click)="chequeaEstadoInscripciones()">
-    <span class="icon-bot_ico_auditoriaconsultar"></span>
-    <p>Consulte el estado actual de las inscripciones</p>
-  </div>
-  <div class="listado" [style.display]="_muestraEstadoInscripciones === true ? 'block': 'none'">
-    <div><p>Todavia no llegue a hacer esto</p></div>
-  </div>
-</div>

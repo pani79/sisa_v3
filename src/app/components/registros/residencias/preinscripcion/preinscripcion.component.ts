@@ -321,6 +321,9 @@ export class PreinscripcionComponent implements OnInit {
                     console.log(' A [ OK ]');
                   }
                    */
+                  
+                  //console.log(' A [ OK ]' + preinscripcionForm.value.razones_radio01);
+                  console.log(' A [ OK ]' + razones_radio01);
                   if (this._preinscripcionModelo._d_dondeseencontrara === null) {
                     respuesta = false;
                     this._validacionesPasos[8]['completado'] = false;

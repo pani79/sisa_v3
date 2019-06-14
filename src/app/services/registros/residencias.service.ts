@@ -5,10 +5,10 @@ import { Observable } from 'rxjs';
 // import { Http } from '@angular/http';
 
 //  models
-import { Provincia } from '../../classes/tas';
 import { InstitucionFormadora } from 'src/app/models/institucionFormadora';
 import { ResidenciasPreinscripcionModel } from 'src/app/models/residencias_preinscripcion';
 import { ResidenciasResidenciasModel } from 'src/app/models/residencias_residencias';
+import { ResidenciasResidentesModel } from 'src/app/models/residencias_residentes';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,10 @@ export class ResidenciasService {
 
   institucionesFormadorasObtieneTodas(): Observable<InstitucionFormadora[]> {
     return this._http.get<InstitucionFormadora[]>('http://localhost:8080/institucion/all');
+  }
+
+  residentesObtieneTodos(): Observable<ResidenciasResidentesModel[]> {
+    return this._http.get<ResidenciasResidentesModel[]>('http://localhost:8080/residentes/all'); 
   }
 
   residenciasObtieneTodas(): Observable<ResidenciasResidenciasModel[]> {

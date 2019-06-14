@@ -1,7 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FormGroup, FormControl } from '@angular/forms';
-import { ResidenciasService } from '../../../../services/registros/residencias.service';
 import { formControlBinding } from '@angular/forms/src/directives/ng_model';
+
+//  Modelo
+import { ResidenciasResidentesModel } from 'src/app/models/residencias_residentes';
+
+//  Servicios
+import { ResidenciasService } from '../../../../services/registros/residencias.service';
+
 
 @Component({
   selector: 's-registros-residencias-inscripcionConsultar',
@@ -10,13 +17,18 @@ import { formControlBinding } from '@angular/forms/src/directives/ng_model';
 })
 export class ConsultarInscripcionComponent implements OnInit {
 
+  _residentes: ResidenciasResidentesModel[];
   consultarInscripcionResultado = false;
   t_resultado: any[];
+  _botones = {
+    buscar: ['boton_general', 'bot_ico_buscar', 'Buscar inscripción']
+  };
 
    constructor(private _serviResidencias: ResidenciasService) { }
 
   ngOnInit() {
-    this._serviResidencias.residenciasObtieneTodas();
+    this._serviResidencias.residentesObtieneTodos()
+      .subscribe(data => this._residentes = data);
   }
 
 
