@@ -44,7 +44,7 @@ export class PreinscripcionComponent implements OnInit {
 
     null,     // public _c_concurso: number,
 
-    null,     // public _d_razoneseleccion: number[],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],     // public _d_razoneseleccion: number[],
     null,     // public _d_dondeseencontrara: number,
     null,     // public _d_ambitodesarrollo: number,
 
@@ -323,7 +323,9 @@ export class PreinscripcionComponent implements OnInit {
                    */
                   
                   //console.log(' A [ OK ]' + preinscripcionForm.value.razones_radio01);
-                  console.log(' A [ OK ]' + razones_radio01);
+                  //console.log(' A [ OK ]' + #preinscripcionForm.razones_radio01);
+                  //console.log(' A [ OK ]' + _d_razones_01);
+                  console.log(' A [ OK ] -> ' + this._preinscripcionModelo._d_razoneseleccion[0]);
                   if (this._preinscripcionModelo._d_dondeseencontrara === null) {
                     respuesta = false;
                     this._validacionesPasos[8]['completado'] = false;
