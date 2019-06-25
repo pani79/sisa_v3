@@ -24,6 +24,7 @@ ng g c components/commons/panelPasos
 ng g c components/commons/encabezado
 ng g c components/commons/recuadroInfo
 
+ng g c components/registros/residencias/consultar-inscripcion-codigoalfanumerico
 ng g s components/registros/residencias/preinscripcion/preinscripcionServiceDebug
 
 

@@ -7,11 +7,6 @@
 <form #preinscripcionForm="ngForm" class="Formulario seccionesPaso">
   <!-- seccionesPaso i - - - - - - - - - - - - - - - - - - -    -->
 
-  {{preinscripcionForm.value | json}}
-  <hr/>
-  => {{_preinscripcionModelo | json}}
-
-
 
   <div class="container" [style.display]="_pasoActual === 0 ? 'block': 'none'">
     <!-- <div class="container" *ngIf="_pasoActual === 0"> -->
@@ -64,7 +59,7 @@
             </div>
             <div class="columna w70_">
               <select name="_a_concursaProvincia" [(ngModel)]="_preinscripcionModelo._a_concursaProvincia">
-                <option value="999" selected>x</option>
+                <option value="999" *ngIf="_offLineMode === true" selected>x</option>
                 <option value="" selected disabled hidden>Seleccione provincia</option>
                 <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
                 </option>
@@ -80,8 +75,8 @@
             </div>
             <div class="columna w70_">
               <select name="_a_concursaInstitucion" [(ngModel)]="_preinscripcionModelo._a_concursaInstitucion">
-                <option value="999" selected>x</option>
-                <option value="" selected disabled hidden>Seleccione una institución formadora</option>
+                <option value="999" *ngIf="_offLineMode === true" selected>x</option>
+                <!-- <option value="" selected disabled hidden>Seleccione una institución formadora</option> -->
                 <option *ngFor="let instfor of _institucionesFormadoras" value="{{instfor.id}}">{{instfor.nombre}}
                 </option>
               </select>
@@ -95,8 +90,8 @@
             </div>
             <div class="columna w70_">
               <select name="_a_concursaEspecialidad" [(ngModel)]="_preinscripcionModelo._a_concursaEspecialidad">
-                  <option value="999" selected>x</option>
-                <option value="" selected disabled hidden>Seleccione una especialidad</option>
+                <option value="999" *ngIf="_offLineMode === true" selected>x</option>
+                <!-- <option value="" selected disabled hidden>Seleccione una especialidad</option> -->
                 <option *ngFor="let especialidad of _especialidades" value="{{especialidad.id}}">{{especialidad.nombre}}
                 </option>
               </select>
@@ -146,8 +141,8 @@
                 </div>
                 <div class="columna w70_">
                   <select name="_b_concursotipo" [(ngModel)]="_preinscripcionModelo._b_concursotipo">
-                    <option value="-seleccione-">-seleccione-</option>
-                    <option value="1">Examen Unico</option>
+                    <!-- <option value="-seleccione-">-seleccione-</option> -->
+                    <option value="1" *ngIf="_offLineMode === true" >Examen Unico</option>
                   </select>
                   <small [style.display]="(_validacionesPasos[4]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[4]['info']}}</small>
                 </div>
@@ -161,8 +156,8 @@
                 </div>
                 <div class="columna w70_">
                   <select name="_b_concursosubtipo" [(ngModel)]="_preinscripcionModelo._b_concursosubtipo">
-                    <option value="-seleccione-">-seleccione-</option>
-                    <option value="1">Médico</option>
+                    <!-- <option value="-seleccione-">-seleccione-</option> -->
+                    <option value="1" *ngIf="_offLineMode === true" >Médico</option>
                   </select>
                   <small [style.display]="(_validacionesPasos[5]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[5]['info']}}</small>
                 </div>
@@ -194,6 +189,18 @@
 
 
     <div class="listado">
+      
+        <div *ngIf="_offLineMode === true" class="fila">
+          <div>0</div>
+          <div>Juan</div>
+          <div>Debug</div>
+          <div>este dato es para probar offline</div>
+          <div>0</div>
+          <div>sub-0</div>
+          <div class="acciones">
+              <div class="al" (click)="seleccionaResidencia(0)"><span class="icon-bot_ico_acceder_ver"></span></div>
+          </div>
+        </div>
       <!-- 
         <p> {{_residencias.length}} </p>
         <p> {{_residencias |json}} </p>
@@ -208,6 +215,7 @@
         <div class="acciones">
             <div class="al" (click)="seleccionaResidencia(residencia.idPreinscripcion)"><span class="icon-bot_ico_acceder_ver"></span></div>
         </div>
+        
       </div>
       
       <small [style.display]="(_validacionesPasos[6]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[6]['info']}}</small>
@@ -255,8 +263,8 @@
             <p>1.Tradición familiar</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor" id="razones_01"
-            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[0]"  name="_d_razones_01" >
+            <input type="text" placeholder="Ingrese el valor" id="razones_0"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[0]"  name="_d_razones_0" >
           </div>
         </div>
         <div class="item">
@@ -264,7 +272,8 @@
             <p>2.Prestigio social o académico</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_1"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[1]"  name="_d_razones_1">
           </div>
         </div>
         <div class="item">
@@ -272,7 +281,8 @@
             <p>3.Bienestar económico</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_2"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[2]"  name="_d_razones_2">
           </div>
         </div>
         <div class="item">
@@ -280,7 +290,8 @@
             <p>4.Compromiso social y comunitario. Vocación de trabajo en terreno</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_3"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[3]"  name="_d_razones_3">
           </div>
         </div>
         <div class="item">
@@ -288,7 +299,8 @@
             <p>5.Razones geográficas (irse o llegar a algún lugar)</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_4"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[4]"  name="_d_razones_4">
           </div>
         </div>
         <div class="item">
@@ -296,7 +308,8 @@
             <p>6.Tiene más probabilidad de ingresar por la oferta de cargos disponibles</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_5"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[5]"  name="_d_razones_5">
           </div>
         </div>
         <div class="item">
@@ -304,7 +317,8 @@
             <p>7.Le atraen la investigación y/o la docencia</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_6"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[6]"  name="_d_razones_6">
           </div>
         </div>
         <div class="item">
@@ -314,7 +328,8 @@
               etc.</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_7"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[7]"  name="_d_razones_7">
           </div>
         </div>
         <div class="item">
@@ -322,7 +337,8 @@
             <p>9.Una razón diferente de las mencionadas aquí</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_8"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[8]"  name="_d_razones_8">
           </div>
         </div>
         <div class="item">
@@ -330,7 +346,8 @@
             <p>10.Descarte de otras alternativas</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_9"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[9]"  name="_d_razones_9">
           </div>
         </div>
         <div class="item">
@@ -338,7 +355,8 @@
             <p>11.No lo tiene claro/no sabe</p>
           </div>
           <div class="w20_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor" id="razones_10"
+            [(ngModel)]="_preinscripcionModelo._d_razoneseleccion[10]"  name="_d_razones_10">
           </div>
 
         </div>
@@ -354,10 +372,9 @@
         <h3>En un lapso de 8 años a partir de hoy, usted considera que se encontrará:</h3>
         <hr />
 
-
         <div>
           <input type="radio" id="s4_b_radio01" name="radio" value="1"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipo" name="_a_concursaTipo" />
+            [(ngModel)]="_preinscripcionModelo._d_dondeseencontrara" name="_d_dondeseencontrara" />
           <label for="s4_b_radio01">
             <span></span>
             Practicando la especialidad en la cual se inscribe, en el mismo lugar
@@ -365,7 +382,7 @@
         </div>
         <div>
           <input type="radio" id="s4_b_radio02" name="radio" value="2"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipo" name="_a_concursaTipo" />
+            [(ngModel)]="_preinscripcionModelo._d_dondeseencontrara" name="_d_dondeseencontrara" />
           <label for="s4_b_radio02">
             <span></span>
             Practicando la especialidad en la cual se inscribe, en otro sitio
@@ -373,7 +390,7 @@
         </div>
         <div>
           <input type="radio" id="s4_b_radio03" name="radio" value="3"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipo" name="_a_concursaTipo" />
+            [(ngModel)]="_preinscripcionModelo._d_dondeseencontrara" name="_d_dondeseencontrara" />
           <label for="s4_b_radio03">
             <span></span>
             Practicando una subespecialidad
@@ -381,7 +398,7 @@
         </div>
         <div>
           <input type="radio" id="s4_b_radio04" name="radio" value="4"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipo" name="_a_concursaTipo" />
+            [(ngModel)]="_preinscripcionModelo._d_dondeseencontrara" name="_d_dondeseencontrara" />
           <label for="s4_b_radio04">
             <span></span>
             Practicando otra especialidad
@@ -389,7 +406,7 @@
         </div>
         <div>
           <input type="radio" id="s4_b_radio05" name="radio" value="5"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipo" name="_a_concursaTipo" />
+            [(ngModel)]="_preinscripcionModelo._d_dondeseencontrara" name="_d_dondeseencontrara" />
           <label for="s4_b_radio05">
             <span></span>
             Trabajando fuera del sector salud
@@ -397,7 +414,7 @@
         </div>
         <div>
           <input type="radio" id="s4_b_radio06" name="radio" value="6"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipo" name="_a_concursaTipo" />
+            [(ngModel)]="_preinscripcionModelo._d_dondeseencontrara" name="_d_dondeseencontrara" />
           <label for="s4_b_radio06">
             <span></span>
             Trabajando en gestión o administración de servicios
@@ -405,7 +422,7 @@
         </div>
         <div>
           <input type="radio" id="s4_b_radio07" name="radio" value="7"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipo" name="_a_concursaTipo" />
+            [(ngModel)]="_preinscripcionModelo._d_dondeseencontrara" name="_d_dondeseencontrara" />
           <label for="s4_b_radio07">
             <span></span>
             No lo sabe
@@ -416,11 +433,9 @@
 
         <h3>Respecto del ámbito en el que espera desarrollarse en el futuro:</h3>
         <hr />
-
-
         <div>
           <input type="radio" id="s4_c_radio01" name="radio" value="1"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipox" name="_a_concursaTipox" />
+            [(ngModel)]="_preinscripcionModelo._d_ambitodesarrollo" name="_d_ambitodesarrollo" />
           <label for="s4_c_radio01">
             <span></span>
             A igualdad de ingresos y modalidades de contratación preferiría el subsector público
@@ -428,7 +443,7 @@
         </div>
         <div>
           <input type="radio" id="s4_c_radio02" name="radio" value="2"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipox" name="_a_concursaTipox" />
+            [(ngModel)]="_preinscripcionModelo._d_ambitodesarrollo" name="_d_ambitodesarrollo" />
           <label for="s4_c_radio02">
             <span></span>
             A igualdad de ingresos y modalidades de contratación preferiría el subsector privado
@@ -436,7 +451,7 @@
         </div>
         <div>
           <input type="radio" id="s4_c_radio03" name="radio" value="3"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipox" name="_a_concursaTipox" />
+            [(ngModel)]="_preinscripcionModelo._d_ambitodesarrollo" name="_d_ambitodesarrollo" />
           <label for="s4_c_radio03">
             <span></span>
             Trabajaría indistintamente en ambos subsectores
@@ -444,7 +459,7 @@
         </div>
         <div>
           <input type="radio" id="s4_c_radio04" name="radio" value="4"
-            [(ngModel)]="_preinscripcionModelo._a_concursaTipox" name="_a_concursaTipox" />
+            [(ngModel)]="_preinscripcionModelo._d_ambitodesarrollo" name="_d_ambitodesarrollo" />
           <label for="s4_c_radio04">
             <span></span>
             No lo sabe
@@ -460,6 +475,7 @@
 
   </div>
     => {{_validacionesPasos[7] | json}}
+    
     <br>
     => {{_validacionesPasos[8] | json}}
     <br>
@@ -963,6 +979,12 @@
 </div>
 
   </div>
+
+  <hr/>
+  {{preinscripcionForm.value | json}}
+  <hr/>
+  => {{_preinscripcionModelo | json}}
+
 
 
   <div class="contenedorDeBotones inverso" [style.display]="_pasoActual === 4 ? 'flex': 'none'">              

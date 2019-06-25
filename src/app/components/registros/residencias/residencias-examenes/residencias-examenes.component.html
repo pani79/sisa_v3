@@ -23,7 +23,7 @@
     <h3>Readjudicación</h3>
     <h4>Concurso de Residencias</h4>
   </div>
-  <div id="bot_op4" (click)="operaBotoneraPrincipal(2)">
+  <div id="bot_op4" (click)="operaBotoneraPrincipal(4)">
     <div class="icono">
       <span class="icon-mod_verificador"></span>
     </div>
@@ -92,5 +92,21 @@
     </div>
 
   
+    
+    
+    <div *ngIf="consultarInscripcioncodigoAlfanumerico === true">
+
+        <h1>Consultar codigo alfanumérico de examen</h1>
+        <p>
+                Ingrese el DNI correspondiente al examen que quiera recuperar el codigo alfanumerico. En caso de encontrar algun resultado este se le enviara un mail con el codigo al mail que corresponda el examen.
+        </p>
+
+        <s-registros-residencias-inscripcionConsultarcodigoalfanumerico></s-registros-residencias-inscripcionConsultarcodigoalfanumerico>
+
+    </div>
+        
+        
+
+
 
 </div>

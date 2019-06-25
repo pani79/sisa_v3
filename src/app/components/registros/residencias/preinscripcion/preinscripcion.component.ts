@@ -20,6 +20,7 @@ import { PreinscripcionServiceDebugService } from './preinscripcion-service-debu
 
 import { Ipreinscripcion_busqueda } from './ipreinscripcion_busqueda';
 import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
+import { IfStmt } from '@angular/compiler';
 /* */
 
 // Informacion falsa
@@ -31,6 +32,9 @@ import { Ipreinscripcion_inscripcion } from './ipreinscripcion_inscripcion';
   styleUrls: ['./preinscripcion.component.css']
 })
 export class PreinscripcionComponent implements OnInit {
+
+  // por si no hay conexion a la base
+  _offLineMode = false;
 
   _preinscripcionModelo = new ResidenciasPreinscripcionModel (
     null,     // public _a_concursaId: number,
@@ -134,15 +138,15 @@ export class PreinscripcionComponent implements OnInit {
     },
     { //  _d_razoneseleccion
       completado: null,
-      info: 'Seleccione...'
+      info: 'La suma de todos los campos debe ser 100, por favor revise los valores que ha puesto y reconsidere sus estudios primarios.'
     },
     { //  _d_dondeseencontrara
       completado: null,
-      info: 'Seleccione...'
+      info: 'Seleccione una de las opciones'
     },
     { //  _d_ambitodesarrollo
       completado: null,
-      info: 'Seleccione...'
+      info: 'Seleccione una de las opciones'
     },
     { //  _e_nombre
       completado: null,
@@ -192,6 +196,12 @@ export class PreinscripcionComponent implements OnInit {
 
     //this._servicio_degug_preinscripcion.preinscripcionesObtieneTodas()
     //.subscribe(data => this._preinscripciones = data);
+    if (this._especialidades === undefined) {
+      this._offLineMode = true;
+      console.log('trabajaremos en modo OFFLINE');
+    } else {
+      console.log('DEBUG => ' + this._especialidades);
+    }
   }
 
   configura() {
@@ -242,11 +252,11 @@ export class PreinscripcionComponent implements OnInit {
                     respuesta = false;
                     this._validacionesPasos[3]['completado'] = false;
                     console.log(' C [ FALSE ]');
-                  } else { 
+                  } else {
                     this._validacionesPasos[3]['completado'] = true;
-                    console.log(' C [ OK ]');  
+                    console.log(' C [ OK ]');
                   }
-                  if (this._preinscripcionModelo._a_concursaTipo === 'true') {
+                  if (this._preinscripcionModelo._a_concursaTipo === true) {
                     console.log(' B ');
                     if (this._preinscripcionModelo._a_concursaProvincia === null) {
                       respuesta = false;
@@ -256,7 +266,7 @@ export class PreinscripcionComponent implements OnInit {
                       this._validacionesPasos[1]['completado'] = true;
                       console.log(' B [ OK ]');
                     }
-                  } else if (this._preinscripcionModelo._a_concursaTipo === 'false') {
+                  } else if (this._preinscripcionModelo._a_concursaTipo === false) {
                     console.log(' B ');
                     if (this._preinscripcionModelo._a_concursaInstitucion === null) {
                       respuesta = false;
@@ -325,7 +335,18 @@ export class PreinscripcionComponent implements OnInit {
                   //console.log(' A [ OK ]' + preinscripcionForm.value.razones_radio01);
                   //console.log(' A [ OK ]' + #preinscripcionForm.razones_radio01);
                   //console.log(' A [ OK ]' + _d_razones_01);
-                  console.log(' A [ OK ] -> ' + this._preinscripcionModelo._d_razoneseleccion[0]);
+                  console.log(' A -> ' + this._preinscripcionModelo._d_razoneseleccion[0]);
+                  let resultadorazones = 0;
+                  this._preinscripcionModelo._d_razoneseleccion.forEach(v => resultadorazones += Number(v));
+                  if (resultadorazones !== 100) {
+                    respuesta = false;
+                    this._validacionesPasos[7]['completado'] = false;
+                    console.log(' A [ ERROR ] -> ' + resultadorazones);
+                  } else {
+                    this._validacionesPasos[7]['completado'] = true;
+                    console.log(' A [ OK ] -> ' + resultadorazones);
+                  }
+                  
                   if (this._preinscripcionModelo._d_dondeseencontrara === null) {
                     respuesta = false;
                     this._validacionesPasos[8]['completado'] = false;

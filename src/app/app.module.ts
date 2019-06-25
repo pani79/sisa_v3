@@ -57,6 +57,7 @@ import { RecuadroInfoComponent } from './components/commons/recuadro-info/recuad
 //  revisar estos ultimos dos si son necesarios en la version
 import { UsuariosComponent } from './components/modulos/usuarios/usuarios/usuarios.component';
 import { UsuarioCreaComponent } from './components/modulos/usuarios/usuario-crea/usuario-crea.component';
+import { ConsultarInscripcionCodigoalfanumericoComponent } from './components/registros/residencias/consultar-inscripcion-codigoalfanumerico/consultar-inscripcion-codigoalfanumerico.component';
 
 
 // const routes: Routes = [
@@ -105,7 +106,7 @@ import { UsuarioCreaComponent } from './components/modulos/usuarios/usuario-crea
     RecuadroInfoComponent//,
 
     // estos lo tuve que agregar pal deploy en prod
-    , UsuariosComponent, UsuarioCreaComponent
+    , UsuariosComponent, UsuarioCreaComponent, ConsultarInscripcionCodigoalfanumericoComponent
     // UsuariosListaComponent,
     // UsuariosAltaComponent
   ],

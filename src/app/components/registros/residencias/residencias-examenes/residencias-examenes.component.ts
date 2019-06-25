@@ -41,7 +41,8 @@ export class ResidenciasExamenesComponent implements OnInit {
   preinscripcion = false;
   consultarInscripcion = false;
   readjudicacion = false;
-  readjudicacionResultado = false;
+  readjudicacionResultado = false;  // esto despues deberia eliminarlo
+  consultarInscripcioncodigoAlfanumerico = false;
 
   // Debug
 
@@ -55,12 +56,15 @@ export class ResidenciasExamenesComponent implements OnInit {
     this.preinscripcion = false;
     this.consultarInscripcion = false;
     this.readjudicacion = false;
+    this.consultarInscripcioncodigoAlfanumerico = false;
     if (trae === 1) {
       this.preinscripcion = true;
     } else if (trae === 2) {
       this.consultarInscripcion = true;
     } else if (trae === 3) {
       this.readjudicacion = true;
+    } else if (trae === 4) {
+      this.consultarInscripcioncodigoAlfanumerico = true;
     }
   }
 
