@@ -25,21 +25,54 @@
   </div>  
   
   
-    <div class="listado">
-      <!-- {{_residentes |json}}   -->
-      <div *ngFor="let residente of _residentes" class="fila">
-        <div>{{residente.id}}</div>
-        <div>{{residente.apellido}}</div>
-        <div>{{residente.nombre}}</div>
-        <div>{{residente.tipodoc}}</div>
-        <div>{{residente.ndoc}}</div>
-        <div>{{residente.paisnacimiento}}</div>
-        <!-- <div>{{residente.}}</div> -->
-        <div class="acciones">
-            <div class="al"><span class="icon-bot_ico_acceder_ver"></span></div>
-            <div class="al"><span class="icon-bot_ico_cancelar"></span></div>
-            <div class="al"><span class="icon-askeletor"></span></div>     
-        </div>
+  <div class="listado">
+    <!--  {{_residentes |json}}  -->
+    <div *ngFor="let residente of _residentesX" class="fila">
+      <div>{{residente.$key}}</div>
+      <div>{{residente._e_apellido}}</div>
+      <div>{{residente._e_nombre}}</div>
+      <div>{{residente._e_numerodocumento}}</div>
+      <div>{{residente._a_concursaEspecialidad}}</div>
+      <div>{{residente._a_concursaTipo}}</div>
+      <!-- <div>{{residente.}}</div> -->
+      <div class="acciones">
+          <div class="al"><span class="icon-askeletor"></span></div>     
       </div>
     </div>
-  
+  </div>
+  {{_residentesX |json}}
+
+
+  <!-- 
+
+    Fugoqcc5T9
+    34354353
+
+    Datos encontrados: 4. DNI: 11111111
+
+    Email: alezei@gmail.com
+    Tipo de examen: Examen Unico
+    Especialidad: Anatomía patológica
+    Provincia: N/A
+    Institución: UNIVERSIDAD NACIONAL DE CORDOBA
+
+    Email: alezei@gmail.com
+    Tipo de examen: Examen Unico
+    Especialidad: Anatomía patológica
+    Provincia: N/A
+    Institución: UNIVERSIDAD NACIONAL DE CORDOBA
+
+    Email: aledrienisienia@gmail.com
+    Tipo de examen: Examen Unico - 2019
+    Especialidad: Cardiología
+    Provincia: Catamarca
+    Institución: N/A
+
+    Email: lionelromanelli@gmail.com
+    Tipo de examen: prueba concurso
+    Especialidad: Anatomía patológica
+    Provincia: CABA
+    Institución: N/A
+
+    El código alfanumérico será enviado al mail que ve en pantalla.
+   -->

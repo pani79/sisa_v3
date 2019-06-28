@@ -502,9 +502,9 @@
             <p>Nombres</p>
           </div>
           <div class="columna w70_">
-            <input type="text" placeholder="Ingrese el valor">
-            <small [style.display]="(_validacionesPasos[10]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[10]['info']}}</small>
-      
+            <input type="text" placeholder="Ingrese el valor"
+            [(ngModel)]="_preinscripcionModelo._e_nombre"  name="_e_nombre">
+            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[10]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -512,9 +512,9 @@
             <p>Apellidos</p>
           </div>
           <div class="columna w70_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor"
+            [(ngModel)]="_preinscripcionModelo._e_apellido"  name="_e_apellido">
             <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
-      
           </div>
         </div>
         <div class="item">
@@ -530,7 +530,9 @@
             <p>Número de documento</p>
           </div>
           <div class="w30_">
-            <input type="text" placeholder="Ingrese el número de documento de la persona a buscar">
+            <input type="text" placeholder="Ingrese el número de documento de la persona a buscar"
+            [(ngModel)]="_preinscripcionModelo._e_numerodocumento"  name="_e_numerodocumento">
+            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -538,12 +540,13 @@
             <p>Sexo</p>
           </div>
           <div class="w30_">
-            <select>
+            <select [(ngModel)]="_preinscripcionModelo._e_sexo"  name="_e_sexo">
               <option value="-seleccione-">-seleccione-</option>
               <option>Femenino</option>
               <option>Masculino</option>
               <option>Indeterminado</option>
             </select>
+            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -551,7 +554,7 @@
             <p>Estado civil</p>
           </div>
           <div class="w30_">
-            <select>
+            <select [(ngModel)]="_preinscripcionModelo._e_estadocivil"  name="_e_estadocivil">
               <option value="-seleccione-">-seleccione-</option>
               <option value="0">Desconocido</option>
               <option value="1">Soltero/a</option>
@@ -559,7 +562,8 @@
               <option value="3">Divorciado/a</option>
               <option value="4">Viudo/a</option>
               <option value="5">Separado/a</option>
-            </select>
+            </select>            
+            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -567,7 +571,9 @@
             <p>Hijos</p>
           </div>
           <div class="w10_">
-            <input type="text" placeholder="Ingrese el valor">
+            <input type="text" placeholder="Ingrese el valor"
+            [(ngModel)]="_preinscripcionModelo._e_hijos"  name="_e_hijos">
+            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">

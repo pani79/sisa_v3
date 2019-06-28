@@ -108,51 +108,51 @@ export class PreinscripcionComponent implements OnInit {
     }
   ];
   _validacionesPasos: any[] = [
-    { //  _a_concursaTipo
+    { //0  _a_concursaTipo
       completado: null,
       info: 'Seleccione el tipo de concurso donde desea inscribirse'
     },
-    { //  _a_concursaProvincia
+    { //1  _a_concursaProvincia
       completado: null,
       info: 'Seleccione una provincia donde desea inscribirse'
     },
-    { //  _a_concursaInstitucion
+    { //2  _a_concursaInstitucion
       completado: null,
       info: 'Seleccione una institución donde desea inscribirse'
     },
-    { //  _a_concursaEspecialidad
+    { //3  _a_concursaEspecialidad
       completado: null,
       info: 'Seleccione la especialidad a la que desea inscribirse'
     },
-    { //  _b_concursotipo
+    { //4  _b_concursotipo
       completado: null,
       info: 'Seleccione un tipo de concurso en el cual desea inscribirse'
     },
-    { //  _b_concursosubtipo
+    { //5  _b_concursosubtipo
       completado: null,
       info: 'Seleccione un subtipo de concurso en el cual desea inscribirse'
     },
-    { //  _c_concurso
+    { //6  _c_concurso
       completado: null,
       info: 'Seleccione el concurso en el cual desea inscribirse'
     },
-    { //  _d_razoneseleccion
+    { //7  _d_razoneseleccion
       completado: null,
       info: 'La suma de todos los campos debe ser 100, por favor revise los valores que ha puesto y reconsidere sus estudios primarios.'
     },
-    { //  _d_dondeseencontrara
+    { //8  _d_dondeseencontrara
       completado: null,
       info: 'Seleccione una de las opciones'
     },
-    { //  _d_ambitodesarrollo
+    { //9  _d_ambitodesarrollo
       completado: null,
       info: 'Seleccione una de las opciones'
     },
-    { //  _e_nombre
+    { //10  _e_nombre
       completado: null,
       info: 'Ingrese su nombre'
     },
-    { //  _e_apellido
+    { //11  _e_apellido
       completado: null,
       info: 'Ingrese su apellido'
     }

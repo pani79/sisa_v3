@@ -14,6 +14,7 @@ import { PreinscripcionServiceDebugService } from '../preinscripcion/preinscripc
 export class ConsultarInscripcionCodigoalfanumericoComponent implements OnInit {
 
   _residentes: ResidenciasResidentesModel[];
+  _residentesX: any[];
   _botones = {
       buscar: ['boton_general', 'bot_ico_buscar', 'Buscar inscripción']
     };
@@ -30,11 +31,11 @@ export class ConsultarInscripcionCodigoalfanumericoComponent implements OnInit {
     this._residenciasService.preinscripcionesObtieneTodas()
     .snapshotChanges()
     .subscribe(item => {
-      this._residentes = [];
+      this._residentesX = [];
       item.forEach(element => {
         let x = element.payload.toJSON();
         x[this.keyCodigo] = element.key;
-        this._residentes.push(x);
+        this._residentesX.push(x);
       });
     });
   }
