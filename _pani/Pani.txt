@@ -47,6 +47,7 @@ ng g pipe pipes/PObjectPropeties
 ng g s services/listas
 ng g s services/sisaInfo
 ng g s services/tas/geo
+ng g s services/tas/personas
 ng g s services/registros/refeps
 
 F:\SISA - aplicaciones\Sisa V3\src\app\services\registros\residencias.service.ts

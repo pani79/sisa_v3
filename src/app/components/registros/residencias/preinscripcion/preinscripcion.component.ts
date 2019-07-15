@@ -9,6 +9,7 @@ import { Provincia } from 'src/app/models/provincia';
 import { InstitucionFormadora } from 'src/app/models/institucionFormadora';
 import { RefepsEspecialidades } from 'src/app/models/refepsEspecialidades';
 import { Pais } from 'src/app/models/paises';
+import { EstadoCivil } from 'src/app/models/estadoCivil';
 
 //  Servicios
 import { GeoService } from 'src/app/services/tas/geo.service';
@@ -61,6 +62,7 @@ export class PreinscripcionComponent implements OnInit {
   );
 
   //  Info de tablas
+  _estadoCivil: EstadoCivil[];
   _provincias: Provincia[];
   _especialidades: RefepsEspecialidades[];
   _paises: Pais[];
