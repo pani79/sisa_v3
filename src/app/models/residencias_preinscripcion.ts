@@ -1,6 +1,6 @@
 export class ResidenciasPreinscripcionModel {
     constructor(
-        /* 
+        /*
             public nombre: string,
             public apellido: string,
             public email: string
@@ -26,7 +26,6 @@ export class ResidenciasPreinscripcionModel {
         public _e_sexo: number,
         public _e_estadocivil: number,
         public _e_hijos: number,
-
     
         public _e_nacionalidad: number,
         public _e_nacimientoFecha: number,
