@@ -34,7 +34,7 @@
                 <label for="radio02">
                   <span></span>Institución</label>
               </div>
-              <small [style.display]="(_validacionesPasos[0]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[0]['info']}}</small>
+              <small [style.display]="(_validacionesCampos[0]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[0]['info']}}</small>
             </div>
           </div>
 
@@ -64,7 +64,7 @@
                 <option *ngFor="let provincia of _provincias" value="{{provincia.idProvincia}}">{{provincia.nombre}}
                 </option>
               </select>
-              <small [style.display]="(_validacionesPasos[1]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[1]['info']}}</small>
+              <small [style.display]="(_validacionesCampos[1]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[1]['info']}}</small>
             </div>
           </div>
 
@@ -80,7 +80,7 @@
                 <option *ngFor="let instfor of _institucionesFormadoras" value="{{instfor.id}}">{{instfor.nombre}}
                 </option>
               </select>
-              <small [style.display]="(_validacionesPasos[2]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[2]['info']}}</small>
+              <small [style.display]="(_validacionesCampos[2]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[2]['info']}}</small>
             </div>
           </div>
 
@@ -95,7 +95,7 @@
                 <option *ngFor="let especialidad of _especialidades" value="{{especialidad.id}}">{{especialidad.nombre}}
                 </option>
               </select>
-              <small [style.display]="(_validacionesPasos[3]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[3]['info']}}</small>
+              <small [style.display]="(_validacionesCampos[3]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[3]['info']}}</small>
             </div>
           </div>
         </div>
@@ -103,13 +103,13 @@
 
 
     </div>
-    => {{_validacionesPasos[0] | json}}
+    => {{_validacionesCampos[0] | json}}
     <br>
-    => {{_validacionesPasos[1] | json}}
+    => {{_validacionesCampos[1] | json}}
     <br>
-    => {{_validacionesPasos[2] | json}}
+    => {{_validacionesCampos[2] | json}}
     <br>
-    => {{_validacionesPasos[3] | json}}
+    => {{_validacionesCampos[3] | json}}
   </div>
 
 
@@ -144,7 +144,7 @@
                     <!-- <option value="-seleccione-">-seleccione-</option> -->
                     <option value="1" *ngIf="_offLineMode === true" >Examen Unico</option>
                   </select>
-                  <small [style.display]="(_validacionesPasos[4]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[4]['info']}}</small>
+                  <small [style.display]="(_validacionesCampos[4]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[4]['info']}}</small>
                 </div>
               </div>
             </div>
@@ -159,7 +159,7 @@
                     <!-- <option value="-seleccione-">-seleccione-</option> -->
                     <option value="1" *ngIf="_offLineMode === true" >Médico</option>
                   </select>
-                  <small [style.display]="(_validacionesPasos[5]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[5]['info']}}</small>
+                  <small [style.display]="(_validacionesCampos[5]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[5]['info']}}</small>
                 </div>
               </div>
             </div>
@@ -169,9 +169,9 @@
       </div>
     </div>
 
-    => {{_validacionesPasos[4] | json}}
+    => {{_validacionesCampos[4] | json}}
     <br>
-    => {{_validacionesPasos[5] | json}}
+    => {{_validacionesCampos[5] | json}}
   </div>
 
 
@@ -218,7 +218,7 @@
         
       </div>
       
-      <small [style.display]="(_validacionesPasos[6]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[6]['info']}}</small>
+      <small [style.display]="(_validacionesCampos[6]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[6]['info']}}</small>
     </div>
 
     <div class="estadoInscripciones" (click)="chequeaEstadoInscripciones(residencia.idPreinscripcion)">
@@ -361,7 +361,7 @@
 
         </div>
 
-      <small [style.display]="(_validacionesPasos[7]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[7]['info']}}</small>
+      <small [style.display]="(_validacionesCampos[7]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[7]['info']}}</small>
 
       </div>
     </div>
@@ -428,7 +428,7 @@
             No lo sabe
           </label>
         </div>
-        <small [style.display]="(_validacionesPasos[8]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[8]['info']}}</small>
+        <small [style.display]="(_validacionesCampos[8]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[8]['info']}}</small>
 
 
         <h3>Respecto del ámbito en el que espera desarrollarse en el futuro:</h3>
@@ -465,7 +465,7 @@
             No lo sabe
           </label>
         </div>
-        <small [style.display]="(_validacionesPasos[9]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[9]['info']}}</small>
+        <small [style.display]="(_validacionesCampos[9]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[9]['info']}}</small>
 
 
       </div>
@@ -474,12 +474,12 @@
 
 
   </div>
-    => {{_validacionesPasos[7] | json}}
+    => {{_validacionesCampos[7] | json}}
     
     <br>
-    => {{_validacionesPasos[8] | json}}
+    => {{_validacionesCampos[8] | json}}
     <br>
-    => {{_validacionesPasos[9] | json}}
+    => {{_validacionesCampos[9] | json}}
 </div>
 
 
@@ -504,7 +504,7 @@
           <div class="columna w70_">
             <input type="text" placeholder="Ingrese el valor"
             [(ngModel)]="_preinscripcionModelo._e_nombre"  name="_e_nombre">
-            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[10]['info']}}</small>
+            <small [style.display]="(_validacionesCampos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[10]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -514,7 +514,7 @@
           <div class="columna w70_">
             <input type="text" placeholder="Ingrese el valor"
             [(ngModel)]="_preinscripcionModelo._e_apellido"  name="_e_apellido">
-            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
+            <small [style.display]="(_validacionesCampos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -532,7 +532,7 @@
           <div class="w30_">
             <input type="text" placeholder="Ingrese el número de documento de la persona a buscar"
             [(ngModel)]="_preinscripcionModelo._e_numerodocumento"  name="_e_numerodocumento">
-            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
+            <small [style.display]="(_validacionesCampos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -546,7 +546,7 @@
               <option>Masculino</option>
               <option>Indeterminado</option>
             </select>
-            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
+            <small [style.display]="(_validacionesCampos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -563,7 +563,7 @@
               <option value="4">Viudo/a</option>
               <option value="5">Separado/a</option>
             </select>            
-            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
+            <small [style.display]="(_validacionesCampos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
@@ -573,7 +573,7 @@
           <div class="w10_">
             <input type="text" placeholder="Ingrese el valor"
             [(ngModel)]="_preinscripcionModelo._e_hijos"  name="_e_hijos">
-            <small [style.display]="(_validacionesPasos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesPasos[11]['info']}}</small>
+            <small [style.display]="(_validacionesCampos[11]['completado'] === false) ? 'flex': 'none'">{{_validacionesCampos[11]['info']}}</small>
           </div>
         </div>
         <div class="item">
