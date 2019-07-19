@@ -26,6 +26,7 @@ export class ConsultarInscripcionCodigoalfanumericoComponent implements OnInit {
     this.keyCodigo = '$key';  // esto es el key de firebase
     this.configura();
   }
+
   configura() {
 
     this._residenciasService.preinscripcionesObtieneTodas()
@@ -38,6 +39,11 @@ export class ConsultarInscripcionCodigoalfanumericoComponent implements OnInit {
         this._residentesX.push(x);
       });
     });
+  }
+
+  consulta(item: any) {
+    alert('llega ' + item);
+    // this._residentesX.filter((item: {}) => item._e_nombre);
   }
 
 
