@@ -51,7 +51,7 @@ export class ResidenciasPreinscripcionModel {
         public _e_profesionTipoMatricula: number,
         public _e_profesionAnoIngreso: number,
         public _e_profesionPromedio: number,
-        public _e_profesionTituloEnTramite: boolean,
+        public _e_profesionTituloEnTramite: boolean
 
     ) {}
 }

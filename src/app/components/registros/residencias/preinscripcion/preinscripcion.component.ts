@@ -58,7 +58,34 @@ export class PreinscripcionComponent implements OnInit {
     null,     // public _e_numerodocumento: number,
     null,     // public _e_sexo: number,
     null,     // public _e_estadocivil: number,
-    null     // public _e_hijos: number
+    null,     // public _e_hijos: number
+    
+    null,     // _e_nacionalidad: number,
+    null,     // _e_nacimientoFecha: number,
+    null,     // _e_nacimientoPais: number,
+    null,     // _e_nacimientoProvincia: number,
+    null,     // _e_email: string,
+    null,     // _e_domicilioProvincia: number,
+    null,     // _e_domicilioLocalidad: number,
+    null,     // _e_domicilioDomicilio: number,
+    null,     // _e_domicilioNro: number,
+    null,     // _e_domicilioPiso: number,
+    null,     // _e_domicilioDepto: number,
+    null,     // _e_domicilioCP: number,
+    null,     // _e_domicilioTelATipo: number,
+    null,     // _e_domicilioTelANro: number,
+    null,     // _e_domicilioTelBTipo: number,
+    null,     // _e_domicilioTelBNro: number,
+    null,     // _e_domicilioTelCTipo: number,
+    null,     // _e_domicilioTelCNro: number,
+    null,     // _e_domicilioTelDTipo: number,
+    null,     // _e_domicilioTelDNro: number,
+    null,     // _e_profesionTitulo: number,
+    null,     // _e_profesionTipoMatricula: number,
+    null,     // _e_profesionAnoIngreso: number,
+    null,     // _e_profesionPromedio: number,
+    null     // _e_profesionTituloEnTramite: boolean
+
   );
 
   //  Info de tablas
@@ -293,7 +320,7 @@ export class PreinscripcionComponent implements OnInit {
           this._infoPasoAPaso[0]['completado'] = true;
           this._infoPasoAPaso[1]['habilitado'] = true;
           console.log(' VALIDA paso 1 OK');
-        } else{ this._infoPasoAPaso[0]['completado'] = false;}                
+        } else{ this._infoPasoAPaso[0]['completado'] = false;}
         break;
 
 
